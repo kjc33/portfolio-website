@@ -102,7 +102,7 @@ export default function App() {
               <div className="photo-attribution-left vertical flex-column">
                 <p>
                   Photo by{" "}
-                  <a href="https://www.arieljordanphoto.com/" target="_blank">
+                  <a href="https://www.arieljordanphoto.com/" target="_blank" rel="noreferrer">
                     Ariel Jordan
                   </a>
                 </p>
@@ -129,17 +129,17 @@ export default function App() {
             <div className="job-card developer-card flex-column large-gap">
               <h3>Developer</h3>
               <p className="percentage">70 Percent</p>
-              <p className="pagination">// 01</p>
+              <p className="pagination">{"// 01"}</p>
             </div>
             <div className="job-card designer-card flex-column large-gap">
               <h3>Designer</h3>
               <p className="percentage">20 Percent</p>
-              <p className="pagination">// 02</p>
+              <p className="pagination">{"// 02"}</p>
             </div>
             <div className="job-card strategist-card flex-column large-gap">
               <h3>Strategist</h3>
               <p className="percentage">10 Percent</p>
-              <p className="pagination">// 03</p>
+              <p className="pagination">{"// 03"}</p>
             </div>
           </div>
         </section>
@@ -149,11 +149,11 @@ export default function App() {
               <div className="photo-attribution-right vertical flex-column">
                 <p>
                   Photo by{" "}
-                  <a href="https://unsplash.com/@kaleidico?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">
+                  <a href="https://unsplash.com/@kaleidico?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
                     Kaleidico
                   </a>{" "}
                   on
-                  <a href="https://unsplash.com/photos/two-people-drawing-on-whiteboard-26MJGnCM0Wc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">
+                  <a href="https://unsplash.com/photos/two-people-drawing-on-whiteboard-26MJGnCM0Wc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
                     Unsplash
                   </a>
                 </p>
@@ -166,7 +166,7 @@ export default function App() {
             <div className="heading-with-cta">
               <h2 className="primary-h2 white">Skills</h2>
               <div className="arrow-btn">
-                <a href="./docs/kyle-chin-resume.pdf" target="_blank" className="arrow-btn-text">
+                <a href="./docs/kyle-chin-resume.pdf" target="_blank" rel="noreferrer" className="arrow-btn-text">
                   View Résumé
                 </a>
               </div>
@@ -176,19 +176,19 @@ export default function App() {
                 <ul className="custom-list underline-link">
                   <li>
                     Certified{" "}
-                    <a href="https://verify.w3schools.com/1O963J2W5L" target="_blank">
+                    <a href="https://verify.w3schools.com/1O963J2W5L" target="_blank" rel="noreferrer">
                       Frontend Developer
                     </a>
                     , including{" "}
-                    <a href="https://verify.w3schools.com/1O5HIAQZ4E" target="_blank">
+                    <a href="https://verify.w3schools.com/1O5HIAQZ4E" target="_blank" rel="noreferrer">
                       HTML
                     </a>
                     ,{" "}
-                    <a href="https://verify.w3schools.com/1O5JOA4BC6" target="_blank">
+                    <a href="https://verify.w3schools.com/1O5JOA4BC6" target="_blank" rel="noreferrer">
                       CSS
                     </a>
-                    , and
-                    <a href="https://verify.w3schools.com/1O963ITIZN" target="_blank">
+                    , and{" "}
+                    <a href="https://verify.w3schools.com/1O963ITIZN" target="_blank" rel="noreferrer">
                       JavaScript
                     </a>
                   </li>
@@ -244,11 +244,11 @@ export default function App() {
                   <div className="photo-attribution-right vertical flex-column">
                     <p>
                       Photo by{" "}
-                      <a href="https://unsplash.com/@mvds?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">
+                      <a href="https://unsplash.com/@mvds?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
                         MSR
                       </a>{" "}
                       on
-                      <a href="https://unsplash.com/photos/man-in-white-shirt-and-black-pants-carrying-black-and-yellow-skateboard-on-white-sand-during-fhQ816rFmN0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">
+                      <a href="https://unsplash.com/photos/man-in-white-shirt-and-black-pants-carrying-black-and-yellow-skateboard-on-white-sand-during-fhQ816rFmN0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
                         Unsplash
                       </a>
                     </p>
@@ -264,7 +264,7 @@ export default function App() {
                       praesent sem fringilla. Quis potenti euismod aliquam porttitor, nisi fames.
                     </p>
                     <div className="arrow-btn">
-                      <a href="https://www.chill.org" target="_blank" className="arrow-btn-text">
+                      <a href="https://www.chill.org" target="_blank" rel="noreferrer" className="arrow-btn-text">
                         Visit Website
                       </a>
                     </div>
@@ -276,11 +276,11 @@ export default function App() {
                   <div className="photo-attribution-right vertical flex-column">
                     <p>
                       Photo by{" "}
-                      <a href="https://unsplash.com/@flopt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">
+                      <a href="https://unsplash.com/@flopt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
                         Flo Pappert
                       </a>{" "}
                       on
-                      <a href="https://unsplash.com/photos/black-suv-park-beside-white-and-brown-house-during-daytime-kspRwqFxOms?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">
+                      <a href="https://unsplash.com/photos/black-suv-park-beside-white-and-brown-house-during-daytime-kspRwqFxOms?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
                         Unsplash
                       </a>
                     </p>
@@ -296,7 +296,7 @@ export default function App() {
                       praesent sem fringilla. Quis potenti euismod aliquam porttitor, nisi fames.
                     </p>
                     <div className="arrow-btn">
-                      <a href="https://www.mountainwoodhomes.com" target="_blank" className="arrow-btn-text">
+                      <a href="https://www.mountainwoodhomes.com" target="_blank" rel="noreferrer" className="arrow-btn-text">
                         Visit Website
                       </a>
                     </div>
@@ -308,11 +308,11 @@ export default function App() {
                   <div className="photo-attribution-right vertical flex-column">
                     <p>
                       Photo by{" "}
-                      <a href="https://unsplash.com/@visualsbyroyalz?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">
+                      <a href="https://unsplash.com/@visualsbyroyalz?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
                         AM
                       </a>{" "}
                       on
-                      <a href="https://unsplash.com/photos/man-in-orange-tank-top-and-black-shorts-doing-exercise-aclkvEMIfL8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">
+                      <a href="https://unsplash.com/photos/man-in-orange-tank-top-and-black-shorts-doing-exercise-aclkvEMIfL8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
                         Unsplash
                       </a>
                     </p>
@@ -328,7 +328,7 @@ export default function App() {
                       praesent sem fringilla. Quis potenti euismod aliquam porttitor, nisi fames.
                     </p>
                     <div className="arrow-btn">
-                      <a href="https://www.ritualhealthandfitness.com" target="_blank" className="arrow-btn-text">
+                      <a href="https://www.ritualhealthandfitness.com" target="_blank" rel="noreferrer" className="arrow-btn-text">
                         Visit Website
                       </a>
                     </div>
@@ -356,7 +356,7 @@ export default function App() {
               <div className="photo-attribution-left vertical flex-column">
                 <p>
                   Photo by{" "}
-                  <a href="https://www.arieljordanphoto.com/" target="_blank">
+                  <a href="https://www.arieljordanphoto.com/" target="_blank" rel="noreferrer">
                     Ariel Jordan
                   </a>
                 </p>
@@ -416,12 +416,12 @@ export default function App() {
               </div>
               <div className="social-icons full-width flex flex-row">
                 <div className="footer-social-icon github">
-                  <a href="https://github.com/kjc33" target="_blank">
+                  <a href="https://github.com/kjc33" target="_blank" rel="noreferrer">
                     <i className="fa-brands fa-github"></i>
                   </a>
                 </div>
                 <div className="footer-social-icon linkedin">
-                  <a href="https://www.linkedin.com/in/kylechin/" target="_blank">
+                  <a href="https://www.linkedin.com/in/kylechin/" target="_blank" rel="noreferrer">
                     <i className="fa-brands fa-linkedin-in"></i>
                   </a>
                 </div>
