@@ -1,101 +1,21 @@
 import React from "react";
 import styles from "./App.css";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import JobTitles from "./components/JobTitles";
 
-import headshot from "./images/kyle-headshot-square.jpg";
-import downArrow from "./images/arrow-white.svg";
 import greenBorderHexagon from "./images/hexagon-green-border.svg";
 import whiteHexagon from "./images/hexagon-white.svg";
 import blackHexagon from "./images/hexagon-black.svg";
-import greenHexagon from "./images/hexagon-green.svg";
+import greenHexagon from "./images/hexagon-green-logo.svg";
 
 export default function App() {
   return (
     <>
-      <header className="primary-header">
-        <div className="header-inner">
-          <a className="site-logo" href="./index.html">
-            <div className="logo-inner">
-              <div className="headshot">
-                <figure>
-                  <img src={headshot} alt="Kyle Chin Headshot" width="80" height="80" />
-                </figure>
-              </div>
-              <div className="site-name">
-                <p>Kyle Chin</p>
-              </div>
-            </div>
-          </a>
-          <nav className="site-nav" id="siteNav">
-            <ul className="primary-nav">
-              <li className="nav-item">
-                <a href="#about">About</a>
-              </li>
-              <li className="nav-item">
-                <a href="#skills">Skills</a>
-              </li>
-              <li className="nav-item">
-                <a href="#work">Work</a>
-              </li>
-            </ul>
-          </nav>
-          <div className="mobile-menu">
-            <div className="mobile-menu-burger" id="mobileMenuBurger">
-              <div className="top-bar"></div>
-              <div className="middle-bar"></div>
-              <div className="bottom-bar"></div>
-            </div>
-            <div className="mobile-menu-nav" id="mobileMenuNav">
-              <div className="mobile-menu-nav-items" id="mobileMenuNavItems">
-                <ul className="mobile-menu-nav-list-items">
-                  <li className="nav-item">
-                    <a href="#about">About</a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="#skills">Skills</a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="#work">Work</a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="#contact">Hire Me</a>
-                  </li>
-                </ul>
-              </div>
-              <div className="mobile-close-btn">
-                <button aria-label="Mobile Menu Close Button" className="close-btn" id="closeBtn">
-                  <i className="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="cta" id="menuBtn">
-            <a className="primary-nav-cta-btn" id="primary-nav-cta-btn" href="#contact">
-              Hire Me
-            </a>
-          </div>
-        </div>
-      </header>
+      <Header />
       <main>
-        <section className="hero" id="top">
-          <div className="inner-container max-width flex-column">
-            <h1 className="outline-heading-large">Frontend Developer</h1>
-            <div className="hero-subhead">
-              <p className="white">Open to Work</p>
-              <p className="light-font">Available Now</p>
-            </div>
-            <div className="drop-down-arrow">
-              <a href="#about">
-                <figure>
-                  <img className="arrow-icon" src={downArrow} alt="Drop Down Arrow" />
-                </figure>
-              </a>
-            </div>
-            <div className="location vertical flex-column">
-              <p>45.6280&deg; N, 122.6739&deg; W</p>
-              <p>Vancouver, WA</p>
-            </div>
-          </div>
-        </section>
+        <Hero />
         <div className="image-separator-right hero-separator">
           <div className="inner-container">
             <div className="image-separator-bg">
@@ -110,39 +30,8 @@ export default function App() {
             </div>
           </div>
         </div>
-        <section className="about no-bottom-padding" id="about">
-          <div className="inner-container medium-width">
-            <h2 className="primary-h2 white">Hey There</h2>
-            <div className="large-text underline-link">
-              <p>
-                My name is Kyle, and I'm a web designer and front-end developer. Over the last ten years, I've overseen the development and delivery of over 150 websites from initial discovery to site launch. My project experience is quite diverse and I've taken on other roles, including account
-                manager, content strategist, and SEO/Digital Marketer.
-              </p>
-              <p>
-                My passion is helping businesses and individuals establish a strong online presence by creating beautiful, user-friendly websites that drive results. If you think we're a good fit for a project, please feel free to <a href="#contact">reach out</a>.
-              </p>
-            </div>
-          </div>
-        </section>
-        <section className="job-titles">
-          <div className="inner-container max-width flex-row flex-column-tablet large-gap">
-            <div className="job-card developer-card flex-column large-gap">
-              <h3>Developer</h3>
-              <p className="percentage">70 Percent</p>
-              <p className="pagination">{"// 01"}</p>
-            </div>
-            <div className="job-card designer-card flex-column large-gap">
-              <h3>Designer</h3>
-              <p className="percentage">20 Percent</p>
-              <p className="pagination">{"// 02"}</p>
-            </div>
-            <div className="job-card strategist-card flex-column large-gap">
-              <h3>Strategist</h3>
-              <p className="percentage">10 Percent</p>
-              <p className="pagination">{"// 03"}</p>
-            </div>
-          </div>
-        </section>
+        <About />
+        <JobTitles />
         <div className="image-separator-left about-separator">
           <div className="inner-container">
             <div className="image-separator-bg">
@@ -391,7 +280,7 @@ export default function App() {
               <div className="footer-logo flex flex-column">
                 <figure>
                   <a href="#top">
-                    <img src={greenHexagon} alt="Green Hexagon" width="100" height="100" />
+                    <img src={greenHexagon} alt="Green Hexagon" width="80" height="80" />
                   </a>
                 </figure>
                 <p className="footer-tagline">Developer. Designer. Strategist.</p>
