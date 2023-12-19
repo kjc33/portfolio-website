@@ -1,19 +1,13 @@
 import React from "react";
 
+import NavList from "./NavList";
+
 export default function PrimaryNav() {
-  return (
-    <nav className="site-nav" id="siteNav">
-      <ul className="primary-nav">
-        <li className="nav-item">
-          <a href="#about">About</a>
-        </li>
-        <li className="nav-item">
-          <a href="#skills">Skills</a>
-        </li>
-        <li className="nav-item">
-          <a href="#work">Work</a>
-        </li>
-      </ul>
-    </nav>
-  );
+  const navItems = [
+    { href: "#about", navLabel: "About" },
+    { href: "#skills", navLabel: "Skills" },
+    { href: "#work", navLabel: "Work" },
+  ];
+
+  return <NavList navClass="site-nav" navId="siteNav" ulClass="primary-nav" liClass="nav-item" navItems={navItems} />;
 }

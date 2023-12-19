@@ -1,6 +1,15 @@
 import React from "react";
 
+import NavList from "./NavList";
+
 export default function MobileNav() {
+  const navItems = [
+    { href: "#about", navLabel: "About" },
+    { href: "#skills", navLabel: "Skills" },
+    { href: "#work", navLabel: "Work" },
+    { href: "#contact", navLabel: "Hire Me" },
+  ];
+
   return (
     <div className="mobile-menu">
       <div className="mobile-menu-burger" id="mobileMenuBurger">
@@ -9,7 +18,8 @@ export default function MobileNav() {
         <div className="bottom-bar"></div>
       </div>
       <div className="mobile-menu-nav" id="mobileMenuNav">
-        <div className="mobile-menu-nav-items" id="mobileMenuNavItems">
+        <NavList navClass="mobile-menu-nav-items" navId="mobileMenuNavItems" ulClass="mobile-menu-nav-list-items" liClass="nav-item" navItems={navItems} />
+        {/* <nav className="mobile-menu-nav-items" id="mobileMenuNavItems">
           <ul className="mobile-menu-nav-list-items">
             <li className="nav-item">
               <a href="#about">About</a>
@@ -24,7 +34,7 @@ export default function MobileNav() {
               <a href="#contact">Hire Me</a>
             </li>
           </ul>
-        </div>
+        </nav> */}
         <div className="mobile-close-btn">
           <button aria-label="Mobile Menu Close Button" className="close-btn" id="closeBtn">
             <i className="fa-solid fa-xmark"></i>
