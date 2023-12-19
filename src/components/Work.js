@@ -1,5 +1,7 @@
 import React from "react";
 
+import ArrowButton from "./ArrowButton";
+
 export default function Work() {
   return (
     <section className="work no-bottom-padding" id="work">
@@ -30,11 +32,7 @@ export default function Work() {
                   Lorem ipsum dolor sit amet consectetur adipiscing elit, massa conubia turpis arcu at gravida cum est, nisl primis blandit accumsan ligula convallis. Per vitae pulvinar pellentesque taciti tellus egestas litora duis ut sociosqu morbi, integer feugiat metus platea ultrices id
                   praesent sem fringilla. Quis potenti euismod aliquam porttitor, nisi fames.
                 </p>
-                <div className="arrow-btn">
-                  <a href="https://www.chill.org" target="_blank" rel="noreferrer" className="arrow-btn-text">
-                    Visit Website
-                  </a>
-                </div>
+                <ArrowButton href="https://www.chill.org" target="_blank" buttonLabel="Visit Website" />
               </div>
             </div>
           </article>
@@ -62,11 +60,7 @@ export default function Work() {
                   Lorem ipsum dolor sit amet consectetur adipiscing elit, massa conubia turpis arcu at gravida cum est, nisl primis blandit accumsan ligula convallis. Per vitae pulvinar pellentesque taciti tellus egestas litora duis ut sociosqu morbi, integer feugiat metus platea ultrices id
                   praesent sem fringilla. Quis potenti euismod aliquam porttitor, nisi fames.
                 </p>
-                <div className="arrow-btn">
-                  <a href="https://www.mountainwoodhomes.com" target="_blank" rel="noreferrer" className="arrow-btn-text">
-                    Visit Website
-                  </a>
-                </div>
+                <ArrowButton href="https://www.mountainwoodhomes.com" target="_blank" buttonLabel="Visit Website" />
               </div>
             </div>
           </article>
@@ -94,11 +88,7 @@ export default function Work() {
                   Lorem ipsum dolor sit amet consectetur adipiscing elit, massa conubia turpis arcu at gravida cum est, nisl primis blandit accumsan ligula convallis. Per vitae pulvinar pellentesque taciti tellus egestas litora duis ut sociosqu morbi, integer feugiat metus platea ultrices id
                   praesent sem fringilla. Quis potenti euismod aliquam porttitor, nisi fames.
                 </p>
-                <div className="arrow-btn">
-                  <a href="https://www.ritualhealthandfitness.com" target="_blank" rel="noreferrer" className="arrow-btn-text">
-                    Visit Website
-                  </a>
-                </div>
+                <ArrowButton href="https://www.ritualhealthandfitness.com" target="_blank" buttonLabel="Visit Website" />
               </div>
             </div>
           </article>

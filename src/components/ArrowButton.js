@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function ArrowButton({ href, download, buttonLabel }) {
+export default function ArrowButton({ href, download, target, buttonLabel }) {
   return (
     <div className="arrow-btn">
-      <a href={href} download={download} target="_blank" rel="noreferrer" className="arrow-btn-text">
+      <a href={href} download={download} target={target} rel="noreferrer" className="arrow-btn-text">
         {buttonLabel}
       </a>
     </div>
