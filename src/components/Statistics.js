@@ -1,4 +1,5 @@
 import React from "react";
+
 import greenBorderHexagon from "../images/hexagon-green-border.svg";
 import whiteHexagon from "../images/hexagon-white.svg";
 import blackHexagon from "../images/hexagon-black.svg";

@@ -1,4 +1,5 @@
 import React from "react";
+
 import greenHexagon from "../images/hexagon-green.svg";
 
 export default function Footer() {

@@ -1,4 +1,5 @@
 import React from "react";
+
 import ContactForm from "./Form";
 
 export default function Contact({ primaryH2, description }) {

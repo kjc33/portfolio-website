@@ -85,7 +85,7 @@
   
   .nav-item a,
   .site-logo,
-  .primary-nav-cta-btn {
+  .primary-cta-btn {
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
@@ -210,7 +210,7 @@
     display: none;
   }
   
-  .primary-nav-cta-btn {
+  .primary-cta-btn {
     display: inline-block;
     font-size: 1.2rem;
     letter-spacing: 2px;
@@ -222,7 +222,7 @@
     padding: 10px 20px;
   }
   
-  .primary-nav-cta-btn:hover {
+  .primary-cta-btn:hover {
     color: #262626;
     background-color: #22e52e;
   }
@@ -1499,7 +1499,7 @@
       display: flex;
       column-gap: 30px;
     }
-    .primary-nav-cta-btn {
+    .primary-cta-btn {
       width: 9em;
       padding: 15px 30px;
     }
