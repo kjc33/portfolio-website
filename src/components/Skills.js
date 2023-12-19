@@ -7,7 +7,7 @@ export default function Skills() {
         <div className="heading-with-cta">
           <h2 className="primary-h2 white">Skills</h2>
           <div className="arrow-btn">
-            <a href="./docs/kyle-chin-resume.pdf" target="_blank" rel="noreferrer" className="arrow-btn-text">
+            <a href="./docs/kyle-chin-resume.pdf" download="kyle-chin-resume.pdf" target="_blank" rel="noreferrer" className="arrow-btn-text">
               View Résumé
             </a>
           </div>
