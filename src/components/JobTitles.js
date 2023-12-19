@@ -1,24 +1,14 @@
 import React from "react";
 
+import Card from "./Card";
+
 export default function JobTitles() {
   return (
     <section className="job-titles">
       <div className="inner-container max-width flex-row flex-column-tablet large-gap">
-        <div className="job-card developer-card flex-column large-gap">
-          <h3>Developer</h3>
-          <p className="percentage">70 Percent</p>
-          <p className="pagination">{"// 01"}</p>
-        </div>
-        <div className="job-card designer-card flex-column large-gap">
-          <h3>Designer</h3>
-          <p className="percentage">20 Percent</p>
-          <p className="pagination">{"// 02"}</p>
-        </div>
-        <div className="job-card strategist-card flex-column large-gap">
-          <h3>Strategist</h3>
-          <p className="percentage">10 Percent</p>
-          <p className="pagination">{"// 03"}</p>
-        </div>
+        <Card containerClasses="job-card developer-card flex-column large-gap" primaryH3="Developer" percentage="70 Percent" pagination="// 01" />
+        <Card containerClasses="job-card designer-card flex-column large-gap" primaryH3="Designer" percentage="20 Percent" pagination="// 02" />
+        <Card containerClasses="job-card strategist-card flex-column large-gap" primaryH3="Strategist" percentage="10 Percent" pagination="// 03" />
       </div>
     </section>
   );

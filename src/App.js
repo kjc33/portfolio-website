@@ -21,7 +21,7 @@ export default function App() {
         <Header />
         <Hero primaryH1="Frontend Developer" subHead="Open to Work" subHeadDescription="Available Now" location="Vancouver, WA" latitude="45.6280" longitude="122.6739" />
         <ImageSeparator containerNameClasses="image-separator-right hero-separator" photoAttributionClasses="photo-attribution-left vertical flex-column" imageUrl="https://www.arieljordanphoto.com/" photographer="Ariel Jordan" />
-        <About 
+        <About
           primaryH2="Hey There"
           paragraph1="My name is Kyle, and I'm a web designer and front-end developer. Over the last ten years, I've overseen the development and delivery of over 150 websites from initial discovery to site launch. My project experience is quite diverse and I've taken on other roles, including account
           manager, content strategist, and SEO/Digital Marketer"
