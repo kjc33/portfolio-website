@@ -1,5 +1,5 @@
 import React from "react";
-import greenHexagon from "../images/hexagon-green-logo.svg";
+import greenHexagon from "../images/hexagon-green.svg";
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="footer-logo flex flex-column">
             <figure>
               <a href="#top">
-                <img src={greenHexagon} alt="Green Hexagon" width="80" height="80" />
+                <img src={greenHexagon} alt="Green Hexagon" width="100" height="100" />
               </a>
             </figure>
             <p className="footer-tagline">Developer. Designer. Strategist.</p>
