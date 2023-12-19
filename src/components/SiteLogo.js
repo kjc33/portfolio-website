@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SiteLogo({ siteName, headshot }) {
   return (
-    <a className="site-logo" href="./index.html">
+    <a className="site-logo" href="/">
       <div className="logo-inner">
         <div className="headshot">
           <figure>
