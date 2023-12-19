@@ -18,7 +18,14 @@ export default function App() {
     <>
       <main>
         <Header />
-        <Hero />
+        <Hero 
+          primaryH1="Frontend Developer"
+          subHead="Open to Work"
+          subHeadDescription="Available Now"
+          location="Vancouver, WA"
+          latitude="45.6280"
+          longitude="122.6739"
+        />
         <ImageSeparator 
           containerNameClasses="image-separator-right hero-separator" 
           photoAttributionClasses="photo-attribution-left vertical flex-column" 
