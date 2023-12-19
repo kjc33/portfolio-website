@@ -53,7 +53,10 @@ export default function App() {
           imageUrl="https://www.arieljordanphoto.com/" 
           photographer="Ariel Jordan" 
         />
-        <Contact />
+        <Contact 
+          primaryH2="Let's Talk"
+          description="I am open to contract work (strategy, design, development, or website maintenance) and full-time agency or studio employment."
+        />
         <Footer />
       </main>
     </>

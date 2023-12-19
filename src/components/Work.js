@@ -14,7 +14,7 @@ export default function Work() {
                   <a href="https://unsplash.com/@mvds?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
                     MSR
                   </a>{" "}
-                  on
+                  on{" "}
                   <a href="https://unsplash.com/photos/man-in-white-shirt-and-black-pants-carrying-black-and-yellow-skateboard-on-white-sand-during-fhQ816rFmN0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
                     Unsplash
                   </a>
@@ -46,7 +46,7 @@ export default function Work() {
                   <a href="https://unsplash.com/@flopt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
                     Flo Pappert
                   </a>{" "}
-                  on
+                  on{" "}
                   <a href="https://unsplash.com/photos/black-suv-park-beside-white-and-brown-house-during-daytime-kspRwqFxOms?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
                     Unsplash
                   </a>
@@ -78,7 +78,7 @@ export default function Work() {
                   <a href="https://unsplash.com/@visualsbyroyalz?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
                     AM
                   </a>{" "}
-                  on
+                  on{" "}
                   <a href="https://unsplash.com/photos/man-in-orange-tank-top-and-black-shorts-doing-exercise-aclkvEMIfL8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
                     Unsplash
                   </a>
