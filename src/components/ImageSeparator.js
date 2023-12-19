@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ImageSeparator({ containerNameClasses, photoAttributionClasses, imageUrl, photographer, sourceUrl, imageSource }) {
+export default function ImageSeparator({ containerNameClasses, photoAttributionClasses, imageUrl, photographer, conCat, sourceUrl, imageSource }) {
   return (
     <div className={containerNameClasses}>
       <div className="inner-container">
@@ -12,8 +12,9 @@ export default function ImageSeparator({ containerNameClasses, photoAttributionC
                 {" "}
                 {photographer}
               </a>{" "}
-              {" "}
+              {conCat}{" "}
               <a href={sourceUrl} target="_blank" rel="noreferrer">
+                {" "}
                 {imageSource}
               </a>
             </p>

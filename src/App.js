@@ -21,29 +21,15 @@ export default function App() {
         <ImageSeparator containerNameClasses="image-separator-right hero-separator" photoAttributionClasses="photo-attribution-left vertical flex-column" imageUrl="https://www.arieljordanphoto.com/" photographer="Ariel Jordan" />
         <About />
         <JobTitles />
-        <ImageSeparator containerNameClasses="image-separator-left about-separator" photoAttributionClasses="photo-attribution-right vertical flex-column" imageUrl="https://unsplash.com/@kaleidico?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" photographer="Kaleidico" sourceUrl="https://unsplash.com/photos/two-people-drawing-on-whiteboard-26MJGnCM0Wc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" imageSource="Unsplash" />
+        <ImageSeparator containerNameClasses="image-separator-left about-separator" photoAttributionClasses="photo-attribution-right vertical flex-column" imageUrl="https://unsplash.com/@kaleidico?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" photographer="Kaleidico" conCat={"on"} sourceUrl="https://unsplash.com/photos/two-people-drawing-on-whiteboard-26MJGnCM0Wc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" imageSource="Unsplash" />
         <Skills />
         <Statistics />
         <Work />
         <Quote />
-        <div className="image-separator-right quote-separator">
-          <div className="inner-container">
-            <div className="image-separator-bg">
-              <div className="photo-attribution-left vertical flex-column">
-                <p>
-                  Photo by{" "}
-                  <a href="https://www.arieljordanphoto.com/" target="_blank" rel="noreferrer">
-                    Ariel Jordan
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ImageSeparator containerNameClasses="image-separator-right quote-separator" photoAttributionClasses="photo-attribution-left vertical flex-column" imageUrl="https://www.arieljordanphoto.com/" photographer="Ariel Jordan" />
         <Contact />
         <Footer />
       </main>
-      <script src="script.js"></script>
     </>
   );
 }
