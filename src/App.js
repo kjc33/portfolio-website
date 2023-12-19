@@ -19,21 +19,16 @@ export default function App() {
     <>
       <main>
         <Header />
-        <Hero 
-          primaryH1="Frontend Developer"
-          subHead="Open to Work"
-          subHeadDescription="Available Now"
-          location="Vancouver, WA"
-          latitude="45.6280"
-          longitude="122.6739"
+        <Hero primaryH1="Frontend Developer" subHead="Open to Work" subHeadDescription="Available Now" location="Vancouver, WA" latitude="45.6280" longitude="122.6739" />
+        <ImageSeparator containerNameClasses="image-separator-right hero-separator" photoAttributionClasses="photo-attribution-left vertical flex-column" imageUrl="https://www.arieljordanphoto.com/" photographer="Ariel Jordan" />
+        <About 
+          primaryH2="Hey There"
+          paragraph1="My name is Kyle, and I'm a web designer and front-end developer. Over the last ten years, I've overseen the development and delivery of over 150 websites from initial discovery to site launch. My project experience is quite diverse and I've taken on other roles, including account
+          manager, content strategist, and SEO/Digital Marketer"
+          paragraph2="My passion is helping businesses and individuals establish a strong online presence by creating beautiful, user-friendly websites that drive results. If you think we're a good fit for a project, please feel free to"
+          link="#contact"
+          linkText="reach out"
         />
-        <ImageSeparator 
-          containerNameClasses="image-separator-right hero-separator" 
-          photoAttributionClasses="photo-attribution-left vertical flex-column" 
-          imageUrl="https://www.arieljordanphoto.com/" 
-          photographer="Ariel Jordan" 
-        />
-        <About />
         <JobTitles />
         <ImageSeparator
           containerNameClasses="image-separator-left about-separator"
@@ -48,16 +43,8 @@ export default function App() {
         <Statistics />
         <Work />
         <Quote />
-        <ImageSeparator
-          containerNameClasses="image-separator-right quote-separator" 
-          photoAttributionClasses="photo-attribution-left vertical flex-column" 
-          imageUrl="https://www.arieljordanphoto.com/" 
-          photographer="Ariel Jordan" 
-        />
-        <Contact 
-          primaryH2="Let's Talk"
-          description="I am open to contract work (strategy, design, development, or website maintenance) and full-time agency or studio employment."
-        />
+        <ImageSeparator containerNameClasses="image-separator-right quote-separator" photoAttributionClasses="photo-attribution-left vertical flex-column" imageUrl="https://www.arieljordanphoto.com/" photographer="Ariel Jordan" />
+        <Contact primaryH2="Let's Talk" description="I am open to contract work (strategy, design, development, or website maintenance) and full-time agency or studio employment." />
         <Footer />
       </main>
     </>
