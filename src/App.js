@@ -42,7 +42,9 @@ export default function App() {
         <Skills primaryH2="Skills" />
         <Statistics />
         <Work />
-        <Quote />
+        <Quote name="Steven Howsley" position="Marketing Analyst" company="REI">
+          Kyle is extremely organized, professional, and a master at his craft. From <span className="green-accent">frontend development</span> to design, Kyle is an asset to any team and a genuine pleasure to work with!
+        </Quote>
         <ImageSeparator containerNameClasses="image-separator-right quote-separator" photoAttributionClasses="photo-attribution-left vertical flex-column" imageUrl="https://www.arieljordanphoto.com/" photographer="Ariel Jordan" />
         <Contact primaryH2="Let's Talk" description="I am open to contract work (strategy, design, development, or website maintenance) and full-time agency or studio employment." />
         <Footer />
