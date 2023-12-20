@@ -1,6 +1,8 @@
 import React from "react";
 
 import NavList from "./NavList";
+import FooterLogo from "./FooterLogo";
+import SocialIcon from "./SocialIcon";
 
 import greenHexagon from "../images/hexagon-green.svg";
 
@@ -12,32 +14,19 @@ export default function Footer() {
     { href: "#contact", navLabel: "Hire Me" },
   ];
 
+  const copyrightDate = new Date().getFullYear();
+
   return (
     <footer className="primary-footer">
       <div className="inner-container max-width flex flex-column large-gap">
         <div className="top-half full-width flex flex-row flex-wrap justify-space-between large-gap">
-          <div className="footer-logo flex flex-column">
-            <figure>
-              <a href="#top">
-                <img src={greenHexagon} alt="Green Hexagon" width="100" height="100" />
-              </a>
-            </figure>
-            <p className="footer-tagline">Developer. Designer. Strategist.</p>
-          </div>
+          <FooterLogo imgSrc={greenHexagon} alt="Green Hexagon" width="100" height="100" tagline="Developer. Designer. Strategist." />
           <div className="footer-navigation flex flex-row">
             <NavList navClass="primary-footer-nav" ulClass="flex flex-row flex-wrap small-gap" navItems={navItems} />
           </div>
           <div className="social-icons full-width flex flex-row">
-            <div className="footer-social-icon github">
-              <a href="https://github.com/kjc33" target="_blank" rel="noreferrer">
-                <i className="fa-brands fa-github"></i>
-              </a>
-            </div>
-            <div className="footer-social-icon linkedin">
-              <a href="https://www.linkedin.com/in/kylechin/" target="_blank" rel="noreferrer">
-                <i className="fa-brands fa-linkedin-in"></i>
-              </a>
-            </div>
+            <SocialIcon iconParentClasses="footer-social-icon github" href="https://github.com/kjc33" iconClassNames="fa-brands fa-github" />
+            <SocialIcon iconParentClasses="footer-social-icon linkedin" href="https://www.linkedin.com/in/kylechin/" iconClassNames="fa-brands fa-linkedin-in" />
           </div>
         </div>
         <div className="bottom-half flex flex-column large-gap">
@@ -48,7 +37,7 @@ export default function Footer() {
           </div>
           <div className="footer-signature">
             <p>
-              &copy; <span id="copyright-year"></span> Kyle John Chin <span className="pipe">|</span> Website by me, duh.
+              &copy; {copyrightDate} Kyle Chin <span className="pipe">|</span> Website by me, duh.
             </p>
           </div>
         </div>
