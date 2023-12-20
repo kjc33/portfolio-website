@@ -3,7 +3,7 @@ import React from "react";
 import SkillList from "./SkillList";
 import ArrowButton from "./ArrowButton";
 
-export default function Skills() {
+export default function Skills({ primaryH2 }) {
   const column1Skills = [
     {
       text: (
@@ -38,7 +38,7 @@ export default function Skills() {
     <section className="skills no-bottom-padding" id="skills">
       <div className="inner-container large-width flex-row flex-column-mobile justify-space-between large-gap">
         <div className="heading-with-cta">
-          <h2 className="primary-h2 white">Skills</h2>
+          <h2 className="primary-h2 white">{primaryH2}</h2>
           <div className="arrow-btn">
             <ArrowButton href="./docs/kyle-chin-resume.pdf" download="kyle-chin-resume.pdf" buttonLabel="View Résumé" />
           </div>

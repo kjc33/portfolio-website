@@ -19,7 +19,7 @@ export default function App() {
     <>
       <main>
         <Header />
-        <Hero primaryH1="Frontend Developer" subHead="Open to Work" subHeadDescription="Available Now" location="Vancouver, WA" latitude="45.6280" longitude="122.6739" />
+        <Hero primaryH1="Frontend Developer" subHead="Open to Work" subHeadDescription="Available Now" />
         <ImageSeparator containerNameClasses="image-separator-right hero-separator" photoAttributionClasses="photo-attribution-left vertical flex-column" imageUrl="https://www.arieljordanphoto.com/" photographer="Ariel Jordan" />
         <About
           primaryH2="Hey There"
@@ -39,7 +39,7 @@ export default function App() {
           sourceUrl="https://unsplash.com/photos/two-people-drawing-on-whiteboard-26MJGnCM0Wc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
           imageSource="Unsplash"
         />
-        <Skills />
+        <Skills primaryH2="Skills" />
         <Statistics />
         <Work />
         <Quote />

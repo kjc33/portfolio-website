@@ -1,8 +1,9 @@
 import React from "react";
 
-import downArrow from "../images/arrow-white.svg";
+import DropDownArrow from "./DropDownArrow";
+import Location from "./Location";
 
-export default function Hero({ primaryH1, subHead, subHeadDescription, location, latitude, longitude }) {
+export default function Hero({ primaryH1, subHead, subHeadDescription }) {
   return (
     <section className="hero" id="top">
       <div className="inner-container max-width flex-column">
@@ -11,17 +12,8 @@ export default function Hero({ primaryH1, subHead, subHeadDescription, location,
           <p className="white">{subHead}</p>
           <p className="light-font">{subHeadDescription}</p>
         </div>
-        <div className="drop-down-arrow">
-          <a href="#about">
-            <figure>
-              <img className="arrow-icon" src={downArrow} alt="Drop Down Arrow" />
-            </figure>
-          </a>
-        </div>
-        <div className="location vertical flex-column">
-          <p>{latitude}&deg; N, {longitude}&deg; W</p>
-          <p>{location}</p>
-        </div>
+        <DropDownArrow href="#about" />
+        <Location location="Vancouver, WA" latitude="45.6280" longitude="122.6739" />
       </div>
     </section>
   );
