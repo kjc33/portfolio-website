@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header className="primary-header">
       <div className="header-inner">
-        <SiteLogo headshot={headshot} siteName="Kyle Chin" />
+        <SiteLogo headshot={headshot} siteName="Kyle Chin" alt="Kyle Chin Headshot" width="80" height="80" />
         <PrimaryNav />
         <MobileNav />
         <PrimaryButton url="#contact" label="Hire Me" />
