@@ -1474,6 +1474,13 @@
   }
   
   @media screen and (max-width: 1024px) {
+    .primary-header .header-inner .mobile-menu .mobile-menu-nav .mobile-menu-nav-items.active,
+    .primary-header .header-inner .mobile-menu .mobile-menu-nav .mobile-menu-nav-items.active .mobile-close-btn {
+      display: block;
+    }
+    .primary-header .header-inner .mobile-menu .mobile-menu-nav {
+      display: flex;
+    }
     .mobile-menu {
       display: block;
       margin-left: auto;
