@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import NavList from "./NavList";
 
@@ -10,15 +10,21 @@ export default function MobileNav() {
     { href: "#contact", navLabel: "Hire Me" },
   ];
 
+  const [mobileNavVisible, setMobileNavVisible] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileNavVisible((prevVisible) => !prevVisible);
+  };
+
   return (
     <div className="mobile-menu">
-      <div className="mobile-menu-burger" id="mobileMenuBurger">
+      <div className="mobile-menu-burger" id="mobileMenuBurger" onClick={toggleMobileMenu}>
         <div className="top-bar"></div>
         <div className="middle-bar"></div>
         <div className="bottom-bar"></div>
       </div>
       <div className="mobile-menu-nav" id="mobileMenuNav">
-        <NavList navClass="mobile-menu-nav-items" navId="mobileMenuNavItems" ulClass="mobile-menu-nav-list-items" liClass="nav-item" navItems={navItems} />
+        <NavList navClass="mobile-menu-nav-items" navId="mobileMenuNavItems" ulClass="mobile-menu-nav-list-items" liClass="nav-item" navItems={navItems} mobileNavVisible={mobileNavVisible} />
         {/* <nav className="mobile-menu-nav-items" id="mobileMenuNavItems">
           <ul className="mobile-menu-nav-list-items">
             <li className="nav-item">
