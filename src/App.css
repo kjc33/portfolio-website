@@ -175,7 +175,7 @@ html {
 }
 
 .mobile-menu-nav-wrapper .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a:hover,
-.mobile-menu-nav-wrapper .close-btn:hover .fa-solid.fa-xmark {
+.mobile-menu-nav-wrapper .mobile-close-btn .close-btn:hover i {
   color: #ffffff;
 }
 
