@@ -1,6 +1,6 @@
 import React from "react";
 
-import NavList from "./NavList";
+import PrimaryNavList from "./PrimaryNavList";
 import FooterLogo from "./FooterLogo";
 import SocialIcon from "./SocialIcon";
 
@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="top-half full-width flex flex-row flex-wrap justify-space-between large-gap">
           <FooterLogo imgSrc={greenHexagon} alt="Green Hexagon" width="100" height="100" tagline="Developer. Designer. Strategist." />
           <div className="footer-navigation flex flex-row">
-            <NavList navClass="primary-footer-nav" ulClass="flex flex-row flex-wrap small-gap" navItems={navItems} />
+            <PrimaryNavList navClass="primary-footer-nav" ulClass="flex flex-row flex-wrap small-gap" navItems={navItems} />
           </div>
           <div className="social-icons full-width flex flex-row">
             <SocialIcon iconParentClasses="footer-social-icon github" href="https://github.com/kjc33" iconClassNames="fa-brands fa-github" />

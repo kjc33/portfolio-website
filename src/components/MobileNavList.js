@@ -1,8 +1,10 @@
 import React from "react";
 
-export default function NavList({ navClass, navId, ulClass, liClass, navItems, mobileNavVisible }) {
+export default function MobileNavList({ navClass, navId, ulClass, liClass, navItems, active }) {
+  const mobileClass = active ? "active" : "inactive";
+
   return (
-    <nav className={`${navClass} ${mobileNavVisible && "active"}`} id={navId}>
+    <nav className={`${navClass} ${mobileClass}`} id={navId}>
       <ul className={ulClass}>
         {navItems.map((item, index) => (
           <li key={index} className={liClass}>
