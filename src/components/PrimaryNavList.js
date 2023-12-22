@@ -1,4 +1,3 @@
-// NavList.js
 import React from "react";
 
 export default function PrimaryNavList({ navClass, navId, ulClass, liClass, navItems }) {
