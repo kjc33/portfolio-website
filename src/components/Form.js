@@ -9,7 +9,7 @@ export default function Form() {
         <input type="email" name="email" id="email" placeholder="Email" required autoComplete="on" />
         <input type="tel" name="phone" id="phone" placeholder="Phone" autoComplete="on" />
         <input type="url" name="website" id="website" placeholder="Website" />
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Tell me about your website goals, budget, and anything other pertinent details."></textarea>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Tell me about your website goals, budget, and any other pertinent details."></textarea>
         <input type="submit" value="Submit" />
       </form>
     </div>

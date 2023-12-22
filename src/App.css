@@ -953,6 +953,7 @@ input[type="file"] {
 
 .footer-tagline {
   font-size: 1rem;
+  line-height: 2;
   color: #999999;
   text-transform: uppercase;
 }
@@ -1129,6 +1130,10 @@ input[type="file"] {
     -webkit-text-stroke-width: 0;
     -wekkit-text-stroke-color: transparent;
     color: #ffffff;
+  }
+  /* Footer Navigation */
+  .footer-navigation .primary-footer-nav .small-gap {
+    gap: 20px;
   }
 }
 
