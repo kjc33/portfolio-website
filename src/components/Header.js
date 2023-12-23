@@ -5,7 +5,7 @@ import PrimaryNav from "./PrimaryNav";
 import MobileNav from "./MobileNav";
 import PrimaryButton from "./PrimaryButton";
 
-import headshot from "../images/kyle-headshot-square.jpg";
+import headshot from "../images/kyle-chin-headshot.jpg";
 
 export default function Header() {
   return (
