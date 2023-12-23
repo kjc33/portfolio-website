@@ -11,8 +11,7 @@ export default function Work() {
       featuredImgLink: "https://unsplash.com/photos/man-in-white-shirt-and-black-pants-carrying-black-and-yellow-skateboard-on-white-sand-during-fhQ816rFmN0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
       featuredImgSrc: "Unsplash",
       ProjectName: "The Chill Foundation",
-      projectDescription:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit, massa conubia turpis arcu at gravida cum est, nisl primis blandit accumsan ligula convallis. Per vitae pulvinar pellentesque taciti tellus egestas litora duis ut sociosqu morbi, integer feugiat metus platea ultrices id praesent sem fringilla. Quis potenti euismod aliquam porttitor, nisi fames.",
+      projectDescription: `As a youth sports nonprofit in Vermont, I co-designed and led the development of The Chill Foundation's new website in 2022. I worked from an approved design and designed other pages during development. Integrating the homepage "Programs" section with hover-over images and click-to-landing functionality pushed the limits of Elementor.`,
       projectLink: "https://www.chill.org",
       projectButtonLabel: "Visit Website",
     },
@@ -27,7 +26,7 @@ export default function Work() {
       featuredImgSrc: "Unsplash",
       ProjectName: "Mountainwood Homes",
       projectDescription:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit, massa conubia turpis arcu at gravida cum est, nisl primis blandit accumsan ligula convallis. Per vitae pulvinar pellentesque taciti tellus egestas litora duis ut sociosqu morbi, integer feugiat metus platea ultrices id praesent sem fringilla. Quis potenti euismod aliquam porttitor, nisi fames.",
+        `Mountainwood Homes, a premier home builder and renovation company, tasked me to lead the entire redesign project, including AM, strategy, design, and development. I explored overlapping elements, vertical text, and image "cutouts" to mimic crown moulding. This site has aged nicely over the years, as my core design is mostly still intact.`,
       projectLink: "https://www.mountainwoodhomes.com",
       projectButtonLabel: "Visit Website",
     },
@@ -42,7 +41,7 @@ export default function Work() {
       featuredImgSrc: "Unsplash",
       ProjectName: "Ritual Health and Fitness",
       projectDescription:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit, massa conubia turpis arcu at gravida cum est, nisl primis blandit accumsan ligula convallis. Per vitae pulvinar pellentesque taciti tellus egestas litora duis ut sociosqu morbi, integer feugiat metus platea ultrices id praesent sem fringilla. Quis potenti euismod aliquam porttitor, nisi fames.",
+        `Ritual Health and Fitness is owned and operated by Rod Stanley, an award-winning bodybuilder and fitness professional. The strategy, design, and site development came together naturally. I implemented a blog with custom taxonomy filters and a custom post for "Success Stories," utilizing Advanced Custom Fields (ACF) and Elementor's dynamic tagging.`,
       projectLink: "https://www.ritualhealthandfitness.com",
       projectButtonLabel: "Visit Website",
     },

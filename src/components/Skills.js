@@ -10,7 +10,7 @@ export default function Skills({ primaryH2 }) {
         <>
           Certified{" "}
           <a href="https://verify.w3schools.com/1O963J2W5L" target="_blank" rel="noreferrer">
-            Frontend Developer
+            Front-end Developer
           </a>
           , including{" "}
           <a href="https://verify.w3schools.com/1O5HIAQZ4E" target="_blank" rel="noreferrer">

@@ -473,7 +473,6 @@ h6 {
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 4px;
-  width: 50%;
   padding-bottom: 30px;
 }
 
@@ -1087,6 +1086,10 @@ input[type="file"] {
 }
 
 @media screen and (min-width: 400px) {
+  /* Outline Heading */
+  .outline-heading-large {
+    width: 80%;
+  }
   /* Vertical Text */
   .vertical {
     display: flex;
