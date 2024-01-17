@@ -788,20 +788,27 @@ h6 {
 }
 
 .select-work-featured-bg.project-1 {
-  background-image: url(./images/snowboarder.jpg);
+  background-image: url(./images/live-band.jpg);
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
 }
 
 .select-work-featured-bg.project-2 {
+  background-image: url(./images/snowboarder.jpg);
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+.select-work-featured-bg.project-3 {
   background-image: url(./images/home-exterior.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-.select-work-featured-bg.project-3 {
+.select-work-featured-bg.project-4 {
   background-image: url(./images/weight-training.jpg);
   background-size: cover;
   background-position: center center;
