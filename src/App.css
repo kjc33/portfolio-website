@@ -815,9 +815,7 @@ h6 {
   background-repeat: no-repeat;
 }
 
-.select-work-featured-bg.project-1,
-.select-work-featured-bg.project-2,
-.select-work-featured-bg.project-3,
+.select-work-featured-bg,
 .select-work article {
   position: relative;
 }
