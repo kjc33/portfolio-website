@@ -6,11 +6,11 @@ export default function Work() {
   const featuredWorks1 = [
     {
       featuredWorkContainerClasses: "select-work-featured-bg project-1",
-      photographer: "Danny Howe",
-      photographerProfileLink: "https://unsplash.com/@dannyhowe?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
-      featuredImgLink: "https://unsplash.com/photos/photo-of-music-band-performing-at-front-of-crowded-stadium-under-blue-sky-zZxs1_uupOQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      photographer: "Cody Board",
+      photographerProfileLink: "https://unsplash.com/@codypboard?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+      featuredImgLink: "https://unsplash.com/photos/man-in-white-t-shirt-C7DWZcxFCNY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
       featuredImgSrc: "Unsplash",
-      ProjectName: "Artify App Project",
+      ProjectName: "Artify Search App",
       projectDescription: `Ritual Health and Fitness is owned and operated by Rod Stanley, an award-winning bodybuilder and fitness professional. The strategy, design, and site development came together naturally. I implemented a blog with custom taxonomy filters and a custom post for "Success Stories," utilizing Advanced Custom Fields (ACF) and Elementor's dynamic tagging.`,
       projectLink: "https://spotify-artist-search-app.netlify.app/",
       projectButtonLabel: "Visit Website",
