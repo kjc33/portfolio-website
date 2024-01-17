@@ -11,8 +11,7 @@ export default function Work() {
       featuredImgLink: "https://unsplash.com/photos/photo-of-music-band-performing-at-front-of-crowded-stadium-under-blue-sky-zZxs1_uupOQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
       featuredImgSrc: "Unsplash",
       ProjectName: "Artify App Project",
-      projectDescription:
-        `Ritual Health and Fitness is owned and operated by Rod Stanley, an award-winning bodybuilder and fitness professional. The strategy, design, and site development came together naturally. I implemented a blog with custom taxonomy filters and a custom post for "Success Stories," utilizing Advanced Custom Fields (ACF) and Elementor's dynamic tagging.`,
+      projectDescription: `Ritual Health and Fitness is owned and operated by Rod Stanley, an award-winning bodybuilder and fitness professional. The strategy, design, and site development came together naturally. I implemented a blog with custom taxonomy filters and a custom post for "Success Stories," utilizing Advanced Custom Fields (ACF) and Elementor's dynamic tagging.`,
       projectLink: "https://spotify-artist-search-app.netlify.app/",
       projectButtonLabel: "Visit Website",
     },
@@ -40,8 +39,7 @@ export default function Work() {
       featuredImgLink: "https://unsplash.com/photos/black-suv-park-beside-white-and-brown-house-during-daytime-kspRwqFxOms?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
       featuredImgSrc: "Unsplash",
       ProjectName: "Mountainwood Homes",
-      projectDescription:
-        `Mountainwood Homes, a premier home builder and renovation company, tasked me to lead the entire redesign project, including AM, strategy, design, and development. I explored overlapping elements, vertical text, and image "cutouts" to mimic crown moulding. This site has aged nicely over the years, as my core design is mostly still intact.`,
+      projectDescription: `Mountainwood Homes, a premier home builder and renovation company, tasked me to lead the entire redesign project, including AM, strategy, design, and development. I explored overlapping elements, vertical text, and image "cutouts" to mimic crown moulding. This site has aged nicely over the years, as my core design is mostly still intact.`,
       projectLink: "https://www.mountainwoodhomes.com",
       projectButtonLabel: "Visit Website",
     },
@@ -55,8 +53,7 @@ export default function Work() {
       featuredImgLink: "https://unsplash.com/photos/man-in-orange-tank-top-and-black-shorts-doing-exercise-aclkvEMIfL8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
       featuredImgSrc: "Unsplash",
       ProjectName: "Ritual Health and Fitness",
-      projectDescription:
-        `Ritual Health and Fitness is owned and operated by Rod Stanley, an award-winning bodybuilder and fitness professional. The strategy, design, and site development came together naturally. I implemented a blog with custom taxonomy filters and a custom post for "Success Stories," utilizing Advanced Custom Fields (ACF) and Elementor's dynamic tagging.`,
+      projectDescription: `Ritual Health and Fitness is owned and operated by Rod Stanley, an award-winning bodybuilder and fitness professional. The strategy, design, and site development came together naturally. I implemented a blog with custom taxonomy filters and a custom post for "Success Stories," utilizing Advanced Custom Fields (ACF) and Elementor's dynamic tagging.`,
       projectLink: "https://www.ritualhealthandfitness.com",
       projectButtonLabel: "Visit Website",
     },
@@ -75,6 +72,9 @@ export default function Work() {
           ))}
           {featuredWorks3.map((featuredWork3, index) => (
             <WorkListingItem key={index} featuredWorkDetails={featuredWork3} />
+          ))}
+          {featuredWorks4.map((featuredWork4, index) => (
+            <WorkListingItem key={index} featuredWorkDetails={featuredWork4} />
           ))}
         </div>
       </div>
