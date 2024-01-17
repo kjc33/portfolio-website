@@ -11,7 +11,7 @@ export default function Work() {
       featuredImgLink: "https://unsplash.com/photos/man-in-white-t-shirt-C7DWZcxFCNY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
       featuredImgSrc: "Unsplash",
       ProjectName: "Artify Search App",
-      projectDescription: `Artify is an artist search app that helps users learn more about the musicians they love. Built with React, Artify uses the Spotify API to display the artist's name, number of followers, genres, and top songs. Unfortunately, the Spotify API doesn't include biographies, so Artify also uses the Wikipedia API to expand upon artist profiles.`,
+      projectDescription: `Artify is an artist search app that helps users learn more about the musicians they love. Built in React, Artify uses the Spotify API to display the artist's name, number of followers, genres, and top songs. Unfortunately, the Spotify API doesn't include biographies, so Artify also uses the Wikipedia API to expand upon artist profiles.`,
       projectLink: "https://spotify-artist-search-app.netlify.app/",
       projectButtonLabel: "Visit Website",
     },
