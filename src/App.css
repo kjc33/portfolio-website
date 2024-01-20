@@ -595,7 +595,7 @@ h6 {
   opacity: 0;
   visibility: hidden;
   z-index: 2;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, visibility 0.3s, background-color 0.3s, border-color 0.3s;
 }
 
 .drop-down-arrow .arrow-icon:hover::before {
@@ -606,9 +606,6 @@ h6 {
 .drop-down-arrow .arrow-icon:hover::after {
   opacity: 1;
   visibility: visible;
-}
-
-.drop-down-arrow .arrow-icon:hover {
   background-color: #22e52e;
   border-color: #22e52e;
 }
