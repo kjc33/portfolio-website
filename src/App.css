@@ -576,6 +576,7 @@ h6 {
 
 .drop-down-arrow .arrow-icon::before,
 .drop-down-arrow .arrow-icon::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -585,14 +586,12 @@ h6 {
 }
 
 .drop-down-arrow .arrow-icon::before {
-  content: "";
   background-image: url("./images/arrow-white.svg");
   z-index: 1;
   transition: opacity 0.3s;
 }
 
 .drop-down-arrow .arrow-icon::after {
-  content: "";
   background-image: url("./images/arrow-black.svg");
   opacity: 0;
   visibility: hidden;
