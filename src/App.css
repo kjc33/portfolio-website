@@ -571,7 +571,6 @@ h6 {
   background-color: transparent;
   padding: 10px;
   border-radius: 50%;
-  transition: background-color 0.3s, border 0.3s;
 }
 
 .drop-down-arrow .arrow-icon:hover {
