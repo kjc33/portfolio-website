@@ -611,7 +611,6 @@ h6 {
 .drop-down-arrow .arrow-icon:hover {
   background-color: #22e52e;
   border-color: #22e52e;
-  content: url("./images/arrow-black.svg");
 }
 
 .drop-down-arrow a {
