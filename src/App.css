@@ -600,7 +600,7 @@ h6 {
   transition: opacity 0.3s, visibility 0.3s, background-color 0.3s, border-color 0.3s;
 }
 
-/* Drop Down Button Hover */
+/* Drop Down Button Hover State */
 
 .drop-down-arrow .arrow-icon:hover::before {
   opacity: 0;
@@ -608,15 +608,15 @@ h6 {
 }
 
 .drop-down-arrow .arrow-icon:hover::after {
+  background-image: url("./images/arrow-black.svg");
   opacity: 1;
   visibility: visible;
-  filter: invert(1);
 }
 
 .drop-down-arrow .arrow-icon:hover {
   background-color: #22e52e;
   border-color: #22e52e;
- }
+}
 
 .drop-down-arrow a {
   border: none;
