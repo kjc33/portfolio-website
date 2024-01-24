@@ -8,11 +8,15 @@ export default function Skills({ primaryH2 }) {
     {
       text: (
         <>
-          Certified{" "}
-          <a href="https://verify.w3schools.com/1O963J2W5L" target="_blank" rel="noreferrer">
-            Front-end Developer
+          Certified in{" "}
+          <a href="https://verify.w3schools.com/1OH49UNPGF" target="_blank" rel="noreferrer">
+            React
           </a>
-          , including{" "}
+          {" and"}
+          <a href="https://verify.w3schools.com/1O963J2W5L" target="_blank" rel="noreferrer">
+            Front-end Development
+          </a>
+          {"("}
           <a href="https://verify.w3schools.com/1O5HIAQZ4E" target="_blank" rel="noreferrer">
             HTML
           </a>
@@ -24,6 +28,7 @@ export default function Skills({ primaryH2 }) {
           <a href="https://verify.w3schools.com/1O963ITIZN" target="_blank" rel="noreferrer">
             JavaScript
           </a>
+          {")"}
         </>
       ),
     },
