@@ -11,12 +11,12 @@ export default function Skills({ primaryH2 }) {
           Certified in{" "}
           <a href="https://verify.w3schools.com/1OH49UNPGF" target="_blank" rel="noreferrer">
             React
-          </a>
-          {" "}and{" "}
+          </a>{" "}
+          and{" "}
           <a href="https://verify.w3schools.com/1O963J2W5L" target="_blank" rel="noreferrer">
             Front-end Development
-          </a>
-          {" "}{"("}
+          </a>{" "}
+          {"("}
           <a href="https://verify.w3schools.com/1O5HIAQZ4E" target="_blank" rel="noreferrer">
             HTML
           </a>
@@ -35,9 +35,10 @@ export default function Skills({ primaryH2 }) {
     { text: "Express, Node.js, and PostgreSQL" },
     { text: "WordPress and Visual Page Builders (Elementor and WP Bakery)" },
     { text: "Bash / Linux Terminal" },
+    { text: "Git / GitHub Version Control" },
   ];
 
-  const column2Skills = [{ text: "Git / GitHub Version Control" }, { text: "FTP, cPanel, SMTP, and DNS" }, { text: "Photoshop, Illustrator, Sketch, and Figma" }, { text: "Google Analytics, Search Console, and Tag Manager" }];
+  const column2Skills = [{ text: "FTP, cPanel, SMTP, and DNS" }, { text: "Photoshop, Illustrator, Sketch, and Figma" }, { text: "Google Analytics, Search Console, and Tag Manager" }];
 
   return (
     <section className="skills no-bottom-padding" id="skills">
@@ -45,7 +46,7 @@ export default function Skills({ primaryH2 }) {
         <div className="heading-with-cta">
           <h2 className="primary-h2 white">{primaryH2}</h2>
           <div className="arrow-btn">
-            <ArrowButton href="./docs/kyle-chin-resume.pdf" download="kyle-chin-resume.pdf" buttonLabel="View Résumé" />
+            <ArrowButton href="./docs/kyle-chin-résumé.pdf" download="kyle-chin-resume.pdf" buttonLabel="View Résumé" />
           </div>
         </div>
         <div className="skills-list flex-row large-gap">
