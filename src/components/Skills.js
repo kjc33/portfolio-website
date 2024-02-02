@@ -46,7 +46,7 @@ export default function Skills({ primaryH2 }) {
         <div className="heading-with-cta">
           <h2 className="primary-h2 white">{primaryH2}</h2>
           <div className="arrow-btn">
-            <ArrowButton href="./docs/kyle-chin-résumé.pdf" download="kyle-chin-resume.pdf" buttonLabel="View Résumé" />
+            <ArrowButton href="./docs/kyle-chin-resume.pdf" download="kyle-chin-resume.pdf" buttonLabel="View Résumé" />
           </div>
         </div>
         <div className="skills-list flex-row large-gap">
