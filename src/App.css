@@ -723,6 +723,11 @@ h6 {
   padding-bottom: 0;
 }
 
+.skills-column-1,
+.skills-column-2 {
+  flex: 1;
+}
+
 /* Statistics */
 
 .hexagon-divider .inner-container {
