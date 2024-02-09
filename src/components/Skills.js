@@ -35,10 +35,9 @@ export default function Skills({ primaryH2 }) {
     { text: "Express.js, Sequelize, Node.js, and PostgreSQL" },
     { text: "RESTful APIs and  JSON Web Tokens" },
     { text: "WordPress and Visual Page Builders (Elementor and WP Bakery)" },
-    { text: "Bash / Linux Terminal" },
   ];
 
-  const column2Skills = [{ text: "Git / GitHub Version Control" }, { text: "FTP, cPanel, SMTP, and DNS" }, { text: "Photoshop, Illustrator, Sketch, and Figma" }, { text: "Google Analytics, Search Console, and Tag Manager" }];
+  const column2Skills = [{ text: "Bash / Linux Terminal" }, { text: "Git / GitHub Version Control" }, { text: "FTP, cPanel, SMTP, and DNS" }, { text: "Photoshop, Illustrator, Sketch, and Figma" }, { text: "Google Analytics, Search Console, and Tag Manager" }];
 
   return (
     <section className="skills no-bottom-padding" id="skills">
