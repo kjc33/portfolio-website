@@ -377,10 +377,6 @@ footer,
   display: grid;
 }
 
-.skills-list {
-  flex-wrap: wrap;
-}
-
 .small-gap {
   gap: 30px;
 }
