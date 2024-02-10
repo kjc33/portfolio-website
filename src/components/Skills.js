@@ -48,7 +48,7 @@ export default function Skills({ primaryH2 }) {
             <ArrowButton href="./docs/kyle-chin-resume.pdf" download="kyle-chin-resume.pdf" buttonLabel="View Résumé" />
           </div>
         </div>
-        <div className="skills-list flex-row large-gap">
+        <div className="skills-list flex-column large-gap">
           <div className="skills-column-1">
             <SkillList items={column1Skills} />
           </div>

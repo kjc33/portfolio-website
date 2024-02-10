@@ -1210,6 +1210,9 @@ input[type="file"] {
     font-size: 2.5rem;
   }
   /* Skills List */
+  .skills-list {
+    flex-direction: row;
+  }
   .skills-list .custom-list li,
   .large-text p {
     font-size: 1.2rem;
@@ -1389,7 +1392,10 @@ input[type="file"] {
   .primary-h2 {
     font-size: 3.5rem;
   }
-  /* Skills - Heading with CTA */
+  /* Skills */
+  .skills-list {
+    flex-direction: column;
+  }
   .skills .primary-h2 {
     padding-bottom: 0;
   }
@@ -1604,6 +1610,9 @@ input[type="file"] {
     padding: 150px 50px 0 50px;
   }
   /* Skills List */
+  .skills-list {
+    flex-direction: row;
+  }
   .skills-list .custom-list li,
   .large-text p {
     font-size: 1.5rem;
