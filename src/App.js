@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -14,11 +14,11 @@ export default function App() {
       <Router>
         <main>
           <Header />
-          <Switch>
+          <Routes>
             <Route exact path="/" component={Home} />
             <Route path="/thank-you" component={ThankYou} />
             <Route path="*" component={NotFound} />
-          </Switch>
+          </Routes>
           <Footer />
         </main>
       </Router>
