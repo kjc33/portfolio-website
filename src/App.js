@@ -15,9 +15,9 @@ export default function App() {
         <main>
           <Header />
           <Routes>
-            <Route exact path="/" component={Home} />
-            <Route path="/thank-you" component={ThankYou} />
-            <Route path="*" component={NotFound} />
+            <Route exact path="/" element={<Home />} />
+            <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="*" element={<ThankYou />} />
           </Routes>
           <Footer />
         </main>
