@@ -8,10 +8,10 @@ import greenHexagon from "../images/hexagon-green.svg";
 
 export default function Footer() {
   const navItems = [
-    { href: "/#about", navLabel: "About" },
-    { href: "/#skills", navLabel: "Skills" },
-    { href: "/#work", navLabel: "Work" },
-    { href: "/#contact", navLabel: "Hire Me" },
+    { to: "/#about", navLabel: "About" },
+    { to: "/#skills", navLabel: "Skills" },
+    { to: "/#work", navLabel: "Work" },
+    { to: "/#contact", navLabel: "Hire Me" },
   ];
 
   const copyrightDate = new Date().getFullYear();

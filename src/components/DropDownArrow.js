@@ -1,11 +1,12 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 
 export default function DropDownArrow({ href }) {
-  return (
+ return (
     <div className="drop-down-arrow">
-      <a href={href}>
+      <HashLink to={href}>
         <div className="arrow-icon"></div>
-      </a>
+      </HashLink>
     </div>
-  );
+ );
 }

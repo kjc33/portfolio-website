@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 
 export default function MobileNavList({ navClass, navId, ulClass, liClass, navItems, active, onLinkClick }) {
   const mobileClass = active ? "active" : "inactive";
@@ -14,9 +15,9 @@ export default function MobileNavList({ navClass, navId, ulClass, liClass, navIt
       <ul className={ulClass}>
         {navItems.map((item, index) => (
           <li key={index} className={liClass}>
-            <a href={item.href} onClick={handleLinkClick}>
+            <HashLink smooth to={item.to} onClick={handleLinkClick}>
               {item.navLabel}
-            </a>
+            </HashLink>
           </li>
         ))}
       </ul>

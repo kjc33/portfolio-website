@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 
 export default function PrimaryNavList({ navClass, navId, ulClass, liClass, navItems }) {
   return (
@@ -6,7 +7,9 @@ export default function PrimaryNavList({ navClass, navId, ulClass, liClass, navI
       <ul className={ulClass}>
         {navItems.map((item, index) => (
           <li key={index} className={liClass}>
-            <a href={item.href}>{item.navLabel}</a>
+            <HashLink smooth to={item.to}>
+              {item.navLabel}
+            </HashLink>
           </li>
         ))}
       </ul>

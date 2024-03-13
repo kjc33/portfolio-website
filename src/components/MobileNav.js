@@ -3,10 +3,10 @@ import MobileNavList from "./MobileNavList";
 
 export default function MobileNav() {
   const navItems = [
-    { href: "/#about", navLabel: "About" },
-    { href: "/#skills", navLabel: "Skills" },
-    { href: "/#work", navLabel: "Work" },
-    { href: "/#contact", navLabel: "Hire Me" },
+    { to: "/#about", navLabel: "About" },
+    { to: "/#skills", navLabel: "Skills" },
+    { to: "/#work", navLabel: "Work" },
+    { to: "/#contact", navLabel: "Hire Me" },
   ];
 
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
@@ -31,7 +31,8 @@ export default function MobileNav() {
         <div className="bottom-bar"></div>
       </div>
       <div className="mobile-menu-nav-wrapper" id="mobileMenuNav">
-        <MobileNavList navClass="mobile-menu-nav-items" navId="mobileMenuNavItems" ulClass="mobile-menu-nav-list-items" liClass="nav-item" navItems={navItems} active={mobileNavVisible} onLinkClick={handleLinkClick} />
+        <MobileNavList 
+        navClass="mobile-menu-nav-items" navId="mobileMenuNavItems" ulClass="mobile-menu-nav-list-items" liClass="nav-item" navItems={navItems} active={mobileNavVisible} onLinkClick={handleLinkClick} />
         <div className={`mobile-close-btn ${mobileNavVisible ? "visible" : "hidden"}`}>
           <button aria-label="Mobile Menu Close Button" className="close-btn" id="closeBtn" onClick={closeMobileMenu}>
             <i className="fa-solid fa-xmark"></i>
