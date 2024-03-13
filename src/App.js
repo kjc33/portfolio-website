@@ -15,8 +15,8 @@ export default function App() {
         <main>
           <Header />
           <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/thank-you" element={<ThankYou />} />
+            <Route exact path="/" element={<Home />} />``
+            <Route path="/thank-you/" element={<ThankYou />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
