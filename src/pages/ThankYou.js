@@ -9,7 +9,7 @@ function ThankYou() {
         <div className="underline-link">
           <p>Thank you for contacting me. Please allow 24-48 hours for a response. I look forward to connecting with you soon.</p>
         </div>
-        <PrimaryButton url="/" label="Homepage" />
+        <PrimaryButton url="/" label="Home" />
       </div>
     </section>
   );
