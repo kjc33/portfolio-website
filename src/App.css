@@ -434,12 +434,12 @@ footer,
 p,
 li {
   font-size: 1rem;
+  line-height: 1.5em;
   letter-spacing: 2px;
 }
 
 .green-accent {
   color: #22e52e;
-  line-height: 1.5em;
 }
 
 .uppercase {
