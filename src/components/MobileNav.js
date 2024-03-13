@@ -3,10 +3,10 @@ import MobileNavList from "./MobileNavList";
 
 export default function MobileNav() {
   const navItems = [
-    { href: "www.kylejohnchin.com/#about", navLabel: "About" },
-    { href: "www.kylejohnchin.com/#skills", navLabel: "Skills" },
-    { href: "www.kylejohnchin.com/#work", navLabel: "Work" },
-    { href: "www.kylejohnchin.com/#contact", navLabel: "Hire Me" },
+    { href: "/#about", navLabel: "About" },
+    { href: "/#skills", navLabel: "Skills" },
+    { href: "/#work", navLabel: "Work" },
+    { href: "/#contact", navLabel: "Hire Me" },
   ];
 
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
