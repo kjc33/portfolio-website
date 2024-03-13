@@ -4,7 +4,7 @@ import PrimaryButton from "../components/PrimaryButton";
 function ThankYou() {
   return (
     <section className="thank-you">
-      <div className="inner-container x-small-width">
+      <div className="inner-container flex-column small-gap x-small-width">
         <h1>Thank You</h1>
         <p>Thank you for contacting me. Please allow 24-48 hours for a response. I look forward to connecting with you soon.</p>
         <PrimaryButton url="/" label="Homepage" />
