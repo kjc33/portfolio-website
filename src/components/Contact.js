@@ -1,6 +1,6 @@
 import React from "react";
 
-import ContactForm from "./Form";
+import ContactForm from "./ContactForm";
 
 export default function Contact({ primaryH2, description }) {
   return (

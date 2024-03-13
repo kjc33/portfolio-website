@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Form() {
+export default function ContactForm() {
   return (
     <div className="form-wrapper small-gap">
       <form action="thank-you.html" method="post" className="contact-form display-grid" id="contact-form">
