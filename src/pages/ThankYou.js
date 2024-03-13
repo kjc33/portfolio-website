@@ -6,7 +6,7 @@ function ThankYou() {
     <section className="thank-you">
       <div className="inner-container flex-column small-gap x-small-width">
         <h1 className="primary-h1 white">Thank You</h1>
-        <div className="large-text underline-link">
+        <div className="underline-link">
           <p>Thank you for contacting me. Please allow 24-48 hours for a response. I look forward to connecting with you soon.</p>
         </div>
         <PrimaryButton url="/" label="Homepage" />
