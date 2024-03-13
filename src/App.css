@@ -456,6 +456,10 @@ h6 {
   text-transform: uppercase;
 }
 
+.primary-h1 {
+  font-size: 1.75rem;
+}
+
 .primary-h2 {
   font-size: 1.5rem;
   padding-bottom: 30px;
@@ -1100,6 +1104,9 @@ input[type="file"] {
     width: 60px;
     height: 60px;
   }
+  .primary-h1 {
+    font-size: 2.25rem;
+  }
   .primary-h2,
   .job-card .percentage {
     font-size: 2rem;
@@ -1202,6 +1209,10 @@ input[type="file"] {
   .outline-text-large {
     font-size: 3rem;
   }
+  /* Primary H1 */
+  .primary-h1 {
+    font-size: 2.75rem;
+  }
   /* Primary H2 */
   .primary-h2 {
     font-size: 2.5rem;
@@ -1263,6 +1274,9 @@ input[type="file"] {
   /* Outline Heading */
   .outline-heading-large {
     font-size: 4rem;
+  }
+  .primary-h1 {
+    font-size: 3.25rem;
   }
   .primary-h2 {
     font-size: 3rem;
@@ -1386,6 +1400,9 @@ input[type="file"] {
   .outline-heading-large {
     font-size: 5rem;
   }
+  .primary-h1 {
+    font-size: 3.75rem;
+  }
   .primary-h2 {
     font-size: 3.5rem;
   }
@@ -1479,6 +1496,9 @@ input[type="file"] {
   .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a,
   .outline-heading-large {
     font-size: 6rem;
+  }
+  .primary-h1 {
+    font-size: 4.25rem;
   }
   .primary-h2 {
     font-size: 4rem;
@@ -1594,6 +1614,9 @@ input[type="file"] {
   /* Outline Heading */
   .outline-heading-large {
     font-size: 7rem;
+  }
+  .primary-h1 {
+    font-size: 4.75rem;
   }
   .primary-h2 {
     font-size: 4.5rem;
