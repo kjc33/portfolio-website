@@ -14,7 +14,7 @@ export default function Header() {
         <SiteLogo headshot={headshot} siteName="Kyle Chin" alt="Kyle Chin Headshot" width="80" height="80" />
         <PrimaryNav />
         <MobileNav />
-        <PrimaryButton url="#contact" label="Hire Me" />
+        <PrimaryButton url="www.kylejohnchin.com/#contact" label="Hire Me" />
       </div>
     </header>
   );
