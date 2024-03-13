@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 
 import PrimaryNavList from "./PrimaryNavList";
 import FooterLogo from "./FooterLogo";
@@ -32,7 +33,7 @@ export default function Footer() {
         <div className="bottom-half flex flex-column large-gap">
           <div className="accessibility-disclaimer underline-link">
             <p>
-              I make every effort to ensure my portfolio is accessible to everyone. If you are having trouble using any part of my website, please do not hesitate to <a href="#contact">contact</a> me, and I will do my best to address the issue. Thank you for your understanding.
+              I make every effort to ensure my portfolio is accessible to everyone. If you are having trouble using any part of my website, please do not hesitate to <HashLink smooth to="#contact">contact</HashLink> me, and I will do my best to address the issue. Thank you for your understanding.
             </p>
           </div>
           <div className="footer-signature">
