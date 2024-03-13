@@ -622,16 +622,16 @@ h6 {
 
 /* Large Body Text */
 
-.large-text p {
+.large-text {
   font-size: 1rem;
   line-height: 1.5em;
 }
 
-.large-text p:first-child:not(.select-work-description.large-text p, .contact .heading-and-description .large-text p) {
+.large-text:first-child:not(.select-work-description.large-text, .contact .heading-and-description .large-text) {
   margin-bottom: 30px;
 }
 
-.select-work-description.large-text p {
+.select-work-description.large-text {
   margin-bottom: 20px;
 }
 
@@ -1210,7 +1210,7 @@ input[type="file"] {
     flex-direction: row;
   }
   .skills-list .custom-list li,
-  .large-text p {
+  .large-text {
     font-size: 1.2rem;
   }
   .custom-list li:not(:last-child) {
@@ -1484,7 +1484,7 @@ input[type="file"] {
   }
   /* Skills List */
   .skills-list .custom-list li,
-  .large-text p {
+  .large-text {
     font-size: 1.4rem;
   }
   .custom-list li::before {
@@ -1504,7 +1504,7 @@ input[type="file"] {
   .select-work-content .select-work-heading h3 {
     font-size: 2.5rem;
   }
-  .select-work-description.large-text p {
+  .select-work-description.large-text {
     margin-bottom: 30px;
   }
   .select-work-content {
@@ -1610,7 +1610,7 @@ input[type="file"] {
     flex-direction: row;
   }
   .skills-list .custom-list li,
-  .large-text p {
+  .large-text {
     font-size: 1.5rem;
   }
   .custom-list li::before {
@@ -1714,7 +1714,7 @@ input[type="file"] {
     height: 17px;
   }
   .skills-list .custom-list li,
-  .large-text p {
+  .large-text {
     font-size: 1.75rem;
   }
   .skills .inner-container.large-gap {
