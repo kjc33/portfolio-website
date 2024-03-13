@@ -1,14 +1,14 @@
 import React from "react";
 
-import Hero from "./components/Hero";
-import About from "./components/About";
-import JobTitles from "./components/JobTitles";
-import Skills from "./components/Skills";
-import Statistics from "./components/Statistics";
-import Work from "./components/Work";
-import Quote from "./components/Quote";
-import Contact from "./components/Contact";
-import ImageSeparator from "./components/ImageSeparator";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import JobTitles from "../components/JobTitles";
+import Skills from "../components/Skills";
+import Statistics from "../components/Statistics";
+import Work from "../components/Work";
+import Quote from "../components/Quote";
+import Contact from "../components/Contact";
+import ImageSeparator from "../components/ImageSeparator";
 
 function Home() {
   return (
