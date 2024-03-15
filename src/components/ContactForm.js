@@ -25,7 +25,6 @@ export default function ContactForm() {
       } else if (!/^\S+@\S+\.\S+$/.test(values.email)) {
         errors.email = "Invalid email address";
       }
-      // Only validate phone number if it has been entered
       if (values.phone && !/^\d{10}$/.test(values.phone)) {
         errors.phone = "Invalid phone number";
       }
@@ -39,22 +38,22 @@ export default function ContactForm() {
       <Formik initialValues={{ first_name: "", last_name: "", email: "", phone: "", website: "", message: "" }} validate={validate} onSubmit={handleSubmit}>
         {({ isSubmitting }) => (
           <Form className="contact-form display-grid" id="contact-form">
-            <div className={"field-wrapper first-name display-grid" + (submitted && validationErrors.first_name ? " required error" : "")}>
+            <div className={"field-wrapper first-name display-grid" + (submitted && validationErrors.first_name ? " error" : "")}>
               <label htmlFor="first_name">First Name</label>
               <Field type="text" name="first_name" id="first_name" placeholder="First Name" autoComplete="on" />
               <ErrorMessage name="first_name" component="div" className="error-message" />
             </div>
-            <div className={"field-wrapper last-name display-grid" + (submitted && validationErrors.last_name ? " required error" : "")}>
+            <div className={"field-wrapper last-name display-grid" + (submitted && validationErrors.last_name ? " error" : "")}>
               <label htmlFor="last_name">Last Name</label>
               <Field type="text" name="last_name" id="last_name" placeholder="Last Name" autoComplete="on" />
               <ErrorMessage name="last_name" component="div" className="error-message" />
             </div>
-            <div className={"field-wrapper email display-grid" + (submitted && validationErrors.email ? " required error" : "")}>
+            <div className={"field-wrapper email display-grid" + (submitted && validationErrors.email ? " error" : "")}>
               <label htmlFor="email">Email</label>
               <Field type="email" name="email" id="email" placeholder="Email" autoComplete="on" />
               <ErrorMessage name="email" component="div" className="error-message" />
             </div>
-            <div className={"field-wrapper phone display-grid" + (submitted && validationErrors.phone ? " required error" : "")}>
+            <div className={"field-wrapper phone display-grid" + (submitted && validationErrors.phone ? " error" : "")}>
               <label htmlFor="phone">Phone</label>
               <Field type="tel" name="phone" id="phone" placeholder="Phone" autoComplete="on" />
               <ErrorMessage name="phone" component="div" className="error-message" />
