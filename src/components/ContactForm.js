@@ -28,6 +28,9 @@ export default function ContactForm() {
       if (values.phone && !/^\d{10}$/.test(values.phone)) {
         errors.phone = "Invalid phone number";
       }
+      if (values.website && !/^(https?:\/\/)?(www\.)?[\w-]+(\.[\w-]+)+([/?].*)?$/.test(values.website)) {
+        errors.website = "Invalid website URL";
+      }
     }
     setValidationErrors(errors);
     return errors;
@@ -35,8 +38,19 @@ export default function ContactForm() {
 
   return (
     <div className="form-wrapper small-gap">
-      <Formik initialValues={{ first_name: "", last_name: "", email: "", phone: "", website: "", message: "" }} validate={validate} onSubmit={handleSubmit}>
-        {({ isSubmitting }) => (
+      <Formik
+        initialValues={{
+          first_name: "",
+          last_name: "",
+          email: "",
+          phone: "",
+          website: "",
+          message: "",
+        }}
+        validate={validate}
+        onSubmit={handleSubmit}
+      >
+        {({ isSubmitting, values, setFieldValue }) => (
           <Form className="contact-form display-grid" id="contact-form">
             <div className={"field-wrapper first-name display-grid" + (submitted && validationErrors.first_name ? " error" : "")}>
               <label htmlFor="first_name">First Name</label>
@@ -55,7 +69,20 @@ export default function ContactForm() {
             </div>
             <div className={"field-wrapper phone display-grid" + (submitted && validationErrors.phone ? " error" : "")}>
               <label htmlFor="phone">Phone</label>
-              <Field type="tel" name="phone" id="phone" placeholder="Phone" autoComplete="on" />
+              <Field
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="Phone"
+                autoComplete="on"
+                onChange={(e) => {
+                  let value = e.target.value.replace(/[^\d]/g, "");
+                  value = value.slice(0, 10);
+                  const phoneNumber = value.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
+                  setFieldValue("phone", phoneNumber);
+                }}
+                value={values.phone}
+              />
               <ErrorMessage name="phone" component="div" className="error-message" />
             </div>
             <div className="field-wrapper website display-grid">
@@ -64,7 +91,7 @@ export default function ContactForm() {
             </div>
             <div className="field-wrapper message display-grid">
               <label htmlFor="message">Message</label>
-              <Field as="textarea" name="message" id="message" cols="30" rows="10" placeholder="Message" />
+              <Field as="textarea" name="message" id="message" cols="30" rows="10" placeholder="Tell me about your website goals, budget, and any other important project details." />
               <ErrorMessage name="message" component="div" className="error-message" />
             </div>
             <button type="submit" disabled={isSubmitting}>
