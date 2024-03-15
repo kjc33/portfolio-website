@@ -930,6 +930,10 @@ h6 {
 
 /* Contact Form*/
 
+.form-wrapper .field-wrapper label {
+  display: none;
+}
+
 .contact .inner-container {
   width: 100%;
   max-width: 775px;
@@ -942,6 +946,10 @@ h6 {
 
 .contact-form {
   gap: 20px;
+}
+
+input {
+  max-height: 60px;
 }
 
 input:focus:not(input[type="file"]):not(input[type="submit"]),
@@ -975,6 +983,17 @@ form [type="submit"] {
 form [type="submit"]:hover {
   background-color: #22e52e;
   color: #262626;
+}
+
+.form-wrapper .contact-form .field-wrapper.error input,
+.form-wrapper .contact-form .field-wrapper.error textarea {
+  border: solid 1px #22e52e;
+}
+
+.error-message {
+  color: #22e52e;
+  text-transform: uppercase;
+  padding-top: 10px;
 }
 
 input,
@@ -1311,9 +1330,8 @@ input[type="file"] {
     font-size: 2.25rem;
   }
   /* Contact Form */
-  form label,
-  form textarea,
-  form [type="url"] {
+  .field-wrapper.website,
+  .field-wrapper.message {
     grid-column-start: 1;
     grid-column-end: 3;
   }
