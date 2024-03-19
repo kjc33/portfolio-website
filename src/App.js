@@ -17,7 +17,6 @@ export default function App() {
           <Header />
           <Routes>
             <Route exact path="/" element={<Home />} />
-            ``
             <Route path="/thank-you/" element={<ThankYou />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
