@@ -15,7 +15,6 @@ export default function ContactForm() {
       })
       .catch((error) => {
         console.error("Error fetching environment variables:", error);
-        console.log("Response object:", error.response); 
       });
   }, []); // Run only once when the component mounts
 
