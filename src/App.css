@@ -1203,7 +1203,7 @@ input[type="file"] {
   /* Contact Form */
   form [type="submit"] {
     width: 100%;
-    max-width: 175px;
+    max-width: 200px;
   }
 }
 
