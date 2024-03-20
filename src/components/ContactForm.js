@@ -89,7 +89,7 @@ export default function ContactForm() {
             </div>
             <div className={"field-wrapper message display-grid" + (touched.message && errors.message ? " error" : "")}>
               <label htmlFor="message">Message</label>
-              <Field as="textarea" name="message" id="message" placeholder="Message" autoComplete="on" />
+              <Field as="textarea" name="message" id="message" placeholder="Message" cols="30" rows="10" autoComplete="on" />
               <ErrorMessage name="message" component="div" className="error-message" />
             </div>
             <div className="button-wrapper">
