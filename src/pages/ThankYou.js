@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PrimaryButton from "../components/PrimaryButton";
 
 function ThankYou() {
+  // Scroll to the top when the component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="thank-you">
       <div className="inner-container flex-column small-gap x-small-width">
