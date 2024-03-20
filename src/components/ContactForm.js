@@ -92,8 +92,8 @@ export default function ContactForm() {
               <Field as="textarea" name="message" id="message" placeholder="Message" cols="30" rows="10" autoComplete="on" />
               <ErrorMessage name="message" component="div" className="error-message" />
             </div>
-            <div className="button-wrapper">
-              <button type="submit" disabled={isSubmitting} className="submit-button flex align-center">
+            <div className="button-wrapper flex align-center">
+              <button type="submit" disabled={isSubmitting} className="submit-button">
                 {isSubmitting ? "Submitting..." : "Submit"}
               </button>
               {isSubmitting && <span className="spinner"></span>}
