@@ -1,72 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [validationErrors, setValidationErrors] = useState({});
-  const [apiEndpoint, setApiEndpoint] = useState(null);
+  const navigate = useNavigate(); // Initialize useNavigate
 
-  useEffect(() => {
-    fetch("/api/env")
-      .then((response) => response.json())
-      .then((data) => {
-        const { CONTACT_FORM_ROUTES } = data;
-        setApiEndpoint(CONTACT_FORM_ROUTES);
-      })
-      .catch((error) => {
-        console.error("Error fetching environment variables:", error);
-      });
-  }, []); // Run only once when the component mounts
-
-  const handleSubmit = (values, { setSubmitting }) => {
-    console.log("Form values:", values);
-    if (!apiEndpoint) {
-      console.error("API endpoint not available");
-      return;
-    }
-    fetch(apiEndpoint, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(values),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
-        // Redirect to the "Thank You" page or handle success
-        setSubmitted(true);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        // Handle error
-      })
-      .finally(() => setSubmitting(false));
-  };
-
-  const validate = (values) => {
-    const errors = {};
-    if (!values.first_name) {
-      errors.first_name = "First name is required";
-    }
-    if (!values.last_name) {
-      errors.last_name = "Last name is required";
-    }
-    if (!values.email) {
-      errors.email = "Email is required";
-    } else if (!/^\S+@\S+\.\S+$/.test(values.email)) {
-      errors.email = "Invalid email address";
-    }
-    if (values.phone && !/^\(\d{3}\) \d{3}-\d{4}$/.test(values.phone)) {
-      errors.phone = "Invalid phone number";
-    }
-    if (values.website && !/^(https?:\/\/)?(www\.)?[\w-]+(\.[\w-]+)+([/?].*)?$/.test(values.website)) {
-      errors.website = "Invalid website URL";
-    }
-    console.log("Validation errors:", errors);
-    setValidationErrors(errors);
-    return errors;
-  };
+  const API_URL = process.env.REACT_APP_API_URL;
 
   return (
     <div className="form-wrapper small-gap">
@@ -79,8 +20,49 @@ export default function ContactForm() {
           website: "",
           message: "",
         }}
-        validate={validate}
-        onSubmit={handleSubmit}
+        validate={values => {
+          const errors = {};
+          if (!values.first_name) {
+            errors.first_name = "First name is required";
+          }
+          if (!values.last_name) {
+            errors.last_name = "Last name is required";
+          }
+          if (!values.email) {
+            errors.email = "Email is required";
+          } else if (!/^\S+@\S+\.\S+$/.test(values.email)) {
+            errors.email = "Invalid email address";
+          }
+          if (values.website && !/^(https?:\/\/)?(www\.)?[\w-]+(\.[\w-]+)+([/?].*)?$/.test(values.website)) {
+            errors.website = "Invalid website URL";
+          }
+          return errors;
+        }}
+
+        onSubmit={(values, { setSubmitting, resetForm, setErrors }) => {
+          fetch(`${API_URL}/api/contact-form`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(values),
+          })
+            .then(response => {
+              if (!response.ok) throw new Error('Network response was not ok');
+              return response.json();
+            })
+            .then(data => {
+              console.log("Success:", data);
+              setSubmitting(false);
+              resetForm();
+              navigate('/thank-you'); // Redirect on success
+            })
+            .catch(error => {
+              console.error("Error:", error);
+              setSubmitting(false);
+              setErrors({ submit: "There was an error submitting the form. Please try again later." });
+            });
+        }}
       >
         {({ isSubmitting }) => (
           <Form className="contact-form display-grid" id="contact-form">
