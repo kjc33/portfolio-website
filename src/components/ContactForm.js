@@ -17,7 +17,7 @@ export default function ContactForm() {
           website: "",
           message: "",
         }}
-        validate={values => {
+        validate={(values) => {
           const errors = {};
           if (!values.first_name) {
             errors.first_name = "First name is required";
@@ -43,17 +43,17 @@ export default function ContactForm() {
             },
             body: JSON.stringify(values),
           })
-            .then(response => {
-              if (!response.ok) throw new Error('Network response was not ok');
+            .then((response) => {
+              if (!response.ok) throw new Error("Network response was not ok");
               return response.json();
             })
-            .then(data => {
+            .then((data) => {
               console.log("Success:", data);
               setSubmitting(false);
               resetForm();
-              navigate('/thank-you'); // Redirect on success
+              navigate("/thank-you"); // Redirect on success
             })
-            .catch(error => {
+            .catch((error) => {
               console.error("Error:", error);
               setSubmitting(false);
               setErrors({ submit: "There was an error submitting the form. Please try again later." });
@@ -93,12 +93,10 @@ export default function ContactForm() {
               <ErrorMessage name="message" component="div" className="error-message" />
             </div>
             <div className="button-wrapper">
-              <button type="submit" disabled={isSubmitting}>
-                Submit
-                {isSubmitting && (
-                  <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                )}
+              <button type="submit" disabled={isSubmitting} className="submit-button flex align-center">
+                {isSubmitting ? "Submitting..." : "Submit"}
               </button>
+              {isSubmitting && <span className="spinner"></span>}
             </div>
           </Form>
         )}
@@ -106,4 +104,3 @@ export default function ContactForm() {
     </div>
   );
 }
-
