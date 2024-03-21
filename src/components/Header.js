@@ -1,15 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+
 import SiteLogo from "./SiteLogo";
 import PrimaryNav from "./PrimaryNav";
 import MobileNav from "./MobileNav";
 import PrimaryButton from "./PrimaryButton";
+
 import headshot from "../images/kyle-chin-headshot.jpg";
 
 export default function Header() {
   const [scrollDirection, setScrollDirection] = useState(null);
   const [scrolledEnough, setScrolledEnough] = useState(false);
-  const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
-  const headerRef = useRef(null);
+  const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
 
   useEffect(() => {
     let lastScrollPosition = window.pageYOffset;
@@ -19,7 +20,7 @@ export default function Header() {
       if (!scrolledEnough && currentScrollPos > 200) {
         setScrolledEnough(true);
       }
-      if (scrolledEnough) {
+      if (scrolledEnough && !mobileMenuVisible) {
         if (currentScrollPos > lastScrollPosition) {
           setScrollDirection("scroll-down");
         } else {
@@ -30,7 +31,7 @@ export default function Header() {
     };
 
     const checkInitialScroll = () => {
-      if (window.pageYOffset > headerRef.current.clientHeight) {
+      if (window.pageYOffset > 0) {
         setScrolledEnough(true);
       }
     };
@@ -41,14 +42,14 @@ export default function Header() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [scrolledEnough]);
+  }, [scrolledEnough, mobileMenuVisible]);
 
   return (
-    <header ref={headerRef} className={`primary-header ${scrolledEnough ? scrollDirection : ""}`}>
-      <div className={`header-inner ${isMobileMenuActive ? "menu-active" : ""}`}>
+    <header className={`primary-header ${scrolledEnough && !mobileMenuVisible ? scrollDirection : ""}`}>
+      <div className="header-inner">
         <SiteLogo headshot={headshot} siteName="Kyle Chin" alt="Kyle Chin Headshot" width="80" height="80" />
         <PrimaryNav />
-        <MobileNav setIsMobileMenuActive={setIsMobileMenuActive} />
+        <MobileNav setMobileMenuVisible={setMobileMenuVisible} />
         <PrimaryButton url="/#contact" label="Hire Me" />
       </div>
     </header>
