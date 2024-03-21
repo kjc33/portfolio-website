@@ -170,7 +170,7 @@ html {
   height: 100vh;
   background-color: #22e52e;
   padding: 50px 30px;
-  transition: top 0.5s;
+  transition: transform 0.5s ease;
 }
 
 .mobile-menu-nav-wrapper .mobile-menu-nav-items .mobile-menu-nav-list-items {
