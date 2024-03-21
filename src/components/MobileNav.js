@@ -30,7 +30,6 @@ export default function MobileNav() {
         <div className="middle-bar"></div>
         <div className="bottom-bar"></div>
       </div>
-      {/* Conditionally render mobile menu wrapper based on mobileNavVisible state */}
       {mobileNavVisible && (
         <div className="mobile-menu-nav-wrapper" id="mobileMenuNav">
           <MobileNavList navClass="mobile-menu-nav-items" navId="mobileMenuNavItems" ulClass="mobile-menu-nav-list-items" liClass="nav-item" navItems={navItems} active={mobileNavVisible} onLinkClick={handleLinkClick} />

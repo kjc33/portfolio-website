@@ -25,7 +25,8 @@ html {
   z-index: 100;
 }
 
-.primary-header.scroll-up  {
+.primary-header.scroll-up,
+.primary-header .menu-active  {
   transform: translateY(0);
 }
 

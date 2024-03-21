@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useEffect, useRef } from "react";
 import SiteLogo from "./SiteLogo";
 import PrimaryNav from "./PrimaryNav";
 import MobileNav from "./MobileNav";
 import PrimaryButton from "./PrimaryButton";
-
 import headshot from "../images/kyle-chin-headshot.jpg";
 
 export default function Header() {
   const [scrollDirection, setScrollDirection] = useState(null);
   const [scrolledEnough, setScrolledEnough] = useState(false);
+  const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
+  const headerRef = useRef(null);
 
   useEffect(() => {
     let lastScrollPosition = window.pageYOffset;
@@ -30,7 +30,7 @@ export default function Header() {
     };
 
     const checkInitialScroll = () => {
-      if (window.pageYOffset > 111) {
+      if (window.pageYOffset > headerRef.current.clientHeight) {
         setScrolledEnough(true);
       }
     };
@@ -44,11 +44,11 @@ export default function Header() {
   }, [scrolledEnough]);
 
   return (
-    <header className={`primary-header ${scrolledEnough ? scrollDirection : ""}`}>
-      <div className="header-inner">
+    <header ref={headerRef} className={`primary-header ${scrolledEnough ? scrollDirection : ""}`}>
+      <div className={`header-inner ${isMobileMenuActive ? "menu-active" : ""}`}>
         <SiteLogo headshot={headshot} siteName="Kyle Chin" alt="Kyle Chin Headshot" width="80" height="80" />
         <PrimaryNav />
-        <MobileNav />
+        <MobileNav setIsMobileMenuActive={setIsMobileMenuActive} />
         <PrimaryButton url="/#contact" label="Hire Me" />
       </div>
     </header>
