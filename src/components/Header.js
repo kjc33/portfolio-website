@@ -8,7 +8,7 @@ import PrimaryButton from "./PrimaryButton";
 import headshot from "../images/kyle-chin-headshot.jpg";
 
 export default function Header() {
-  const [scrollDirection, setScrollDirection] = useState(null);
+  const [scrollDirection, setScrollDirection] = useState("scrolling-up");
 
   useEffect(() => {
     const handleScroll = () => {
