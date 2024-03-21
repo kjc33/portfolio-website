@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MobileNavList from "./MobileNavList";
 
-export default function MobileNav() {
+export default function MobileNav({ setMobileMenuVisible }) {
   const navItems = [
     { to: "/#about", navLabel: "About" },
     { to: "/#skills", navLabel: "Skills" },
@@ -21,6 +21,7 @@ export default function MobileNav() {
 
   const handleLinkClick = () => {
     closeMobileMenu();
+    setMobileMenuVisible(false);
   };
 
   return (
