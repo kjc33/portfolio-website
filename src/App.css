@@ -25,6 +25,10 @@ html {
   z-index: 100;
 }
 
+.primary-header.scroll-up  {
+  transform: translateY(0);
+}
+
 .primary-header.scroll-down {
   transform: translateY(-100%);
 }
