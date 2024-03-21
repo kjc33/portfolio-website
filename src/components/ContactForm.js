@@ -93,7 +93,7 @@ export default function ContactForm() {
               <ErrorMessage name="message" component="div" className="error-message" />
             </div>
             <div className="button-wrapper flex align-center">
-              <button type="submit" disabled={isSubmitting} className="submit-button">
+              <button type="submit" disabled={isSubmitting} className={`submit-button ${isSubmitting ? "submitting" : ""}`}>
                 {isSubmitting ? "Submitting..." : "Submit"}
               </button>
               {isSubmitting && <span className="spinner"></span>}

@@ -1209,7 +1209,11 @@ input[type="file"] {
   /* Contact Form */
   form [type="submit"] {
     width: 100%;
-    max-width: 12.1875em;
+    max-width: 175px;
+  }
+  form [type="submit"].submitting {
+    width: 100%;
+    max-width: 200px;
   }
 }
 
