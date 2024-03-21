@@ -11,13 +11,16 @@ export default function Header() {
   const [scrollDirection, setScrollDirection] = useState(null);
 
   useEffect(() => {
+    let lastScrollPosition = window.pageYOffset;
+
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-      if (currentScrollPos > 0) {
-        setScrollDirection(currentScrollPos > (window.scrollY || window.pageYOffset) ? "scroll-up" : "scroll-down");
+      if (currentScrollPos > lastScrollPosition) {
+        setScrollDirection("scroll-down");
       } else {
         setScrollDirection("scroll-up");
       }
+      lastScrollPosition = currentScrollPos;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -28,7 +31,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`primary-header ${scrollDirection !== null ? scrollDirection : ""}`}>
+    <header className={`primary-header ${scrollDirection}`}>
       <div className="header-inner">
         <SiteLogo headshot={headshot} siteName="Kyle Chin" alt="Kyle Chin Headshot" width="80" height="80" />
         <PrimaryNav />
