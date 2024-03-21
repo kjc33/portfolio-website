@@ -29,7 +29,14 @@ export default function Header() {
       lastScrollPosition = currentScrollPos;
     };
 
+    const checkInitialScroll = () => {
+      if (window.pageYOffset > 111) {
+        setScrolledEnough(true);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
+    checkInitialScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
