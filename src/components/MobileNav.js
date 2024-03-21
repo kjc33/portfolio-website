@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MobileNavList from "./MobileNavList";
 
 export default function MobileNav({ setMobileMenuVisible }) {
@@ -10,6 +10,35 @@ export default function MobileNav({ setMobileMenuVisible }) {
   ];
 
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup function to remove the event listener
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    // Toggle the CSS class based on the mobile menu visibility
+    if (mobileNavVisible) {
+      document.body.classList.remove("enable-scroll");
+      document.body.classList.add("disable-scroll");
+    } else {
+      document.body.classList.remove("disable-scroll");
+      document.body.classList.add("enable-scroll");
+    }
+
+    // Cleanup function to reset the CSS class
+    return () => {
+      document.body.classList.remove("disable-scroll", "enable-scroll");
+      document.body.classList.add("enable-scroll");
+    };
+  }, [mobileNavVisible]);
 
   const toggleMobileMenu = () => {
     setMobileNavVisible((prevVisible) => !prevVisible);
@@ -24,7 +53,8 @@ export default function MobileNav({ setMobileMenuVisible }) {
     setMobileMenuVisible(false);
   };
 
-  return (
+  // Only render the mobile menu wrapper if the screen is mobile-sized
+  return isMobile ? (
     <div className="mobile-menu-wrapper">
       <div className="mobile-menu-burger" id="mobileMenuBurger" onClick={toggleMobileMenu}>
         <div className="top-bar"></div>
@@ -33,7 +63,7 @@ export default function MobileNav({ setMobileMenuVisible }) {
       </div>
       {mobileNavVisible && (
         <div className="mobile-menu-nav-wrapper" id="mobileMenuNav">
-          <MobileNavList navClass="mobile-menu-nav-items" navId="mobileMenuNavItems" ulClass="mobile-menu-nav-list-items" liClass="nav-item" navItems={navItems} active={mobileNavVisible} onLinkClick={handleLinkClick} />
+          <MobileNavList navClass="mobile-menu-nav-items" navId="mobileMenuNavItems" ulClass="mobile-menu-nav-list-items" liClass="nav-item" navItems={navItems} onLinkClick={handleLinkClick} />
           <div className="mobile-close-btn">
             <button aria-label="Mobile Menu Close Button" className="close-btn" id="closeBtn" onClick={closeMobileMenu}>
               <i className="fa-solid fa-xmark"></i>
@@ -42,5 +72,5 @@ export default function MobileNav({ setMobileMenuVisible }) {
         </div>
       )}
     </div>
-  );
+  ) : null;
 }

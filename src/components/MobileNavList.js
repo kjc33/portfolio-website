@@ -1,8 +1,7 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
 
-export default function MobileNavList({ navClass, navId, ulClass, liClass, navItems, active, onLinkClick }) {
-  const mobileClass = active ? "active" : "inactive";
+export default function MobileNavList({ navClass, navId, ulClass, liClass, navItems, onLinkClick }) {
 
   const handleLinkClick = () => {
     if (onLinkClick && typeof onLinkClick === "function") {
@@ -11,7 +10,7 @@ export default function MobileNavList({ navClass, navId, ulClass, liClass, navIt
   };
 
   return (
-    <nav className={`${navClass} ${mobileClass}`} id={navId}>
+    <nav className={`${navClass}`} id={navId}>
       <ul className={ulClass}>
         {navItems.map((item, index) => (
           <li key={index} className={liClass}>
