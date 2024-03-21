@@ -44,8 +44,10 @@ export default function Header() {
     };
   }, [scrolledEnough, mobileMenuVisible]);
 
+  const headerClass = scrolledEnough && !mobileMenuVisible ? scrollDirection : "";
+
   return (
-    <header className={`primary-header ${scrolledEnough && !mobileMenuVisible ? scrollDirection : ""}`}>
+    <header className={`primary-header ${headerClass}`}>
       <div className="header-inner">
         <SiteLogo headshot={headshot} siteName="Kyle Chin" alt="Kyle Chin Headshot" width="80" height="80" />
         <PrimaryNav />
