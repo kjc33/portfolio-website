@@ -21,7 +21,7 @@ export default function MobileNav() {
 
   const handleLinkClick = () => {
     closeMobileMenu();
-  }
+  };
 
   return (
     <div className="mobile-menu-wrapper">
@@ -30,15 +30,17 @@ export default function MobileNav() {
         <div className="middle-bar"></div>
         <div className="bottom-bar"></div>
       </div>
-      <div className="mobile-menu-nav-wrapper" id="mobileMenuNav">
-        <MobileNavList 
-        navClass="mobile-menu-nav-items" navId="mobileMenuNavItems" ulClass="mobile-menu-nav-list-items" liClass="nav-item" navItems={navItems} active={mobileNavVisible} onLinkClick={handleLinkClick} />
-        <div className={`mobile-close-btn ${mobileNavVisible ? "visible" : "hidden"}`}>
-          <button aria-label="Mobile Menu Close Button" className="close-btn" id="closeBtn" onClick={closeMobileMenu}>
-            <i className="fa-solid fa-xmark"></i>
-          </button>
+      {/* Conditionally render mobile menu wrapper based on mobileNavVisible state */}
+      {mobileNavVisible && (
+        <div className="mobile-menu-nav-wrapper" id="mobileMenuNav">
+          <MobileNavList navClass="mobile-menu-nav-items" navId="mobileMenuNavItems" ulClass="mobile-menu-nav-list-items" liClass="nav-item" navItems={navItems} active={mobileNavVisible} onLinkClick={handleLinkClick} />
+          <div className="mobile-close-btn">
+            <button aria-label="Mobile Menu Close Button" className="close-btn" id="closeBtn" onClick={closeMobileMenu}>
+              <i className="fa-solid fa-xmark"></i>
+            </button>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
