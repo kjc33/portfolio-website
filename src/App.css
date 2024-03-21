@@ -154,7 +154,7 @@ html {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #22e52e;
   padding: 50px 30px;
   transition: top 0.5s;
