@@ -12,7 +12,7 @@ html {
 /* Header */
 
 .primary-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   display: flex;
   align-items: center;
@@ -20,7 +20,13 @@ html {
   min-height: 100px;
   background-color: #1f1f1f;
   border-bottom: solid 1px rgba(250, 250, 250, 0.2);
+  width: 100%;
+  transition: transform 0.5s ease;
   z-index: 100;
+}
+
+.primary-header.scroll-down {
+  transform: translateY(-100%);
 }
 
 .header-inner {
@@ -642,6 +648,12 @@ h6 {
   margin-bottom: 20px;
 }
 
+/* Hero */
+
+.hero {
+  margin-top: 100px;
+}
+
 /* Image Separator */
 
 .image-separator-right,
@@ -1256,6 +1268,10 @@ input[type="file"] {
   /* Primary H2 */
   .primary-h2 {
     font-size: 2.5rem;
+  }
+  /* Hero */
+  .hero {
+    margin-top: 111px;
   }
   /* Skills List */
   .skills-list {

@@ -16,7 +16,7 @@ export default function Header() {
 
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-      if (!scrolledEnough && currentScrollPos > 111) {
+      if (!scrolledEnough && currentScrollPos > 200) {
         setScrolledEnough(true);
       }
       if (scrolledEnough) {
