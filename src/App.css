@@ -36,11 +36,11 @@ html {
 
 .enable-scroll {
   overflow: auto;
- }
- 
- .disable-scroll {
+}
+
+.disable-scroll {
   overflow: hidden;
- }
+}
 
 .header-inner {
   display: flex;
@@ -659,7 +659,9 @@ h6 {
 
 /* Hero */
 
-.hero {
+.hero,
+.not-found-error,
+.thank-you {
   margin-top: 100px;
 }
 
@@ -1278,8 +1280,10 @@ input[type="file"] {
   .primary-h2 {
     font-size: 2.5rem;
   }
-  /* Hero */
-  .hero {
+  /* Top Margin Offset (for Header) */
+  .hero,
+  .not-found-error,
+  .thank-you {
     margin-top: 111px;
   }
   /* Skills List */
