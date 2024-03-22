@@ -1,3 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow: /thank-you/
+
+Sitemap: https://www.kylejohnchin.com/sitemap.xml
