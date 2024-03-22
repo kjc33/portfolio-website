@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const NotFound = () => {
+  // Scroll to the top when the component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="not-found-error">
       <div className="inner-container flex-column small-gap x-small-width">
