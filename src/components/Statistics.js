@@ -6,13 +6,40 @@ import greenBorderHexagon from "../images/hexagon-green-border.svg";
 import whiteHexagon from "../images/hexagon-white.svg";
 import blackHexagon from "../images/hexagon-black.svg";
 
+const CAREER_START_YEAR = 2013;
+
+function getYearsOfExperience() {
+  const currentYear = new Date().getFullYear();
+  return currentYear - CAREER_START_YEAR;
+}
+
 export default function Statistics() {
+  const yearsWorked = getYearsOfExperience();
+
   return (
     <div className="hexagon-divider no-bottom-padding">
       <div className="inner-container large-width flex-column flex-row-tablet large-gap">
-        <Statistic hexagonContainerClasses="hexagon-statistic-bg hexagon-green" imgSrc={greenBorderHexagon} alt="Green Border Hexagon" num="150+" description="Websites Built" />
-        <Statistic hexagonContainerClasses="hexagon-statistic-bg hexagon-white" imgSrc={whiteHexagon} alt="White Hexagon" num="11" description="Years of Experience" />
-        <Statistic hexagonContainerClasses="hexagon-statistic-bg hexagon-black" imgSrc={blackHexagon} alt="Black Hexagon" num="5" description="Developer Certifications" />
+        <Statistic
+          hexagonContainerClasses="hexagon-statistic-bg hexagon-green"
+          imgSrc={greenBorderHexagon}
+          alt="Green Border Hexagon"
+          num="150+"
+          description="Websites Built"
+        />
+        <Statistic
+          hexagonContainerClasses="hexagon-statistic-bg hexagon-white"
+          imgSrc={whiteHexagon}
+          alt="White Hexagon"
+          num={`${yearsWorked}`}
+          description="Years of Experience"
+        />
+        <Statistic
+          hexagonContainerClasses="hexagon-statistic-bg hexagon-black"
+          imgSrc={blackHexagon}
+          alt="Black Hexagon"
+          num="5"
+          description="Developer Certifications"
+        />
       </div>
     </div>
   );
