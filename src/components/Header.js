@@ -3,7 +3,7 @@ import SiteLogo from "./SiteLogo";
 import PrimaryNav from "./PrimaryNav";
 import MobileNav from "./MobileNav";
 import PrimaryButton from "./PrimaryButton";
-import headshot from "../images/kyle-chin-headshot.jpg";
+import headshot from "../images/kyle-chin-headshot.webp";
 
 export default function Header() {
   const [scrollDirection, setScrollDirection] = useState(null);
