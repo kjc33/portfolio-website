@@ -607,7 +607,9 @@ h6 {
 /* Drop Down Button Normal State */
 
 .drop-down-arrow .arrow-icon::before {
-  background-image: url("./images/arrow-white.svg");
+  -webkit-mask: url("./images/arrow-white.svg") no-repeat center / contain;
+  mask: url("./images/arrow-white.svg") no-repeat center / contain;
+  background-color: #ffffff;
   z-index: 1;
   transition: opacity 0.3s;
 }
@@ -627,7 +629,9 @@ h6 {
 }
 
 .drop-down-arrow .arrow-icon:hover::after {
-  background-image: url("./images/arrow-black.svg");
+  -webkit-mask: url("./images/arrow-black.svg") no-repeat center / contain;
+  mask: url("./images/arrow-black.svg") no-repeat center / contain;
+  background-color: #000000;
   opacity: 1;
   visibility: visible;
 }
