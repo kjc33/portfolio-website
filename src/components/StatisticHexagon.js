@@ -5,9 +5,10 @@ export default function StatisticHexagon({ hexagonContainerClasses, imgSrc, alt,
     <div className={hexagonContainerClasses}>
       <figure>
         <img src={imgSrc} alt={alt} />
-        <p className="hexagon-statistic-description">
-          <span className="statistic-number">{num}</span> {description}
-        </p>
+        <div className="hexagon-statistic">
+          <div className="statistic-number">{num}</div> 
+          <div className="statistic-description">{description}</div>
+        </div>
       </figure>
     </div>
   );

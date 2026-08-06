@@ -791,7 +791,7 @@ h6 {
   margin-bottom: 20px;
 }
 
-.hexagon-statistic-bg .hexagon-statistic-description {
+.hexagon-statistic-bg .hexagon-statistic {
   display: block;
   position: absolute;
   top: 50%;
@@ -805,8 +805,12 @@ h6 {
   z-index: 10;
 }
 
-.hexagon-statistic-bg.hexagon-white .hexagon-statistic-description {
+.hexagon-statistic-bg.hexagon-white .hexagon-statistic {
   color: #292929;
+}
+
+.hexagon-statistic-bg .hexagon-statistic .statistic-description {
+  line-height: 1.5em;
 }
 
 /* Job Cards */
@@ -1192,7 +1196,7 @@ input[type="file"] {
   .statistic-number {
     font-size: 2.5rem;
   }
-  .hexagon-statistic-bg .hexagon-statistic-description {
+  .hexagon-statistic-bg .hexagon-statistic {
     font-size: 0.875rem;
   }
   /* Select Work */
@@ -1328,7 +1332,7 @@ input[type="file"] {
     font-size: 3rem;
     margin-bottom: 30px;
   }
-  .hexagon-statistic-bg .hexagon-statistic-description {
+  .hexagon-statistic-bg .hexagon-statistic {
     font-size: 0.9rem;
   }
   /* Select Work & Quote*/
@@ -1383,7 +1387,7 @@ input[type="file"] {
     font-size: 4rem;
     margin-bottom: 30px;
   }
-  .hexagon-statistic-bg .hexagon-statistic-description {
+  .hexagon-statistic-bg .hexagon-statistic {
     font-size: 1rem;
   }
   /* Select Work */
@@ -1516,7 +1520,7 @@ input[type="file"] {
   .statistic-number {
     font-size: 4.5rem;
   }
-  .hexagon-statistic-bg .hexagon-statistic-description {
+  .hexagon-statistic-bg .hexagon-statistic {
     font-size: 1.25rem;
   }
   /* Select Work */
@@ -1639,7 +1643,7 @@ input[type="file"] {
   .statistic-number {
     font-size: 3.25rem;
   }
-  .hexagon-statistic-bg .hexagon-statistic-description {
+  .hexagon-statistic-bg .hexagon-statistic {
     font-size: 0.9rem;
   }
   /* Flex Row - Tablet */
@@ -1728,7 +1732,7 @@ input[type="file"] {
   .statistic-number {
     font-size: 3.75rem;
   }
-  .hexagon-statistic-bg .hexagon-statistic-description {
+  .hexagon-statistic-bg .hexagon-statistic {
     font-size: 0.875em;
   }
   /* Grid Layout - Tablet */
@@ -1828,7 +1832,7 @@ input[type="file"] {
   .statistic-number {
     font-size: 4rem;
   }
-  .hexagon-statistic-bg .hexagon-statistic-description {
+  .hexagon-statistic-bg .hexagon-statistic {
     font-size: 1rem;
   }
   /* Select Work */
