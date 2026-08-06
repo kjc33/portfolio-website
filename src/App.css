@@ -293,9 +293,9 @@ footer,
   position: absolute;
   top: 9px;
   left: 0;
-  background-image: url("./images/hexagon-white.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
+  -webkit-mask: url("./images/hexagon-white.svg") no-repeat center / contain;
+  mask: url("./images/hexagon-white.svg") no-repeat center / contain;
+  background-color: #ffffff;
   width: 15px;
   height: 15px;
   overflow: visible;
