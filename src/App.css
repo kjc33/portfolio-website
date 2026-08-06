@@ -586,6 +586,12 @@ h6 {
   margin-right: auto;
 }
 
+.drop-down-arrow a {
+  border: none;
+  padding: 0;
+  display: inline-block;
+}
+
 .drop-down-arrow .arrow-icon {
   position: relative;
   transform: rotate(90deg);
@@ -595,6 +601,8 @@ h6 {
   background-color: transparent;
   padding: 10px;
   border-radius: 50%;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  will-change: background-color, border-color;
 }
 
 .drop-down-arrow .arrow-icon::before,
@@ -607,48 +615,45 @@ h6 {
   height: 35px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
+  pointer-events: none;
+  backface-visibility: hidden;
 }
 
-/* Drop Down Button Normal State */
-
-.drop-down-arrow .arrow-icon::before {
+.drop-down-arrow .arrow-icon::before,
+.drop-down-arrow .arrow-icon::after {
   -webkit-mask: url("./images/arrow-white.svg") no-repeat center / contain;
   mask: url("./images/arrow-white.svg") no-repeat center / contain;
-  background-color: #ffffff;
-  z-index: 1;
-  transition: opacity 0.3s;
 }
 
+/* Normal State (White Arrow) */
+.drop-down-arrow .arrow-icon::before {
+  background-color: #ffffff;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+/* Hover State Overlay (Black Arrow) */
 .drop-down-arrow .arrow-icon::after {
-  opacity: 0;
-  visibility: hidden;
+  background-color: #000000;
   z-index: 2;
-  transition: opacity 0.3s, visibility 0.3s, background-color 0.3s, border-color 0.3s;
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 /* Drop Down Button Hover State */
-
-.drop-down-arrow .arrow-icon:hover::before {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.drop-down-arrow .arrow-icon:hover::after {
-  -webkit-mask: url("./images/arrow-black.svg") no-repeat center / contain;
-  mask: url("./images/arrow-black.svg") no-repeat center / contain;
-  background-color: #000000;
-  opacity: 1;
-  visibility: visible;
-}
 
 .drop-down-arrow .arrow-icon:hover {
   background-color: #22e52e;
   border-color: #22e52e;
 }
 
-.drop-down-arrow a {
-  border: none;
-  padding: 0;
+.drop-down-arrow .arrow-icon:hover::before {
+  opacity: 0;
+}
+
+.drop-down-arrow .arrow-icon:hover::after {
+  opacity: 1;
 }
 
 /* Large Body Text */
