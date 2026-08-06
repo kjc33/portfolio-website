@@ -9,14 +9,16 @@ export default function ImageSeparator({ containerNameClasses, photoAttributionC
             <p>
               Photo by{" "}
               <a href={imageUrl} target="_blank" rel="noreferrer">
-                {" "}
                 {photographer}
-              </a>{" "}
-              {conCat}{" "}
-              <a href={sourceUrl} target="_blank" rel="noreferrer">
-                {" "}
-                {imageSource}
               </a>
+              {sourceUrl && (
+                <>
+                  {" "}{conCat}{" "}
+                  <a href={sourceUrl} target="_blank" rel="noreferrer">
+                    {imageSource}
+                  </a>
+                </>
+              )}
             </p>
           </div>
         </div>
