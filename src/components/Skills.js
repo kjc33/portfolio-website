@@ -44,9 +44,7 @@ export default function Skills({ primaryH2 }) {
       <div className="inner-container large-width flex-row flex-column-mobile justify-space-between large-gap">
         <div className="heading-with-cta">
           <h2 className="primary-h2 white">{primaryH2}</h2>
-          <div className="arrow-btn">
             <ArrowButton href="./docs/kyle-chin-resume.pdf" download="kyle-chin-resume.pdf" buttonLabel="View Résumé" />
-          </div>
         </div>
         <div className="skills-list flex-column large-gap">
           <div className="skills-column-1">
