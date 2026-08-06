@@ -856,17 +856,14 @@ h6 {
   background-color: #22e52e;
 }
 
+.job-card:hover h3,
+.job-card:hover .pagination,
 .job-card:hover .percentage {
   color: #000000;
 }
 
-.job-card:hover h3,
-.job-card:hover .pagination {
-  color: #ffffff;
-}
-
 .job-card:hover h3 {
-  border-bottom: solid 1px #ffffff;
+  border-bottom: solid 1px #000000;
 }
 
 /* Select Work */
