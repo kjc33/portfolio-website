@@ -1385,7 +1385,6 @@ input[type="file"] {
   /* Statistics */
   .statistic-number {
     font-size: 4rem;
-    margin-bottom: 30px;
   }
   .hexagon-statistic-bg .hexagon-statistic {
     font-size: 1rem;
