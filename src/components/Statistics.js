@@ -6,12 +6,7 @@ import greenBorderHexagon from "../images/hexagon-green-border.svg";
 import whiteHexagon from "../images/hexagon-white.svg";
 import blackHexagon from "../images/hexagon-black.svg";
 
-const CAREER_START_YEAR = 2013;
-
-function getYearsOfExperience() {
-  const currentYear = new Date().getFullYear();
-  return currentYear - CAREER_START_YEAR;
-}
+import { getYearsOfExperience } from "../utils/getYearsOfExperience";
 
 export default function Statistics() {
   const yearsWorked = getYearsOfExperience();
