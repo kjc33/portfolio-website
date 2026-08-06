@@ -792,6 +792,7 @@ h6 {
 }
 
 .hexagon-statistic-bg .hexagon-statistic-description {
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
