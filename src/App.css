@@ -331,17 +331,22 @@ footer,
 }
 
 .arrow-btn::after {
-  content: url("./images/arrow-white.svg");
+  content: "";
+  display: inline-block;
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
+  transform: translateY(-50%);
   width: 25px;
   height: 20px;
-  transition: content 0.3s;
+  background-color: #ffffff;
+  -webkit-mask: url("./images/arrow-white.svg") no-repeat center / contain;
+  mask: url("./images/arrow-white.svg") no-repeat center / contain;
+  transition: background-color 0.3s;
 }
 
 .arrow-btn:hover::after {
-  content: url("./images/arrow-green.svg");
+  background-color: #22e52e;
 }
 
 .arrow-btn a {
@@ -1797,6 +1802,8 @@ input[type="file"] {
   }
   /* Skills List */
   .custom-list li::before {
+    -webkit-mask: url("./images/hexagon-white.svg") no-repeat center / contain;
+    mask: url("./images/hexagon-white.svg") no-repeat center / contain;
     top: 15px;
     width: 17px;
     height: 17px;
