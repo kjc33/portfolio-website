@@ -15,13 +15,11 @@ export default function ImageSeparator({
     <div className={containerNameClasses}>
       <div className="inner-container">
         <div className="image-separator-bg">
-          {imageSrc && (
-            <img
-              src={imageSrc}
-              alt={altText || `Photo by ${photographer}`}
-              className="image-separator-img"
-            />
-          )}
+          <img
+            src={imageSrc}
+            alt={altText || `Photo by ${photographer}`}
+            className="image-separator-img"
+          />
           <div className={photoAttributionClasses}>
             <p>
               Photo by{" "}
