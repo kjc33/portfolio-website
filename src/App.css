@@ -681,6 +681,18 @@ h6 {
 
 /* Image Separator */
 
+.image-separator-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-separator-bg .photo-attribution-left,
+.image-separator-bg .photo-attribution-right {
+  z-index: 10;
+}
+
 .image-separator-right,
 .image-separator-left {
   margin-bottom: 20px;
