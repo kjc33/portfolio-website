@@ -10,6 +10,8 @@ import Quote from "../components/Quote";
 import Contact from "../components/Contact";
 import ImageSeparator from "../components/ImageSeparator";
 
+import valuesExerciseImg from "../images/values-exercise.jpg";
+
 import { getYearsOfExperience } from "../utils/getYearsOfExperience";
 
 function Home() {
@@ -18,7 +20,14 @@ function Home() {
   return (
     <>
       <Hero primaryH1="Front-end Developer" subHead="Open to Work" subHeadDescription="Available Now" />
-      <ImageSeparator containerNameClasses="image-separator-right hero-separator" photoAttributionClasses="photo-attribution-left vertical flex-column" imageUrl="https://www.arieljordanphoto.com/" photographer="Ariel Jordan" />
+      <ImageSeparator
+        imageSrc={valuesExerciseImg}
+        altText="Candid shot of Kyle Chin participating in a company values exercise." 
+        containerNameClasses="image-separator-right hero-separator" 
+        photoAttributionClasses="photo-attribution-left vertical flex-column" 
+        imageUrl="https://www.arieljordanphoto.com/" 
+        photographer="Ariel Jordan" 
+      />
       <About
         primaryH2="Hey There"
         paragraph1={`My name is Kyle Chin, and I am a web designer and front-end developer. Over the last ${yearsWorked} years, I've overseen the implementation and development of over 150 websites, from initial discovery to site launch. I've helped clients in various capacities outside of design and development, including account management, content strategy, copywriting, and SEO/Digital Marketing.`}
