@@ -1254,7 +1254,7 @@ input[type="file"] {
   /* Outline Heading */
   .outline-text-large {
     -webkit-text-stroke-width: 0;
-    -wekkit-text-stroke-color: transparent;
+    -webkit-text-stroke-color: transparent;
     color: #ffffff;
   }
   /* Footer Navigation */
