@@ -13,7 +13,7 @@ export default function Hero({ primaryH1, subHead, subHeadDescription }) {
           <p className="light-font">{subHeadDescription}</p>
         </div>
         <DropDownArrow href="#about" />
-        <Location location="Vancouver, WA" latitude="45.6280" longitude="122.6739" />
+        <Location location="Vancouver, Washington, USA" latitude="45.6280" longitude="122.6739" />
       </div>
     </section>
   );
