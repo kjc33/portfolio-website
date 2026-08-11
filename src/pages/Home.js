@@ -23,7 +23,7 @@ function Home() {
       <ImageSeparator
         imageSrc={valuesExerciseImg}
         altText="Candid shot of Kyle Chin participating in a company values exercise." 
-        containerNameClasses="image-separator-right hero-separator" 
+        containerNameClasses="image-separator-right hero-separator object-position-left-center" 
         photoAttributionClasses="photo-attribution-left vertical flex-column" 
         imageUrl="https://www.arieljordanphoto.com/" 
         photographer="Ariel Jordan" 
