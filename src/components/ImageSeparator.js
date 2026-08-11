@@ -14,13 +14,13 @@ export default function ImageSeparator({
   return (
     <div className={containerNameClasses}>
       <div className="inner-container">
-        <div className="image-separator-bg">
+        <figure className="image-separator-bg">
           <img
             src={imageSrc}
             alt={altText || `Photo by ${photographer}`}
             className="image-separator-img"
           />
-          <div className={photoAttributionClasses}>
+          <figcaption className={photoAttributionClasses}>
             <p>
               Photo by{" "}
               <a href={imageUrl} target="_blank" rel="noreferrer">
@@ -35,8 +35,8 @@ export default function ImageSeparator({
                 </>
               )}
             </p>
-          </div>
-        </div>
+          </figcaption>
+        </figure>
       </div>
     </div>
   );
