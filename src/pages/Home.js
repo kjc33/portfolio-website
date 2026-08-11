@@ -10,7 +10,9 @@ import Quote from "../components/Quote";
 import Contact from "../components/Contact";
 import ImageSeparator from "../components/ImageSeparator";
 
-import valuesExerciseImg from "../images/values-exercise.jpg";
+import valuesExerciseImg from "../images/values-exercise.webp";
+import businessStrategyImg from "../images/business-strategy.webp";
+import letUsTalkImg from "../images/kyle-headshot.webp";
 
 import { getYearsOfExperience } from "../utils/getYearsOfExperience";
 
@@ -37,6 +39,8 @@ function Home() {
       />
       <JobTitles />
       <ImageSeparator
+        imageSrc={businessStrategyImg}
+        altText="A website information archicture and planning session."
         containerNameClasses="image-separator-left about-separator"
         photoAttributionClasses="photo-attribution-right vertical flex-column"
         imageUrl="https://unsplash.com/@kaleidico?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
@@ -51,7 +55,14 @@ function Home() {
       <Quote name="Steven Howsley" position="Marketing Analyst" company="REI">
         "Kyle is extremely organized, professional, and a master at his craft. From <span className="green-accent">front-end development</span> to design, Kyle is an asset to any team and a genuine pleasure to work with!"
       </Quote>
-      <ImageSeparator containerNameClasses="image-separator-right quote-separator" photoAttributionClasses="photo-attribution-left vertical flex-column" imageUrl="https://www.arieljordanphoto.com/" photographer="Ariel Jordan" />
+      <ImageSeparator
+        imageSrc={letUsTalkImg}
+        altText="Professional headshot of Kyle Chin, a strategist, designer, and front-end developer in Vancouver, WA."
+        containerNameClasses="image-separator-right quote-separator" 
+        photoAttributionClasses="photo-attribution-left vertical flex-column" 
+        imageUrl="https://www.arieljordanphoto.com/" 
+        photographer="Ariel Jordan" 
+      />
       <Contact primaryH2="Let's Talk" description="I am open to contract work (strategy, design, development, or website maintenance) and full-time agency or studio employment." />
     </>
   );
