@@ -41,7 +41,7 @@ function Home() {
       <ImageSeparator
         imageSrc={businessStrategyImg}
         altText="A website information archicture and planning session."
-        containerNameClasses="image-separator-left about-separator"
+        containerNameClasses="image-separator-left about-separator object-position-right-center"
         photoAttributionClasses="photo-attribution-right vertical flex-column"
         imageUrl="https://unsplash.com/@kaleidico?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
         photographer="Kaleidico"
@@ -58,7 +58,7 @@ function Home() {
       <ImageSeparator
         imageSrc={letUsTalkImg}
         altText="Professional headshot of Kyle Chin, a strategist, designer, and front-end developer in Vancouver, WA."
-        containerNameClasses="image-separator-right quote-separator" 
+        containerNameClasses="image-separator-right quote-separator object-position-center-center" 
         photoAttributionClasses="photo-attribution-left vertical flex-column" 
         imageUrl="https://www.arieljordanphoto.com/" 
         photographer="Ariel Jordan" 

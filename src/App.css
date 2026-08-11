@@ -451,6 +451,19 @@ footer,
   margin: 0 auto;
 }
 
+/* Images */
+.object-position-center-center img {
+  object-position: center center;
+}
+
+.object-position-left-center img {
+  object-position: left center;
+}
+
+.object-position-right-center img {
+  object-position: right center;
+}
+
 /* Text */
 
 p,
@@ -713,27 +726,6 @@ h6 {
   position: relative;
   width: 100%;
   height: 325px;
-}
-
-.image-separator-right.hero-separator .inner-container .image-separator-bg {
-  background-image: url(./images/values-exercise.jpg);
-  background-size: cover;
-  background-position: center left;
-  background-repeat: no-repeat;
-}
-
-.image-separator-left.about-separator .inner-container .image-separator-bg {
-  background-image: url(./images/business-strategy.jpg);
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
-}
-
-.image-separator-right.quote-separator .inner-container .image-separator-bg {
-  background-image: url(./images/kyle-headshot.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 .image-separator-right .image-separator-bg::after {
