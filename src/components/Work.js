@@ -2,9 +2,14 @@ import React from "react";
 
 import WorkListingItem from "./WorkListingItem";
 
+import artifyImg from "../images/live-band.webp";
+import quizerImg from "../images/online-quiz.webp";
+
 export default function Work() {
   const featuredWorks = [
     {
+      imgSrc: artifyImg,
+      altText: "Artify search allows you to learn more about your favorite bands and their top songs.",
       featuredWorkContainerClasses: "select-work-featured-bg project-1",
       photographer: "Cody Board",
       photographerProfileLink:
@@ -18,6 +23,8 @@ export default function Work() {
       projectButtonLabel: "Visit Website",
     },
     {
+      imgSrc: quizerImg,
+      altText: "The Quizer app is a fun online trivia test that calculates scores and tracks top users on a leaderboard.",
       featuredWorkContainerClasses: "select-work-featured-bg project-2",
       photographer: "TC",
       photographerProfileLink:
