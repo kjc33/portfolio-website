@@ -884,30 +884,7 @@ h6 {
   height: 325px;
 }
 
-.select-work-featured-bg.project-1 {
-  background-image: url(./images/live-band.jpg);
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
-}
-
-.select-work-featured-bg.project-2 {
-  background-image: url(./images/online-quiz.jpg);
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
-}
-
-.select-work-featured-bg.project-3 {
-  background-image: url(./images/weight-training.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.select-work-featured-bg.project-1,
-.select-work-featured-bg.project-2,
-.select-work-featured-bg.project-3,
+.select-work-featured-bg,
 .select-work article {
   position: relative;
 }
