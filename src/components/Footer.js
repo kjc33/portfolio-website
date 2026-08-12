@@ -22,7 +22,7 @@ export default function Footer() {
       <div className="inner-container max-width flex flex-column large-gap">
         <div className="top-half full-width flex flex-row flex-wrap justify-space-between large-gap">
           <FooterLogo imgSrc={kcLogoMark} alt="Kyle Chin logo mark" width="100" height="100" tagline="Strategist. Designer. Developer." />
-          <div className="footer-navigation flex flex-row">
+          <div className="footer-navigation flex flex-column">
             <PrimaryNavList navClass="primary-footer-nav" ulClass="flex flex-row flex-wrap small-gap" navItems={navItems} />
           </div>
           <div className="social-icons full-width flex flex-row">
@@ -33,12 +33,12 @@ export default function Footer() {
         <div className="bottom-half flex flex-column large-gap">
           <div className="accessibility-disclaimer underline-link">
             <p>
-              I make every effort to ensure my portfolio is accessible to everyone. If you are having trouble using any part of my website, please do not hesitate to <HashLink smooth to="#contact">contact</HashLink> me, and I will do my best to address the issue. Thank you for your understanding.
+              I am dedicated to providing a website that is accessible to all users and aim to align with WCAG 2.1 Level AA standards. If you encounter any accessibility barriers or require content in an alternative format, please <HashLink smooth to="#contact">contact</HashLink> me, and I will work with you to provide a reasonable accommodation.
             </p>
           </div>
           <div className="footer-signature">
             <p>
-              &copy; {copyrightDate} Kyle Chin <span className="pipe">|</span> Website by me, duh.
+              &copy; {copyrightDate} Kyle John Chin. All rights reserved. <span className="pipe">|</span> Website by me, duh.
             </p>
           </div>
         </div>
