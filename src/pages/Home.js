@@ -21,7 +21,7 @@ function Home() {
 
   return (
     <>
-      <Hero primaryH1="Front-end Developer" subHead="Open to Work" subHeadDescription="Available Now" />
+      <Hero primaryH1="Front-end Developer" subHead="Open to Work" subHeadDescription="See Projects" />
       <ImageSeparator
         imageSrc={valuesExerciseImg}
         altText="Candid shot of Kyle Chin participating in a company values exercise." 
