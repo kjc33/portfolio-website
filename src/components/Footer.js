@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="top-half full-width flex flex-row flex-wrap justify-space-between large-gap">
           <FooterLogo imgSrc={kcLogoMark} alt="Kyle Chin logo mark" width="100" height="100" tagline="Strategist. Designer. Developer." />
           <div className="footer-navigation flex flex-column">
-            <PrimaryNavList navClass="primary-footer-nav" ulClass="flex flex-row flex-wrap xx-small-gap" navItems={navItems} />
+            <PrimaryNavList navClass="primary-footer-nav" ulClass="flex flex-column flex-wrap xx-small-gap" navItems={navItems} />
           </div>
           <div className="social-icons full-width flex flex-row">
             <SocialIcon iconParentClasses="footer-social-icon github" href="https://github.com/kjc33" iconClassNames="fa-brands fa-github" />
