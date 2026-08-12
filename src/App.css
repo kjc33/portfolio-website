@@ -399,6 +399,14 @@ footer,
   display: grid;
 }
 
+.xx-small-gap {
+  gap: 10px;
+}
+
+.x-small-gap {
+  gap: 20px;
+}
+
 .small-gap {
   gap: 30px;
 }
