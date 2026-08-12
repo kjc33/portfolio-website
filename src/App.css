@@ -512,6 +512,7 @@ h6 {
 
 .outline-heading-large {
   font-size: 1.5rem;
+  line-height: 1.2em;
   -webkit-text-stroke-width: 0;
   -webkit-text-stroke-color: transparent;
   color: #ffffff;
