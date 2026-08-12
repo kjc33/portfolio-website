@@ -248,7 +248,7 @@ html {
 
 body {
   background-color: #1f1f1f;
-  color: #999999;
+  color: #ABABAB;
 }
 
 section {
@@ -954,7 +954,7 @@ h6 {
 }
 
 .quote-attribution {
-  color: #999999;
+  color: #ABABAB;
 }
 
 .quote-body {
@@ -1077,7 +1077,7 @@ input[type="file"] {
 .footer-tagline {
   font-size: 1rem;
   line-height: 2;
-  color: #999999;
+  color: #ABABAB;
   text-transform: uppercase;
 }
 
@@ -1097,7 +1097,7 @@ input[type="file"] {
 }
 
 .social-icons .footer-social-icon a {
-  color: #999999;
+  color: #ABABAB;
   text-decoration: none;
 }
 
