@@ -1823,7 +1823,7 @@ input[type="file"] {
     align-items: center;
   }
   .footer-top.small-gap,
-  .footer-middle.small-gap {
+  .footer-middle.large-gap {
     gap: 150px;
   }
   .footer-top {
