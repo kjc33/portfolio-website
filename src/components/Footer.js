@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="footer-navigation flex-row">
             <PrimaryNavList 
               navClass="primary-footer-nav" 
-              ulClass="flex-column flex-wrap small-gap" 
+              ulClass="flex-column flex-wrap x-small-gap" 
               navItems={navItems} 
             />
           </div>
