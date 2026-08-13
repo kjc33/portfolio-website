@@ -19,8 +19,7 @@ export default function Footer() {
 
   return (
     <footer className="primary-footer">
-      <div className="inner-container max-width flex flex-column large-gap">
-        
+      <div className="inner-container max-width flex flex-column large-gap">   
         <div className="footer-top full-width flex flex-row justify-space-between align-center large-gap">
           <FooterLogo 
             imgSrc={kcLogoMark} 
@@ -36,7 +35,6 @@ export default function Footer() {
             />
           </div>
         </div>
-
         <div className="footer-middle full-width flex flex-row justify-space-between align-center large-gap">
           <div className="accessibility-disclaimer underline-link">
             <p>
@@ -56,9 +54,6 @@ export default function Footer() {
             />
           </div>
         </div>
-
-        <hr className="footer-divider" />
-
         <div className="footer-bottom full-width flex flex-row justify-space-between align-center">
           <div className="footer-signature">
             <p>
