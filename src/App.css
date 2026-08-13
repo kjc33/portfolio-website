@@ -1620,8 +1620,8 @@ input[type="file"] {
     max-width: 800px;
   }
   /* Footer */
-  .primary-footer .inner-container.xx-large-gap,
-  .footer-top.xx-large-gap {
+  .footer-top.small-gap,
+  .footer-middle.small-gap {
     gap: 50px;
   }
   .footer-navigation .primary-footer-nav ul {
