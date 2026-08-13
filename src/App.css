@@ -1833,13 +1833,13 @@ input[type="file"] {
     flex: 0 0 89px;
   }
   .footer-navigation .primary-footer-nav ul {
-      flex-direction: column;
-      flex-wrap: unset;
-      gap: 10px;
+    flex-direction: column;
+    flex-wrap: unset;
+    gap: 10px;
   }
   .footer-middle {
-      flex-direction: row;
-      align-items: center;
+    flex-direction: row;
+    align-items: center;
   }
   .footer-middle .accessibility-disclaimer {
     width: 100%;
