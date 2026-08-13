@@ -1176,10 +1176,6 @@ input[type="file"] {
     -webkit-text-stroke-color: #ffffff;
     color: transparent;
   }
-  .drop-down-arrow .arrow-icon {
-    width: 60px;
-    height: 60px;
-  }
   .primary-h1 {
     font-size: 2.25rem;
   }
@@ -1218,6 +1214,11 @@ input[type="file"] {
 }
 
 @media screen and (min-width: 400px) {
+  /* Drop Down Arrow */
+  .drop-down-arrow .arrow-icon {
+    width: 60px;
+    height: 60px;
+  }
   /* Outline Heading */
   .outline-heading-large {
     width: 80%;
