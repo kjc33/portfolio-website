@@ -310,16 +310,16 @@ footer,
 }
 
 .underline-link a {
-  color: #ffffff;
+  color: #22e52e;
   text-decoration: none;
-  border-bottom: solid 2px #ffffff;
+  border-bottom: solid 2px #22e52e;
   padding-bottom: 1px;
 }
 
 .underline-link a:hover,
 .arrow-btn a:hover {
-  color: #22e52e;
-  border-bottom-color: #22e52e;
+  color: #ffffff;
+  border-bottom-color: #ffffff;
   transition: 0.4s;
 }
 
@@ -339,18 +339,18 @@ footer,
   transform: translateY(-50%);
   width: 25px;
   height: 20px;
-  background-color: #ffffff;
-  -webkit-mask: url("./images/arrow-white.svg") no-repeat center / contain;
-  mask: url("./images/arrow-white.svg") no-repeat center / contain;
+  background-color: #22e52e;
+  -webkit-mask: url("./images/arrow-green.svg") no-repeat center / contain;
+  mask: url("./images/arrow-green.svg") no-repeat center / contain;
   transition: background-color 0.3s;
 }
 
 .arrow-btn:hover::after {
-  background-color: #22e52e;
+  background-color: #ffffff;
 }
 
 .arrow-btn a {
-  color: #ffffff;
+  color: #22e52e;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
