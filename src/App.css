@@ -1091,6 +1091,10 @@ input[type="file"] {
   padding-bottom: 30px;
 }
 
+.footer-logo figure a {
+  display: inline-block;
+}
+
 .footer-tagline {
   font-size: 1rem;
   line-height: 2;

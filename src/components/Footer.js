@@ -5,7 +5,7 @@ import PrimaryNavList from "./PrimaryNavList";
 import FooterLogo from "./FooterLogo";
 import SocialIcon from "./SocialIcon";
 
-import kcLogoMark from "../images/kc-logo-mark.svg";
+import kcLogoMark from "../images/kc-logo-full.svg";
 
 export default function Footer() {
   const navItems = [
