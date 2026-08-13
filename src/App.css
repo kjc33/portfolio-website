@@ -1124,7 +1124,6 @@ input[type="file"] {
 
 .footer-navigation .primary-footer-nav ul {
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
 .footer-navigation .primary-footer-nav ul li a {
