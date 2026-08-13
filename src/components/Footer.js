@@ -20,28 +20,56 @@ export default function Footer() {
   return (
     <footer className="primary-footer">
       <div className="inner-container max-width flex flex-column large-gap">
-        <div className="top-half full-width flex flex-row flex-wrap justify-space-between large-gap">
-          <FooterLogo imgSrc={kcLogoMark} alt="Kyle Chin logo mark" width="952" height="165" tagline="Strategist. Designer. Developer." />
+        
+        <div className="footer-top full-width flex flex-row justify-space-between align-center large-gap">
+          <FooterLogo 
+            imgSrc={kcLogoMark} 
+            alt="Kyle Chin logo mark" 
+            width="952" 
+            height="165" 
+          />
           <div className="footer-navigation flex flex-column">
-            <PrimaryNavList navClass="primary-footer-nav" ulClass="flex flex-column flex-wrap xx-small-gap" navItems={navItems} />
-          </div>
-          <div className="social-icons full-width flex flex-row">
-            <SocialIcon iconParentClasses="footer-social-icon github" href="https://github.com/kjc33" iconClassNames="fa-brands fa-github" />
-            <SocialIcon iconParentClasses="footer-social-icon linkedin" href="https://www.linkedin.com/in/kylechin/" iconClassNames="fa-brands fa-linkedin-in" />
+            <PrimaryNavList 
+              navClass="primary-footer-nav" 
+              ulClass="flex flex-column flex-wrap xx-small-gap" 
+              navItems={navItems} 
+            />
           </div>
         </div>
-        <div className="bottom-half flex flex-column large-gap">
+
+        <div className="footer-middle full-width flex flex-row justify-space-between align-center large-gap">
           <div className="accessibility-disclaimer underline-link">
             <p>
               I am dedicated to providing a website that is accessible to all users and aim to align with WCAG 2.1 Level AA standards. If you encounter any accessibility barriers or require content in an alternative format, please <HashLink smooth to="#contact">contact</HashLink> me, and I will work with you to provide a reasonable accommodation.
             </p>
           </div>
+          <div className="social-icons flex flex-row medium-gap">
+            <SocialIcon 
+              iconParentClasses="footer-social-icon github" 
+              href="https://github.com/kjc33" 
+              iconClassNames="fa-brands fa-github" 
+            />
+            <SocialIcon 
+              iconParentClasses="footer-social-icon linkedin" 
+              href="https://www.linkedin.com/in/kylechin/" 
+              iconClassNames="fa-brands fa-linkedin-in" 
+            />
+          </div>
+        </div>
+
+        <hr className="footer-divider" />
+
+        <div className="footer-bottom full-width flex flex-row justify-space-between align-center">
           <div className="footer-signature">
             <p>
               &copy; {copyrightDate} Kyle John Chin. All rights reserved. <span className="pipe">|</span> Website by me, duh.
             </p>
           </div>
+          <p className="footer-tagline">
+            Strategist. Designer. Developer.
+          </p>
         </div>
+
       </div>
     </footer>
   );

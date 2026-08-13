@@ -1087,10 +1087,6 @@ input[type="file"] {
   border-top: solid 1px rgba(250, 250, 250, 0.2);
 }
 
-.footer-logo figure {
-  padding-bottom: 30px;
-}
-
 .footer-logo figure a {
   display: inline-block;
 }
@@ -1167,7 +1163,7 @@ input[type="file"] {
   font-size: 1rem;
 }
 
-.bottom-half {
+.footer-bottom {
   padding-top: 50px;
   border-top: 1px solid rgba(250, 250, 250, 0.2);
 }
