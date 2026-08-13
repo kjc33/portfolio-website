@@ -776,6 +776,10 @@ h6 {
   padding-bottom: 0;
 }
 
+.skills .inner-container.large-gap {
+  gap: 30px;
+}
+
 .skills-column-1,
 .skills-column-2 {
   flex: 1;
@@ -1493,20 +1497,12 @@ input[type="file"] {
   .skills .primary-h2 {
     padding-bottom: 0;
   }
-  .skills .inner-container.large-gap {
-    gap: 80px;
-  }
   /* Job Cards */
   .job-card {
     min-height: 380px;
   }
   .job-titles .inner-container {
     gap: 50px;
-  }
-  .heading-with-cta {
-    align-items: flex-start;
-    padding: 0;
-    margin-bottom: auto;
   }
   /* Image Separators & Select Work*/
   .image-separator-right .inner-container .image-separator-bg,
@@ -1815,9 +1811,6 @@ input[type="file"] {
   .large-text p {
     font-size: 1.75rem;
   }
-  .skills .inner-container.large-gap {
-    gap: 100px;
-  }
   .job-card .percentage {
     font-size: 2.5rem;
   }
@@ -1866,9 +1859,20 @@ input[type="file"] {
   }
 }
 
-@media screen and (max-width: 1301px) {
+@media screen and (max-width: 1300px) {
   .flex-column-desktop {
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1301px) {
+  .skills .inner-container .heading-with-cta {
+    align-items: flex-start;
+    padding: 0;
+    margin-bottom: auto;
+  }
+  .skills .inner-container.large-gap {
+    gap: 100px;
   }
 }
 
