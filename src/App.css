@@ -1796,9 +1796,12 @@ input[type="file"] {
   .x-large-gap {
     gap: 50px;
   }
+  .flex-column-desktop {
+    flex-direction: column;
+  }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1201px) {
   /* Outline Heading */
   .outline-heading-large {
     font-size: 8rem;
