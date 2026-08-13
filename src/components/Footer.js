@@ -35,7 +35,7 @@ export default function Footer() {
             />
           </div>
         </div>
-        <div className="footer-middle full-width flex-column column-reverse justify-space-between align-top large-gap">
+        <div className="footer-middle full-width column-reverse justify-space-between align-top large-gap">
           <div className="accessibility-disclaimer underline-link">
             <p>
               I am dedicated to providing a website that is accessible to all users and aim to align with WCAG 2.1 Level AA standards. If you encounter any accessibility barriers or require content in an alternative format, please <HashLink smooth to="#contact">contact</HashLink> me, and I will work with you to provide a reasonable accommodation.
