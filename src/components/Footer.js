@@ -54,7 +54,7 @@ export default function Footer() {
             />
           </div>
         </div>
-        <div className="footer-bottom full-width flex flex-row justify-space-between align-center">
+        <div className="footer-bottom full-width flex flex-row justify-space-between align-center large-gap">
           <div className="footer-signature">
             <p>
               &copy; {copyrightDate} Kyle John Chin. All rights reserved. <span className="pipe">|</span> Website by me, duh.
