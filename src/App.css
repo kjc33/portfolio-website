@@ -372,6 +372,7 @@ footer,
 }
 
 .column-reverse {
+  display: flex;
   flex-direction: column-reverse;
 }
 
@@ -1108,11 +1109,6 @@ input[type="file"] {
   align-items: flex-start;
 }
 
-.primary-footer .inner-container.xx-large-gap,
-.footer-top.xx-large-gap {
-  gap: 30px;
-}
-
 .footer-logo figure a {
   display: inline-block;
 }
@@ -1829,6 +1825,10 @@ input[type="file"] {
     margin: 0 auto;
   }
   /* Footer */
+  .primary-footer .inner-container.small-gap,
+  .footer-top.small-gap {
+    gap: 150px;
+  }
   .footer-top {
     flex-direction: row;
   }
