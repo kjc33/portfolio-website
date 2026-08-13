@@ -20,14 +20,14 @@ export default function Footer() {
   return (
     <footer className="primary-footer">
       <div className="inner-container max-width flex flex-column large-gap">   
-        <div className="footer-top full-width flex flex-row justify-space-between align-center large-gap">
+        <div className="footer-top full-width flex flex-row justify-space-between align-center xx-large-gap">
           <FooterLogo 
             imgSrc={kcLogoMark} 
             alt="Kyle Chin logo mark" 
             width="952" 
             height="165" 
           />
-          <div className="footer-navigation flex flex-column">
+          <div className="footer-navigation flex flex-row">
             <PrimaryNavList 
               navClass="primary-footer-nav" 
               ulClass="flex flex-column flex-wrap xx-small-gap" 
@@ -35,7 +35,7 @@ export default function Footer() {
             />
           </div>
         </div>
-        <div className="footer-middle full-width flex flex-row justify-space-between align-center large-gap">
+        <div className="footer-middle full-width flex column-reverse justify-space-between align-top xx-large-gap">
           <div className="accessibility-disclaimer underline-link">
             <p>
               I am dedicated to providing a website that is accessible to all users and aim to align with WCAG 2.1 Level AA standards. If you encounter any accessibility barriers or require content in an alternative format, please <HashLink smooth to="#contact">contact</HashLink> me, and I will work with you to provide a reasonable accommodation.
@@ -54,7 +54,7 @@ export default function Footer() {
             />
           </div>
         </div>
-        <div className="footer-bottom full-width flex flex-row justify-space-between align-center large-gap">
+        <div className="footer-bottom full-width flex column-reverse justify-space-between align-top large-gap">
           <div className="footer-signature">
             <p>
               &copy; {copyrightDate} Kyle John Chin. All rights reserved. <span className="pipe">|</span> Website by me, duh.

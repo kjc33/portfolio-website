@@ -371,6 +371,10 @@ footer,
   flex-direction: column;
 }
 
+.column-reverse {
+  flex-direction: column-reverse;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -422,6 +426,14 @@ footer,
 
 .large-gap {
   gap: 50px;
+}
+
+.x-large-gap {
+  gap: 100px;
+}
+
+.xx-large-gap {
+  gap: 150px;
 }
 
 .full-width {
@@ -1092,6 +1104,15 @@ input[type="file"] {
   border-top: solid 1px rgba(250, 250, 250, 0.2);
 }
 
+.primary-footer .footer-top {
+  align-items: flex-start;
+}
+
+.primary-footer .inner-container.xx-large-gap,
+.footer-top.xx-large-gap {
+  gap: 30px;
+}
+
 .footer-logo figure a {
   display: inline-block;
 }
@@ -1103,10 +1124,15 @@ input[type="file"] {
 }
 
 .footer-tagline {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 2;
   color: #AAAAAA;
   text-transform: uppercase;
+}
+
+.footer-navigation .primary-footer-nav ul {
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .footer-navigation .primary-footer-nav ul li a {
@@ -1169,8 +1195,9 @@ input[type="file"] {
 }
 
 .footer-bottom {
-  padding-top: 50px;
+  padding-top: 30px;
   border-top: 1px solid rgba(250, 250, 250, 0.2);
+  gap: 30px;
 }
 
 .footer-signature p,
@@ -1469,6 +1496,10 @@ input[type="file"] {
   .hexagon-divider .inner-container {
     gap: 30px;
   }
+  /* Footer */
+  .footer-navigation .primary-footer-nav ul {
+    gap: 20px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1576,6 +1607,9 @@ input[type="file"] {
   textarea {
     font-size: 1.2rem;
   }
+  .footer-bottom {
+    padding-top: 50px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -1589,7 +1623,16 @@ input[type="file"] {
   .skills .inner-container {
     max-width: 800px;
   }
+  /* Footer */
+  .primary-footer .inner-container.xx-large-gap,
+  .footer-top.xx-large-gap {
+    gap: 50px;
+  }
+  .footer-navigation .primary-footer-nav ul {
+    gap: 30px;
+  }
 }
+
 @media screen and (min-width: 880px) {
   /* Primary Menu - Nav Items & Outline Heading */
   .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a,
@@ -1784,6 +1827,30 @@ input[type="file"] {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
+  }
+  /* Footer */
+  .footer-top {
+    flex-direction: row;
+  }
+  .footer-navigation {
+    flex: 0 0 89px;
+  }
+  .footer-navigation .primary-footer-nav ul {
+      flex-direction: column;
+      flex-wrap: nowrap;
+  }
+  .footer-middle {
+      flex-direction: row;
+      align-items: center;
+  }
+  .footer-middle .accessibility-disclaimer {
+    width: 100%;
+    max-width: 952px;
+  }
+  .footer-bottom {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
   }
 }
 
