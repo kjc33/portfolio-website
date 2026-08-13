@@ -777,6 +777,10 @@ h6 {
 }
 
 .skills .inner-container.large-gap {
+  gap: 30px;
+}
+
+.skills-list.large-gap {
   gap: 20px;
 }
 
