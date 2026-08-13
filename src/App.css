@@ -1492,10 +1492,6 @@ input[type="file"] {
   .hexagon-divider .inner-container {
     gap: 30px;
   }
-  /* Footer */
-  .footer-navigation .primary-footer-nav ul {
-    gap: 20px;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1841,6 +1837,7 @@ input[type="file"] {
   .footer-navigation .primary-footer-nav ul {
       flex-direction: column;
       flex-wrap: nowrap;
+      gap: 10px;
   }
   .footer-middle {
       flex-direction: row;

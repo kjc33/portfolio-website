@@ -19,18 +19,18 @@ export default function Footer() {
 
   return (
     <footer className="primary-footer">
-      <div className="inner-container max-width flex flex-column large-gap">   
-        <div className="footer-top full-width flex flex-column justify-space-between align-top small-gap">
+      <div className="inner-container max-width flex-column large-gap">   
+        <div className="footer-top full-width flex-column justify-space-between align-top small-gap">
           <FooterLogo 
             imgSrc={kcLogoMark} 
             alt="Kyle Chin logo mark" 
             width="952" 
             height="165" 
           />
-          <div className="footer-navigation flex flex-row">
+          <div className="footer-navigation flex-row">
             <PrimaryNavList 
               navClass="primary-footer-nav" 
-              ulClass="flex flex-column flex-wrap xx-small-gap" 
+              ulClass="flex-column flex-wrap small-gap" 
               navItems={navItems} 
             />
           </div>
@@ -41,7 +41,7 @@ export default function Footer() {
               I am dedicated to providing a website that is accessible to all users and aim to align with WCAG 2.1 Level AA standards. If you encounter any accessibility barriers or require content in an alternative format, please <HashLink smooth to="#contact">contact</HashLink> me, and I will work with you to provide a reasonable accommodation.
             </p>
           </div>
-          <div className="social-icons flex flex-row medium-gap">
+          <div className="social-icons flex-row medium-gap">
             <SocialIcon 
               iconParentClasses="footer-social-icon github" 
               href="https://github.com/kjc33" 
