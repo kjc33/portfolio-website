@@ -310,16 +310,15 @@ footer,
 }
 
 .underline-link a {
-  color: #22e52e;
+  color: #ffffff;
   text-decoration: none;
-  border-bottom: solid 2px #22e52e;
+  border-bottom: solid 2px #ffffff;
   padding-bottom: 1px;
 }
 
-.underline-link a:hover,
-.arrow-btn a:hover {
-  color: #ffffff;
-  border-bottom-color: #ffffff;
+.underline-link a:hover {
+  color: #22e52e;
+  border-bottom-color: #22e52e;
   transition: 0.4s;
 }
 
@@ -357,6 +356,12 @@ footer,
   line-height: 1.5em;
   border-bottom: none;
   padding: 0 40px 0 0;
+}
+
+.arrow-btn a:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+  transition: 0.4s;
 }
 
 /* Layout */
