@@ -780,10 +780,6 @@ h6 {
   gap: 30px;
 }
 
-.skills-list.large-gap {
-  gap: 20px;
-}
-
 .skills-column-1,
 .skills-column-2 {
   flex: 1;
@@ -1264,6 +1260,12 @@ input[type="file"] {
 @media screen and (min-width: 400px) and (max-width: 767px) {
   .job-card .pagination {
     position: absolute;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .skills-list.large-gap {
+    gap: 20px;
   }
 }
 
