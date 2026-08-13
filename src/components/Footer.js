@@ -20,7 +20,7 @@ export default function Footer() {
   return (
     <footer className="primary-footer">
       <div className="inner-container max-width flex flex-column large-gap">   
-        <div className="footer-top full-width flex flex-row justify-space-between align-center xx-large-gap">
+        <div className="footer-top full-width flex flex-row justify-space-between align-top xx-large-gap">
           <FooterLogo 
             imgSrc={kcLogoMark} 
             alt="Kyle Chin logo mark" 

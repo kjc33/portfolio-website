@@ -1825,8 +1825,11 @@ input[type="file"] {
     margin: 0 auto;
   }
   /* Footer */
-  .primary-footer .inner-container.small-gap,
-  .footer-top.small-gap {
+  .primary-footer .footer-top {
+    align-items: center;
+  }
+  .footer-top.small-gap,
+  .footer-middle.small-gap {
     gap: 150px;
   }
   .footer-top {
@@ -1851,6 +1854,7 @@ input[type="file"] {
     flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
+    gap: 50px;
   }
 }
 
