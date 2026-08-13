@@ -248,7 +248,7 @@ html {
 
 body {
   background-color: #1f1f1f;
-  color: #ABABAB;
+  color: #AAAAAA;
 }
 
 section {
@@ -777,7 +777,7 @@ h6 {
 }
 
 .skills .inner-container.large-gap {
-  gap: 30px;
+  gap: 20px;
 }
 
 .skills-column-1,
@@ -959,7 +959,7 @@ h6 {
 }
 
 .quote-attribution {
-  color: #ABABAB;
+  color: #AAAAAA;
 }
 
 .quote-body {
@@ -1082,7 +1082,7 @@ input[type="file"] {
 .footer-tagline {
   font-size: 1rem;
   line-height: 2;
-  color: #ABABAB;
+  color: #AAAAAA;
   text-transform: uppercase;
 }
 
@@ -1102,7 +1102,7 @@ input[type="file"] {
 }
 
 .social-icons .footer-social-icon a {
-  color: #ABABAB;
+  color: #AAAAAA;
   text-decoration: none;
 }
 
@@ -1353,6 +1353,13 @@ input[type="file"] {
   }
 }
 
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* Skills List */
+  .skills .large-gap {
+    gap: 30px;
+  }
+}
+
 @media screen and (min-width: 641px) {
   /* Outline Heading */
   .outline-heading-large {
@@ -1414,9 +1421,6 @@ input[type="file"] {
 @media screen and (max-width: 767px) {
   .flex-column-mobile {
     flex-direction: column;
-  }
-  .skills .large-gap {
-    gap: 30px;
   }
   .job-titles .large-gap {
     gap: 30px;
