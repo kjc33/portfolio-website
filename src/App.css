@@ -1796,9 +1796,6 @@ input[type="file"] {
   .x-large-gap {
     gap: 50px;
   }
-  .flex-column-desktop {
-    flex-direction: column;
-  }
 }
 
 @media screen and (min-width: 1201px) {
@@ -1866,6 +1863,12 @@ input[type="file"] {
   }
   .contact .inner-container .form-wrapper {
     flex: 0.55;
+  }
+}
+
+@media screen and (max-width: 1301px) {
+  .flex-column-desktop {
+    flex-direction: column;
   }
 }
 
