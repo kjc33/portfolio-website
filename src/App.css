@@ -1843,7 +1843,7 @@ input[type="file"] {
   }
   .footer-middle .accessibility-disclaimer {
     width: 100%;
-    max-width: 952px;
+    max-width: 1000px;
   }
   .footer-bottom {
     flex-direction: row;
