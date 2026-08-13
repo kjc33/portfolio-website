@@ -21,7 +21,7 @@ export default function Footer() {
     <footer className="primary-footer">
       <div className="inner-container max-width flex flex-column large-gap">
         <div className="top-half full-width flex flex-row flex-wrap justify-space-between large-gap">
-          <FooterLogo imgSrc={kcLogoMark} alt="Kyle Chin logo mark" width="100" height="100" tagline="Strategist. Designer. Developer." />
+          <FooterLogo imgSrc={kcLogoMark} alt="Kyle Chin logo mark" width="952" height="165" tagline="Strategist. Designer. Developer." />
           <div className="footer-navigation flex flex-column">
             <PrimaryNavList navClass="primary-footer-nav" ulClass="flex flex-column flex-wrap xx-small-gap" navItems={navItems} />
           </div>
