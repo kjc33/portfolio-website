@@ -1304,9 +1304,6 @@ input[type="file"] {
     margin-top: 111px;
   }
   /* Skills List */
-  .skills-list {
-    flex-direction: row;
-  }
   .skills-list .custom-list li,
   .large-text p {
     font-size: 1.2rem;
@@ -1378,6 +1375,9 @@ input[type="file"] {
   }
   .job-card .percentage {
     font-size: 4rem;
+  }
+  .skills-list {
+    flex-direction: row;
   }
   /* Image Separators & Select Work */
   .image-separator-right .inner-container .image-separator-bg,
@@ -1490,10 +1490,6 @@ input[type="file"] {
   .primary-h2 {
     font-size: 3.5rem;
   }
-  /* Skills */
-  .skills-list {
-    flex-direction: column;
-  }
   .skills .primary-h2 {
     padding-bottom: 0;
   }
@@ -1560,13 +1556,6 @@ input[type="file"] {
     max-width: 800px;
   }
 }
-
-@media screen and (max-width: 1199px) {
-  .skills-list.large-gap {
-    gap: 30px;
-  }
-}
-
 @media screen and (min-width: 880px) {
   /* Primary Menu - Nav Items & Outline Heading */
   .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a,
@@ -1698,9 +1687,6 @@ input[type="file"] {
     padding: 150px 50px 0 50px;
   }
   /* Skills List */
-  .skills-list {
-    flex-direction: row;
-  }
   .skills-list .custom-list li,
   .large-text p {
     font-size: 1.5rem;
@@ -1778,6 +1764,13 @@ input[type="file"] {
   }
   .contact .inner-container .form-wrapper {
     flex: 1;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1300px) {
+  /* Skills */
+  .skills .inner-container.large-width {
+    max-width: 1100px;
   }
 }
 
