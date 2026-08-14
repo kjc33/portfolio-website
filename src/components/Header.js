@@ -12,35 +12,47 @@ export default function Header() {
 
   useEffect(() => {
     let lastScrollPosition = window.pageYOffset;
+    let ticking = false; // Prevent layout thrashing
+
+    const updateScrollDir = () => {
+      const currentScrollPos = window.pageYOffset;
+
+      // Threshold check
+      if (currentScrollPos > 200) {
+        setScrolledEnough(true);
+      } else if (currentScrollPos <= 0) {
+        setScrolledEnough(false);
+      }
+
+      // Direction check
+      if (currentScrollPos > lastScrollPosition) {
+        setScrollDirection("scroll-down");
+      } else {
+        setScrollDirection("scroll-up");
+      }
+
+      lastScrollPosition = currentScrollPos > 0 ? currentScrollPos : 0;
+      ticking = false;
+    };
 
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      if (!scrolledEnough && currentScrollPos > 200) {
-        setScrolledEnough(true);
-      }
-      if (scrolledEnough && !mobileMenuVisible) {
-        if (currentScrollPos > lastScrollPosition) {
-          setScrollDirection("scroll-down");
-        } else {
-          setScrollDirection("scroll-up");
-        }
-      }
-      lastScrollPosition = currentScrollPos;
-    };
-
-    const checkInitialScroll = () => {
-      if (window.pageYOffset > 0) {
-        setScrolledEnough(true);
+      if (!ticking && !mobileMenuVisible) {
+        window.requestAnimationFrame(updateScrollDir);
+        ticking = true;
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    checkInitialScroll();
+    // Check on initial mount
+    if (window.pageYOffset > 0) {
+      setScrolledEnough(true);
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [scrolledEnough, mobileMenuVisible]);
+  }, [mobileMenuVisible]); // Removed scrolledEnough dependency to prevent listener teardown cycles
 
   const toggleMobileMenu = () => {
     setMobileMenuVisible((prevVisible) => !prevVisible);
