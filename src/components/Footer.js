@@ -5,6 +5,9 @@ import PrimaryNavList from "./PrimaryNavList";
 import FooterLogo from "./FooterLogo";
 import SocialIcon from "./SocialIcon";
 
+import GithubIcon from "./icons/GithubIcon";
+import LinkedinIcon from "./icons/LinkedinIcon";
+
 import kcLogoMark from "../images/kc-logo-full.svg";
 
 export default function Footer() {
@@ -45,13 +48,17 @@ export default function Footer() {
             <SocialIcon 
               iconParentClasses="footer-social-icon github" 
               href="https://github.com/kjc33" 
-              iconClassNames="fa-brands fa-github" 
-            />
+              ariaLabel="GitHub profile"
+            >
+              <GithubIcon />
+            </SocialIcon>
             <SocialIcon 
               iconParentClasses="footer-social-icon linkedin" 
               href="https://www.linkedin.com/in/kylechin/" 
-              iconClassNames="fa-brands fa-linkedin-in" 
-            />
+              ariaLabel="LinkedIn profile"
+            >
+              <LinkedinIcon />
+            </SocialIcon>
           </div>
         </div>
         <div className="footer-bottom full-width column-reverse justify-space-between align-top small-gap">
