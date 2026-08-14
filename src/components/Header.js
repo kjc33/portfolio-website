@@ -12,7 +12,7 @@ export default function Header() {
 
   useEffect(() => {
     let lastScrollPosition = window.pageYOffset;
-    let ticking = false; // Prevent layout thrashing
+    let ticking = false;
 
     const updateScrollDir = () => {
       const currentScrollPos = window.pageYOffset;
@@ -52,7 +52,7 @@ export default function Header() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [mobileMenuVisible]); // Removed scrolledEnough dependency to prevent listener teardown cycles
+  }, [mobileMenuVisible]);
 
   const toggleMobileMenu = () => {
     setMobileMenuVisible((prevVisible) => !prevVisible);
