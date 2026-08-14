@@ -516,6 +516,18 @@ li {
   letter-spacing: 2px;
 }
 
+/* Remove default outline on mouse clicks/taps */
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Style strictly for keyboard navigators */
+a:focus-visible {
+  outline: 2px solid #22e52e;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
 .green-accent {
   color: #22e52e;
 }
