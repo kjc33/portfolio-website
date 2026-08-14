@@ -9,6 +9,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Lock scroll without shifting page layout */
+body.disable-scroll {
+  overflow: hidden;
+}
+
 /* Header */
 
 .primary-header {
@@ -1210,6 +1215,13 @@ input[type="file"] {
 }
 
 /* Media Queries */
+
+/* Honor user accessibility preferences for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 
 @media screen and (min-width: 350px) {
   /* Primary Menu - Nav Items */

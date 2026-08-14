@@ -10,31 +10,16 @@ export default function MobileNav({ setMobileMenuVisible }) {
   ];
 
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth <= 1024 : false
-  );
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1024);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   useEffect(() => {
     if (mobileNavVisible) {
-      document.body.classList.remove("enable-scroll");
       document.body.classList.add("disable-scroll");
     } else {
       document.body.classList.remove("disable-scroll");
-      document.body.classList.add("enable-scroll");
     }
 
     return () => {
-      document.body.classList.remove("disable-scroll", "enable-scroll");
-      document.body.classList.add("enable-scroll");
+      document.body.classList.remove("disable-scroll");
     };
   }, [mobileNavVisible]);
 
@@ -51,7 +36,7 @@ export default function MobileNav({ setMobileMenuVisible }) {
     setMobileMenuVisible(false);
   };
 
-  return isMobile ? (
+  return (
     <div className="mobile-menu-wrapper">
       <button
         type="button"
@@ -102,5 +87,5 @@ export default function MobileNav({ setMobileMenuVisible }) {
         </div>
       )}
     </div>
-  ) : null;
+  );
 }
