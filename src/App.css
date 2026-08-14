@@ -1141,48 +1141,42 @@ input[type="file"] {
   text-transform: uppercase;
 }
 
-.social-icons .footer-social-icon a {
-  color: #AAAAAA;
-  text-decoration: none;
-}
-
 .footer-navigation ul li a:hover {
   color: #22e52e;
 }
 
-.social-icons .footer-social-icon a:hover {
-  background-color: #22e52e;
-  border-color: #22e52e;
-}
-
-.social-icons .footer-social-icon a:hover i {
-  color: #262626;
-}
-
+/* Social Icons */
 .social-icons {
   gap: 15px;
 }
 
 .footer-social-icon {
-  position: relative;
   width: 50px;
   height: 50px;
 }
 
 .footer-social-icon a {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   border: solid 1px rgba(250, 250, 250, 0.2);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  color: #AAAAAA;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-.social-icons .footer-social-icon i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1rem;
+.footer-social-icon a svg {
+  width: 18px;
+  height: 18px;
+}
+
+.social-icons .footer-social-icon a:hover {
+  background-color: #22e52e;
+  border-color: #22e52e;
+  color: #262626;
 }
 
 .footer-bottom {
