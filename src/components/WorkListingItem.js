@@ -4,6 +4,11 @@ import ArrowButton from "./ArrowButton";
 export default function WorkListingItem({ featuredWorkDetails }) {
   const {
     imgSrc,
+    srcSet,
+    sizes,
+    width,
+    height,
+    loading = "lazy",
     altText,
     featuredWorkContainerClasses,
     photographer,
@@ -22,9 +27,13 @@ export default function WorkListingItem({ featuredWorkDetails }) {
         {imgSrc && (
           <img
             src={imgSrc}
-            alt={altText || ProjectName}
+            srcSet={srcSet}
+            sizes={sizes}
+            width={width}
+            height={height}
+            loading={loading}
+            alt={altText || (ProjectName ? `Preview of ${ProjectName}` : "")}
             className="select-work-img"
-            loading="lazy"
           />
         )}
         {photographer && (
@@ -34,12 +43,18 @@ export default function WorkListingItem({ featuredWorkDetails }) {
               <a
                 href={photographerProfileLink}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label={`Photo by ${photographer} (opens in a new tab)`}
               >
                 {photographer}
               </a>{" "}
               on{" "}
-              <a href={featuredImgLink} target="_blank" rel="noreferrer">
+              <a 
+                href={featuredImgLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label={`${featuredImgSrc} photo profile (opens in a new tab)`}
+              >
                 {featuredImgSrc}
               </a>
             </p>
