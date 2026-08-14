@@ -127,6 +127,15 @@ html {
   flex-direction: column;
   justify-content: space-between;
   gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
   cursor: pointer;
 }
 
@@ -185,12 +194,15 @@ html {
   letter-spacing: 4px;
 }
 
-.mobile-menu-nav-wrapper .mobile-close-btn .close-btn i {
+.mobile-menu-nav-wrapper .mobile-close-btn .close-btn svg {
+  display: block;
+  width: 24px;
+  height: 24px;
   color: #292929;
 }
 
 .mobile-menu-nav-wrapper .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a:hover,
-.mobile-menu-nav-wrapper .mobile-close-btn .close-btn:hover i {
+.mobile-menu-nav-wrapper .mobile-close-btn .close-btn:hover svg {
   color: #ffffff;
 }
 
