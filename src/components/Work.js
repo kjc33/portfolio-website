@@ -9,6 +9,9 @@ export default function Work() {
   const featuredWorks = [
     {
       imgSrc: artifyImg,
+      width: "1600",
+      height: "1000",
+      loading: "lazy",
       altText: "Artify search allows you to learn more about your favorite bands and their top songs.",
       featuredWorkContainerClasses: "select-work-featured-bg project-1",
       photographer: "Cody Board",
@@ -24,6 +27,9 @@ export default function Work() {
     },
     {
       imgSrc: quizerImg,
+      width: "1600",
+      height: "1000",
+      loading: "lazy",
       altText: "The Quizer app is a fun online trivia test that calculates scores and tracks top users on a leaderboard.",
       featuredWorkContainerClasses: "select-work-featured-bg project-2",
       photographer: "TC",

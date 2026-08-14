@@ -4,6 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#1f1f1f" />
+
+  <!-- Non-blocking stylesheet preloader -->
+  <script>
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        mutation.addedNodes.forEach(function(node) {
+          if (node.tagName === 'LINK' && node.rel === 'stylesheet') {
+            node.media = 'print';
+            node.onload = function() { node.media = 'all'; };
+          }
+        });
+      });
+    });
+    observer.observe(document.head, { childList: true });
+  </script>
   
   <title>Kyle Chin | Designer & Front-End Developer</title>
   <meta name="description" content="Hello! I'm Kyle Chin, a strategist, designer, and developer. Contact me today to start your next web project." />

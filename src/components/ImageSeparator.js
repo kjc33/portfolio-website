@@ -8,7 +8,9 @@ export default function ImageSeparator({
   sizes,                   // Optional responsive sizes layout guidance
   width,                   // Intrinsic width
   height,                  // Intrinsic height
-  loading = "lazy",        // Native lazy loading (defaulting to lazy)
+  loading = "lazy",        // Default to lazy loading for below-fold instances
+  fetchPriority,           // "high" for the first/LCP image, undefined for others
+  decoding = "async",      // Prevents main-thread blocking during image decoding
   altText = "",            // Accessible image description
   imageUrl,                // Photographer's profile URL
   photographer,            // Name of the photographer
@@ -27,6 +29,8 @@ export default function ImageSeparator({
             width={width}
             height={height}
             loading={loading}
+            fetchPriority={fetchPriority}
+            decoding={decoding}
             alt={altText || (photographer ? `Photo by ${photographer}` : "")}
             className="image-separator-img"
           />

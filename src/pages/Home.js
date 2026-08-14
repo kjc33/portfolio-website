@@ -24,7 +24,11 @@ function Home() {
       <Hero primaryH1="Front-end Developer" subHead="Open to Work" subHeadDescription="See Projects" />
       <ImageSeparator
         imageSrc={valuesExerciseImg}
-        altText="Candid shot of Kyle Chin participating in a company values exercise." 
+        altText="Candid shot of Kyle Chin participating in a company values exercise."
+        width="1600"
+        height="850"
+        loading="eager"
+        fetchPriority="high" 
         containerNameClasses="image-separator-right hero-separator object-position-left-center" 
         photoAttributionClasses="photo-attribution-left vertical flex-column" 
         imageUrl="https://www.arieljordanphoto.com/" 
@@ -41,6 +45,9 @@ function Home() {
       <ImageSeparator
         imageSrc={businessStrategyImg}
         altText="A website information archicture and planning session."
+        width="1600"
+        height="850"
+        loading="lazy"
         containerNameClasses="image-separator-left about-separator object-position-right-center"
         photoAttributionClasses="photo-attribution-right vertical flex-column"
         imageUrl="https://unsplash.com/@kaleidico?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
@@ -59,6 +66,9 @@ function Home() {
         imageSrc={letUsTalkImg}
         altText="Professional headshot of Kyle Chin, a strategist, designer, and front-end developer in Vancouver, WA."
         containerNameClasses="image-separator-right quote-separator object-position-center-center" 
+        width="1600"
+        height="850"
+        loading="lazy"
         photoAttributionClasses="photo-attribution-left vertical flex-column" 
         imageUrl="https://www.arieljordanphoto.com/" 
         photographer="Ariel Jordan" 
