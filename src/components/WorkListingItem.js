@@ -44,7 +44,7 @@ export default function WorkListingItem({ featuredWorkDetails }) {
                 href={photographerProfileLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Photo by ${photographer} (opens in a new tab)`}
+                aria-label={`${photographer}'s profile on ${featuredImgSrc} (opens in a new tab)`}
               >
                 {photographer}
               </a>{" "}
@@ -53,7 +53,7 @@ export default function WorkListingItem({ featuredWorkDetails }) {
                 href={featuredImgLink} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                aria-label={`${featuredImgSrc} photo profile (opens in a new tab)`}
+                aria-label={`Photo by ${photographer} on ${featuredImgSrc} (opens in a new tab)`}
               >
                 {featuredImgSrc}
               </a>
