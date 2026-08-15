@@ -245,7 +245,7 @@ body.disable-scroll {
 }
 
 .overlay-logo .brand-logo {
-  width: 80px;
+  width: 60px;
   height: auto;
   max-width: 100%;
   object-fit: contain;
@@ -1350,6 +1350,13 @@ input[type="file"] {
   .drop-down-arrow .arrow-icon {
     width: 60px;
     height: 60px;
+  }
+  /* Mobile Menu */
+  .overlay-logo .brand-logo {
+    width: 80px;
+  }
+  .mobile-menu-nav-wrapper .mobile-menu-nav-items .mobile-menu-nav-list-items {
+    margin-top: 80px;
   }
   .outline-heading-large {
     width: 80%;
