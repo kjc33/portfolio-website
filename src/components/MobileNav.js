@@ -13,17 +13,24 @@ export default function MobileNav({
     { to: "/#contact", navLabel: "Hire Me" },
   ];
 
-  // Close menu on 'Escape' key press
+  // Helper to remove active DOM focus before closing
+  const handleClose = () => {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+    closeMobileMenu();
+  };
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape" && isOpen) {
-        closeMobileMenu();
+        handleClose();
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, closeMobileMenu]);
+  }, [isOpen]);
 
   return (
     <div className="mobile-menu-wrapper">
@@ -44,7 +51,7 @@ export default function MobileNav({
       <div
         className={`mobile-menu-nav-wrapper ${isOpen ? "is-open" : ""}`}
         id="mobileMenuNav"
-        aria-hidden={!isOpen}
+        inert={!isOpen ? "" : undefined}
       >
         <MobileNavList
           navClass="mobile-menu-nav-items"
@@ -52,7 +59,7 @@ export default function MobileNav({
           ulClass="mobile-menu-nav-list-items"
           liClass="nav-item"
           navItems={navItems}
-          onLinkClick={closeMobileMenu}
+          onLinkClick={handleClose}
           mobileNavVisible={isOpen}
         />
         <div className="mobile-close-btn">
@@ -61,7 +68,7 @@ export default function MobileNav({
             aria-label="Close navigation menu"
             className="close-btn"
             id="closeBtn"
-            onClick={closeMobileMenu}
+            onClick={handleClose}
           >
             <svg
               width="24"

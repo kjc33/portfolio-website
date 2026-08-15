@@ -315,6 +315,7 @@ body.disable-scroll {
 
 .primary-header .header-cta {
   display: none;
+  margin-left: auto;
 }
 
 .primary-cta-btn {

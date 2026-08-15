@@ -16,7 +16,6 @@ export default function MobileNavList({
       className={navClass} 
       id={navId}
       aria-label="Mobile Navigation"
-      aria-hidden={!mobileNavVisible}
     >
       {/* Mobile Drawer Header / Brand Logo */}
       <div className="overlay-logo">

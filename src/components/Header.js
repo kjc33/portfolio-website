@@ -10,7 +10,6 @@ export default function Header() {
   const [scrolledEnough, setScrolledEnough] = useState(false);
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
 
-  // Close handler passed to child nav components
   const closeMobileMenu = useCallback(() => {
     setMobileMenuVisible(false);
   }, []);
@@ -19,20 +18,17 @@ export default function Header() {
     setMobileMenuVisible((prev) => !prev);
   }, []);
 
-  // Sync body scroll locking when mobile menu toggles
   useEffect(() => {
     if (mobileMenuVisible) {
       document.body.classList.add("disable-scroll");
     } else {
       document.body.classList.remove("disable-scroll");
     }
-
     return () => {
       document.body.classList.remove("disable-scroll");
     };
   }, [mobileMenuVisible]);
 
-  // Scroll direction & sticky threshold tracking
   useEffect(() => {
     let lastScrollPosition = typeof window !== "undefined" ? window.pageYOffset : 0;
     let ticking = false;
@@ -40,14 +36,12 @@ export default function Header() {
     const updateScrollDir = () => {
       const currentScrollPos = window.pageYOffset;
 
-      // Threshold check
       if (currentScrollPos > 200) {
         setScrolledEnough(true);
       } else if (currentScrollPos <= 0) {
         setScrolledEnough(false);
       }
 
-      // Direction check
       if (currentScrollPos > lastScrollPosition) {
         setScrollDirection("scroll-down");
       } else {
@@ -65,7 +59,6 @@ export default function Header() {
       }
     };
 
-    // Check initial scroll on mount safely
     if (typeof window !== "undefined" && window.pageYOffset > 0) {
       setScrolledEnough(true);
     }
@@ -94,16 +87,10 @@ export default function Header() {
           />
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Links */}
         <PrimaryNav />
 
-        {/* Mobile Navigation */}
-        <MobileNav
-          isOpen={mobileMenuVisible}
-          toggleMobileMenu={toggleMobileMenu}
-          closeMobileMenu={closeMobileMenu}
-        />
-
+        {/* Desktop CTA Button */}
         <div className="header-cta">
           <PrimaryButton
             url="/#contact"
@@ -111,6 +98,13 @@ export default function Header() {
             onClick={closeMobileMenu}
           />
         </div>
+
+        {/* Mobile Navigation Toggle & Drawer */}
+        <MobileNav
+          isOpen={mobileMenuVisible}
+          toggleMobileMenu={toggleMobileMenu}
+          closeMobileMenu={closeMobileMenu}
+        />
       </div>
     </header>
   );
