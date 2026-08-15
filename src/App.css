@@ -335,6 +335,12 @@ body.disable-scroll {
   background-color: var(--accent-green);
 }
 
+/* Mobile Menu Hamburger*/
+.primary-header .header-inner .mobile-menu-wrapper {
+  display: block;
+  margin-left: auto;
+}
+
 /* Body */
 
 body {
@@ -587,12 +593,12 @@ li {
   letter-spacing: 2px;
 }
 
-/* Focus Management for Keyboard Navigators */
-a:focus:not(:focus-visible) {
+/* Focus Management */
+*:focus:not(:focus-visible) {
   outline: none;
 }
 
-a:focus-visible {
+*:focus-visible {
   outline: 2px solid var(--accent-green);
   outline-offset: 4px;
   border-radius: 10px;
@@ -1555,6 +1561,9 @@ input[type="file"] {
     display: block;
     margin-left: auto;
   }
+  .primary-header .header-inner .mobile-menu-wrapper {
+    margin-left: 0;
+  }
   .mobile-menu-nav-items {
     padding: 50px 50px;
   }
@@ -1749,10 +1758,6 @@ input[type="file"] {
 }
 
 @media screen and (max-width: 1024px) {
-  .primary-header .header-inner .mobile-menu-wrapper {
-    display: block;
-    margin-left: auto;
-  }
   .primary-header .header-inner .cta {
     margin-left: 0;
   }
@@ -1775,6 +1780,9 @@ input[type="file"] {
   .primary-cta-btn {
     min-width: 9em;
     padding: 15px 30px;
+  }
+  .primary-header .header-inner .mobile-menu-wrapper {
+    display: none;
   }
   .primary-header .header-inner .cta {
     margin-left: auto;
