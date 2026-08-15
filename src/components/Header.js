@@ -77,6 +77,7 @@ export default function Header() {
       } ${mobileMenuVisible ? "mobile-nav-active" : ""}`}
     >
       <div className="header-inner">
+        <h1>TESTING BREAKAGE</h1>
         <div className="header-brand">
           <SiteLogo
             headshot={headshot}
