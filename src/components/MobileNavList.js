@@ -24,23 +24,20 @@ export default function MobileNavList({
       aria-label="Mobile Navigation"
       aria-hidden={!mobileNavVisible}
     >
+      {/* Mobile Drawer Header / Brand Logo */}
       <div className="overlay-logo">
         <div className="logo-inner">
-          <div className="headshot">
-            <figure>
+          <HashLink smooth to="/#top" className="site-logo" onClick={handleLinkClick}>
+            <figure className="logo-mark-wrapper">
               <img 
-                src="/images/headshot.webp" 
-                alt="Kyle John Chin" 
-                width="40" 
-                height="40" 
+                src="/images/kc-logo-mark-dark.svg" 
+                alt="Kyle John Chin Logo Mark" 
+                className="brand-logo"
+                width="855"
+                height="626"
               />
             </figure>
-          </div>
-          <div className="site-name">
-            <HashLink smooth to="/#top" className="site-logo" onClick={handleLinkClick}>
-              <p className="pure-black">Kyle John Chin</p>
-            </HashLink>
-          </div>
+          </HashLink>
         </div>
       </div>
 
