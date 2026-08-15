@@ -245,7 +245,7 @@ body.disable-scroll {
 }
 
 .overlay-logo .brand-logo {
-  width: 48px;
+  width: 80px;
   height: auto;
   max-width: 100%;
   object-fit: contain;
@@ -1572,7 +1572,7 @@ input[type="file"] {
     left: 50px;
   }
   .overlay-logo .brand-logo {
-    width: 60px;
+    width: 100px;
   }
   .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a {
     font-size: 5rem;
@@ -1688,7 +1688,6 @@ input[type="file"] {
 }
 
 @media screen and (min-width: 880px) {
-  .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a,
   .outline-heading-large {
     font-size: 6rem;
   }
