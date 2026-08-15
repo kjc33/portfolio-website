@@ -187,9 +187,9 @@ body.disable-scroll {
   width: 40px;
 }
 
-/* Primary Nav - Mobile Menu Nav Items */
+/* Primary Nav - Mobile Menu Overlay & Items */
 
-.primary-header .header-inner .mobile-menu-wrapper .mobile-menu-nav-wrapper .mobile-menu-nav-items {
+.mobile-menu-nav-items {
   display: block;
   position: fixed;
   top: 0;
@@ -202,7 +202,6 @@ body.disable-scroll {
   transition: transform 0.5s ease;
 }
 
-/* Overlay Header Logo Positioning */
 .mobile-menu-nav-items .overlay-logo {
   position: absolute;
   top: 30px;
@@ -217,6 +216,7 @@ body.disable-scroll {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-top: 80px;
 }
 
 .mobile-menu-nav-wrapper .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a {
@@ -225,20 +225,17 @@ body.disable-scroll {
   letter-spacing: 4px;
 }
 
-.mobile-menu-nav-wrapper .mobile-close-btn .close-btn svg {
-  display: block;
-  width: 24px;
-  height: 24px;
-  color: var(--bg-dark);
+/* Mobile Link States: High-Contrast Focus & Accessible Hover */
+.mobile-menu-nav-wrapper .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a:hover {
+  color: var(--pure-black);
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
-.mobile-menu-nav-wrapper .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a:hover,
-.mobile-menu-nav-wrapper .mobile-close-btn .close-btn:hover svg {
-  color: var(--white);
-}
-
-.mobile-menu-nav-items .mobile-menu-nav-list-items {
-  margin-top: 80px;
+.mobile-menu-nav-wrapper .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a:focus-visible {
+  outline: 2px solid var(--pure-black);
+  outline-offset: 4px;
+  color: var(--pure-black);
 }
 
 /* Primary Nav - Mobile Close Button */
@@ -257,6 +254,17 @@ body.disable-scroll {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.mobile-menu-nav-wrapper .mobile-close-btn .close-btn svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  color: var(--bg-dark);
+}
+
+.mobile-menu-nav-wrapper .mobile-close-btn .close-btn:hover svg {
+  color: var(--pure-black);
 }
 
 .fa-solid.fa-xmark {
@@ -517,6 +525,7 @@ footer,
 }
 
 /* Images */
+
 .object-position-center-center img {
   object-position: center center;
 }
@@ -538,12 +547,11 @@ li {
   letter-spacing: 2px;
 }
 
-/* Remove default outline on mouse clicks/taps */
+/* Focus Management for Keyboard Navigators */
 a:focus:not(:focus-visible) {
   outline: none;
 }
 
-/* Style strictly for keyboard navigators */
 a:focus-visible {
   outline: 2px solid var(--accent-green);
   outline-offset: 4px;
@@ -614,13 +622,11 @@ h6 {
   color: var(--accent-green);
 }
 
-/* White Text */
+/* Color Helpers */
 
 .white {
   color: var(--white);
 }
-
-/* Pure Black Text */
 
 .pure-black {
   color: var(--pure-black);
@@ -648,7 +654,7 @@ h6 {
   left: unset;
 }
 
-/* Location & Photo Attribution*/
+/* Location & Photo Attribution */
 
 .location p,
 .photo-attribution-left p,
@@ -728,8 +734,6 @@ h6 {
   transition: opacity 0.2s ease;
 }
 
-/* Drop Down Button Hover State */
-
 .drop-down-arrow .arrow-icon:hover {
   background-color: var(--accent-green);
   border-color: var(--accent-green);
@@ -758,7 +762,7 @@ h6 {
   margin-bottom: 20px;
 }
 
-/* Hero */
+/* Hero Section */
 
 .hero,
 .not-found-error,
@@ -766,7 +770,7 @@ h6 {
   margin-top: 100px;
 }
 
-/* Image Separator */
+/* Image Separators */
 
 .image-separator-img {
   width: 100%;
@@ -1045,7 +1049,7 @@ h6 {
   padding: 50px 0;
 }
 
-/* Contact Form*/
+/* Contact Form */
 
 .form-wrapper .field-wrapper label {
   display: none;
@@ -1193,6 +1197,7 @@ input[type="file"] {
 }
 
 /* Social Icons */
+
 .social-icons {
   gap: 15px;
 }
@@ -1246,7 +1251,6 @@ input[type="file"] {
 
 /* Media Queries */
 
-/* Honor user accessibility preferences for reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1254,11 +1258,9 @@ input[type="file"] {
 }
 
 @media screen and (min-width: 350px) {
-  /* Primary Menu - Nav Items */
   .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a {
     font-size: 2.25rem;
   }
-  /* Outline Heading */
   .outline-heading-large {
     font-size: 2rem;
     -webkit-text-stroke-width: 1px;
@@ -1272,7 +1274,6 @@ input[type="file"] {
   .job-card .percentage {
     font-size: 2rem;
   }
-  /* Job Cards */
   .job-card {
     padding: 30px;
   }
@@ -1280,14 +1281,12 @@ input[type="file"] {
   .job-card .pagination {
     font-size: 1rem;
   }
-  /* Statistics */
   .statistic-number {
     font-size: 2.5rem;
   }
   .hexagon-statistic-bg .hexagon-statistic {
     font-size: 0.875rem;
   }
-  /* Select Work */
   .select-work .select-work-featured-bg {
     height: 380px;
   }
@@ -1296,30 +1295,25 @@ input[type="file"] {
     color: var(--white);
     line-height: 1.5em;
   }
-  /* Quote Heading */
   .quote-body .outline-text-large {
     font-size: 1.2rem;
   }
 }
 
 @media screen and (min-width: 400px) {
-  /* Drop Down Arrow */
   .drop-down-arrow .arrow-icon {
     width: 60px;
     height: 60px;
   }
-  /* Outline Heading */
   .outline-heading-large {
     width: 80%;
   }
-  /* Vertical Text */
   .vertical {
     display: flex;
   }
   .job-card .pagination {
     right: 30px;
   }
-  /* Select Work */
   .work .inner-container .outline-heading-large {
     width: 90%;
   }
@@ -1332,11 +1326,9 @@ input[type="file"] {
   .select-work-content {
     width: calc(100% + 50px);
   }
-  /* Quote Heading */
   .quote-body .outline-text-large {
     font-size: 1.4rem;
   }
-  /* Contact Form */
   form [type="submit"] {
     width: 100%;
     max-width: 175px;
@@ -1360,46 +1352,37 @@ input[type="file"] {
 }
 
 @media screen and (max-width: 500px) {
-  /* Outline Heading */
   .outline-text-large {
     -webkit-text-stroke-width: 0;
     -webkit-text-stroke-color: transparent;
     color: var(--white);
   }
-  /* Footer Navigation */
   .footer-navigation .primary-footer-nav .small-gap {
     gap: 20px;
   }
 }
 
 @media screen and (min-width: 500px) {
-  /* Headshot/Logo and Site Name */
   .headshot {
     display: block;
   }
-  /* Primary Menu - Nav Items */
   .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a {
     font-size: 3.5rem;
   }
-  /* Outline Heading */
   .outline-text-large {
     font-size: 3rem;
   }
-  /* Primary H1 */
   .primary-h1 {
     font-size: 2.75rem;
   }
-  /* Primary H2 */
   .primary-h2 {
     font-size: 2.5rem;
   }
-  /* Top Margin Offset (for Header) */
   .hero,
   .not-found-error,
   .thank-you {
     margin-top: var(--header-height-desktop);
   }
-  /* Skills List */
   .skills-list .custom-list li,
   .large-text p {
     font-size: 1.2rem;
@@ -1407,12 +1390,10 @@ input[type="file"] {
   .custom-list li:not(:last-child) {
     padding-bottom: 30px;
   }
-  /* Image Separators*/
   .image-separator-right .inner-container .image-separator-bg,
   .image-separator-left .inner-container .image-separator-bg {
     height: 380px;
   }
-  /* Job Cards */
   .job-card .percentage {
     font-size: 3rem;
   }
@@ -1423,7 +1404,6 @@ input[type="file"] {
   .job-card .pagination {
     right: 50px;
   }
-  /* Statistics */
   .statistic-number {
     font-size: 3rem;
     margin-bottom: 30px;
@@ -1431,7 +1411,6 @@ input[type="file"] {
   .hexagon-statistic-bg .hexagon-statistic {
     font-size: 0.9rem;
   }
-  /* Select Work & Quote*/
   .work .inner-container .outline-heading-large {
     margin: 0 0 -65px 20px;
   }
@@ -1450,14 +1429,12 @@ input[type="file"] {
 }
 
 @media screen and (min-width: 500px) and (max-width: 767px) {
-  /* Skills List */
   .skills .large-gap {
     gap: 30px;
   }
 }
 
 @media screen and (min-width: 641px) {
-  /* Outline Heading */
   .outline-heading-large {
     font-size: 4rem;
   }
@@ -1472,7 +1449,6 @@ input[type="file"] {
   .photo-attribution-right p {
     font-size: 0.875rem;
   }
-  /* Job Cards */
   .job-card {
     min-height: 320px;
   }
@@ -1482,28 +1458,23 @@ input[type="file"] {
   .skills-list {
     flex-direction: row;
   }
-  /* Image Separators & Select Work */
   .image-separator-right .inner-container .image-separator-bg,
   .image-separator-left .inner-container .image-separator-bg,
   .select-work .select-work-featured-bg {
     height: 480px;
   }
-  /* Statistics */
   .statistic-number {
     font-size: 4rem;
   }
   .hexagon-statistic-bg .hexagon-statistic {
     font-size: 1rem;
   }
-  /* Select Work */
   .work .inner-container .outline-heading-large {
     margin: 0 0 -80px 20px;
   }
-  /* Quote Heading */
   .quote-body .outline-text-large {
     font-size: 2.25rem;
   }
-  /* Contact Form */
   .field-wrapper.website,
   .field-wrapper.message {
     grid-column-start: 1;
@@ -1531,14 +1502,12 @@ input[type="file"] {
   .work .select-work article .select-work-content {
     margin: 0 auto;
   }
-  /* Statistics */
   .hexagon-divider .inner-container {
     gap: 30px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  /* Primary Header */
   .primary-header {
     padding: 15px 50px;
   }
@@ -1548,11 +1517,9 @@ input[type="file"] {
   .mobile-menu-nav-items {
     padding: 50px 50px;
   }
-  /* Primary Menu - Nav Items */
   .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a {
     font-size: 5rem;
   }
-  /* Primary Menu - Mobile Nav Close Button */
   .mobile-menu-nav-wrapper .close-btn {
     top: 50px;
     right: 50px;
@@ -1560,7 +1527,6 @@ input[type="file"] {
   .fa-solid.fa-xmark {
     font-size: 40px;
   }
-  /* Paragraphs, Lists, and Sections */
   p,
   li {
     font-size: 1.2rem;
@@ -1568,7 +1534,7 @@ input[type="file"] {
   section,
   footer,
   .quote,
-  .primary-header .header-inner .mobile-menu-wrapper .mobile-menu-nav-wrapper .mobile-menu-nav-items {
+  .mobile-menu-nav-items {
     padding: 80px 50px;
   }
   .image-separator-right {
@@ -1580,7 +1546,6 @@ input[type="file"] {
   .no-bottom-padding {
     padding: 80px 50px 0 50px;
   }
-  /* Outline Heading */
   .outline-heading-large {
     font-size: 5rem;
   }
@@ -1593,27 +1558,23 @@ input[type="file"] {
   .skills .primary-h2 {
     padding-bottom: 0;
   }
-  /* Job Cards */
   .job-card {
     min-height: 380px;
   }
   .job-titles .inner-container {
     gap: 50px;
   }
-  /* Image Separators & Select Work*/
   .image-separator-right .inner-container .image-separator-bg,
   .image-separator-left .inner-container .image-separator-bg,
   .select-work .select-work-featured-bg {
     height: 515px;
   }
-  /* Statistics */
   .statistic-number {
     font-size: 4.5rem;
   }
   .hexagon-statistic-bg .hexagon-statistic {
     font-size: 1.25rem;
   }
-  /* Select Work */
   .work .inner-container .outline-heading-large {
     margin: 0 0 -90px 20px;
   }
@@ -1630,19 +1591,16 @@ input[type="file"] {
     width: calc(90% + 50px);
     margin: 0 auto;
   }
-  /* Quote Heading */
   .quote-body .outline-text-large {
     font-size: 3rem;
   }
   .quote-body {
     padding: 80px 0;
   }
-  /* Contact Form */
   input:not(input[type="file"]):not([type="submit"]),
   textarea {
     font-size: 1.2rem;
   }
-  /* Footer */
   .primary-footer .inner-container.small-gap {
     gap: 50px;
   }
@@ -1652,7 +1610,6 @@ input[type="file"] {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Job Cards */
   .job-card .pagination {
     position: absolute;
     right: 50px;
@@ -1662,7 +1619,6 @@ input[type="file"] {
   .skills .inner-container {
     max-width: 800px;
   }
-  /* Footer */
   .footer-top.small-gap {
     gap: 50px;
   }
@@ -1672,7 +1628,6 @@ input[type="file"] {
 }
 
 @media screen and (min-width: 880px) {
-  /* Primary Menu - Nav Items & Outline Heading */
   .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a,
   .outline-heading-large {
     font-size: 6rem;
@@ -1683,7 +1638,6 @@ input[type="file"] {
   .primary-h2 {
     font-size: 4rem;
   }
-  /* Skills List */
   .skills-list .custom-list li,
   .large-text p {
     font-size: 1.4rem;
@@ -1691,17 +1645,14 @@ input[type="file"] {
   .custom-list li::before {
     top: 12px;
   }
-  /* Image Separators & Select Work*/
   .image-separator-right .inner-container .image-separator-bg,
   .image-separator-left .inner-container .image-separator-bg,
   .select-work .select-work-featured-bg {
     height: 600px;
   }
-  /* Job Cards */
   .job-card .percentage {
     font-size: 4.5rem;
   }
-  /* Select Work */
   .select-work-content .select-work-heading h3 {
     font-size: 2.5rem;
   }
@@ -1711,21 +1662,18 @@ input[type="file"] {
   .select-work-content {
     width: calc(85% + 50px);
   }
-  /* Quote Heading */
   .quote-body .outline-text-large {
     font-size: 3.5rem;
   }
 }
 
 @media screen and (min-width: 880px) and (max-width: 1024px) {
-  /* Job Cards */
   .job-card {
     min-height: 420px;
   }
 }
 
 @media screen and (min-width: 960px) {
-  /* Statistics */
   .hexagon-divider .inner-container {
     gap: 0;
   }
@@ -1744,16 +1692,12 @@ input[type="file"] {
   .hexagon-statistic-bg .hexagon-statistic {
     font-size: 0.9rem;
   }
-  /* Flex Row - Tablet */
   .flex-row-tablet {
     flex-direction: row;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .primary-header .header-inner .mobile-menu-wrapper .mobile-menu-nav-wrapper {
-    display: flex;
-  }
   .primary-header .header-inner .mobile-menu-wrapper {
     display: block;
     margin-left: auto;
@@ -1767,14 +1711,12 @@ input[type="file"] {
   .flex-column-tablet {
     flex-direction: column;
   }
-  /* Select Work */
   .select-work .select-work-content.flex-column {
     gap: 20px;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  /* Primary Nav */
   .primary-nav {
     display: flex;
     column-gap: 30px;
@@ -1786,7 +1728,6 @@ input[type="file"] {
   .primary-header .header-inner .cta {
     margin-left: auto;
   }
-  /* Outline Heading */
   .outline-heading-large {
     font-size: 7rem;
   }
@@ -1801,7 +1742,6 @@ input[type="file"] {
   .no-bottom-padding {
     padding: 150px 50px 0 50px;
   }
-  /* Skills List */
   .skills-list .custom-list li,
   .large-text p {
     font-size: 1.5rem;
@@ -1809,7 +1749,6 @@ input[type="file"] {
   .custom-list li::before {
     top: 13px;
   }
-  /* Cards */
   .job-titles .inner-container {
     align-items: flex-start;
     margin-bottom: 100px;
@@ -1823,19 +1762,16 @@ input[type="file"] {
   .job-card .percentage {
     font-size: 2rem;
   }
-  /* Statistics */
   .statistic-number {
     font-size: 3.75rem;
   }
   .hexagon-statistic-bg .hexagon-statistic {
     font-size: 0.875em;
   }
-  /* Grid Layout - Tablet */
   .grid-tablet {
     display: grid;
     grid-template-columns: 0.75fr 1fr;
   }
-  /* Select Work */
   .select-work .select-work-featured-bg {
     height: 700px;
   }
@@ -1849,24 +1785,20 @@ input[type="file"] {
   .work .inner-container .select-work {
     gap: 100px;
   }
-  /* Quote Heading */
   .quote-body .outline-text-large {
     font-size: 4rem;
   }
   .quote-body {
     padding: 150px 0;
   }
-  /* Flex Row - Desktop */
   .flex-row-desktop {
     flex-direction: row;
   }
-  /* Contact */
   .contact .inner-container {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
   }
-  /* Footer */
   .primary-footer .footer-top {
     align-items: center;
   }
@@ -1902,11 +1834,9 @@ input[type="file"] {
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
-  /* Job Cards */
   .job-card {
     padding: 30px;
   }
-  /* Contact Form*/
   .contact .inner-container .heading-and-description {
     flex: 1;
   }
@@ -1916,7 +1846,6 @@ input[type="file"] {
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1300px) {
-  /* Skills */
   .skills .inner-container.large-width {
     max-width: 1100px;
   }
@@ -1936,11 +1865,9 @@ input[type="file"] {
 }
 
 @media screen and (min-width: 1201px) {
-  /* Outline Heading */
   .outline-heading-large {
     font-size: 8rem;
   }
-  /* Skills List */
   .custom-list li::before {
     -webkit-mask: url("./images/hexagon-white.svg") no-repeat center / contain;
     mask: url("./images/hexagon-white.svg") no-repeat center / contain;
@@ -1955,19 +1882,16 @@ input[type="file"] {
   .job-card .percentage {
     font-size: 2.5rem;
   }
-  /* Image Separators */
   .image-separator-right .inner-container .image-separator-bg,
   .image-separator-left .inner-container .image-separator-bg {
     height: 700px;
   }
-  /* Statistics */
   .statistic-number {
     font-size: 4rem;
   }
   .hexagon-statistic-bg .hexagon-statistic {
     font-size: 1rem;
   }
-  /* Select Work */
   .select-work .select-work-featured-bg {
     height: 800px;
   }
@@ -1981,14 +1905,12 @@ input[type="file"] {
     max-width: 1000px;
     margin: 0 auto;
   }
-  /* Quote Heading */
   .quote-body .outline-text-large {
     font-size: 5rem;
   }
   .x-large-gap {
     gap: 80px;
   }
-  /* Contact Form*/
   .contact .inner-container .heading-and-description {
     flex: 0.45;
   }
@@ -2015,12 +1937,10 @@ input[type="file"] {
 }
 
 @media screen and (min-width: 1400px) {
-  /* Image Separators */
   .image-separator-right .inner-container .image-separator-bg,
   .image-separator-left .inner-container .image-separator-bg {
     height: 850px;
   }
-  /* Select Work */
   .select-work .select-work-featured-bg {
     height: 950px;
   }
