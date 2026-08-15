@@ -104,7 +104,7 @@ export default function Header() {
           closeMobileMenu={closeMobileMenu}
         />
 
-        <div className="header-actions">
+        <div className="header-cta">
           <PrimaryButton
             url="/#contact"
             label="Hire Me"

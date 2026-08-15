@@ -313,7 +313,7 @@ body.disable-scroll {
 
 /* Primary Nav - CTA Button */
 
-.primary-header .cta {
+.primary-header .header-cta {
   display: none;
 }
 
@@ -1551,7 +1551,7 @@ input[type="file"] {
   .primary-header {
     padding: 15px 50px;
   }
-  .primary-header .cta {
+  .primary-header .header-cta {
     display: block;
   }
   .mobile-menu-nav-items {
