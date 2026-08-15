@@ -256,7 +256,7 @@ body.disable-scroll {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .mobile-menu-nav-wrapper .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a {
@@ -1356,7 +1356,7 @@ input[type="file"] {
     width: 80px;
   }
   .mobile-menu-nav-wrapper .mobile-menu-nav-items .mobile-menu-nav-list-items {
-    margin-top: 80px;
+    margin-top: 100px;
   }
   .outline-heading-large {
     width: 80%;
