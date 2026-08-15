@@ -9,22 +9,32 @@ export default function MobileNav({ setMobileMenuVisible }) {
     { to: "/#contact", navLabel: "Hire Me" },
   ];
 
+  // Force default state to false on component mount / fresh reload
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
 
-  // Lock body scroll when drawer is active
+  // Clean up scroll lock and menu state on initial mount & page unmount
+  useEffect(() => {
+    setMobileNavVisible(false);
+    if (typeof setMobileMenuVisible === "function") {
+      setMobileMenuVisible(false);
+    }
+    document.body.classList.remove("disable-scroll");
+
+    return () => {
+      document.body.classList.remove("disable-scroll");
+    };
+  }, []);
+
+  // Sync scroll lock when drawer toggles
   useEffect(() => {
     if (mobileNavVisible) {
       document.body.classList.add("disable-scroll");
     } else {
       document.body.classList.remove("disable-scroll");
     }
-
-    return () => {
-      document.body.classList.remove("disable-scroll");
-    };
   }, [mobileNavVisible]);
 
-  // Accessibility: Close menu on 'Escape' key press
+  // Close menu on 'Escape' key press
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape" && mobileNavVisible) {
@@ -37,18 +47,19 @@ export default function MobileNav({ setMobileMenuVisible }) {
   }, [mobileNavVisible]);
 
   const toggleMobileMenu = () => {
-    setMobileNavVisible((prevVisible) => !prevVisible);
+    setMobileNavVisible((prev) => !prev);
   };
 
   const closeMobileMenu = () => {
     setMobileNavVisible(false);
+    if (typeof setMobileMenuVisible === "function") {
+      setMobileMenuVisible(false);
+    }
+    document.body.classList.remove("disable-scroll");
   };
 
   const handleLinkClick = () => {
     closeMobileMenu();
-    if (typeof setMobileMenuVisible === "function") {
-      setMobileMenuVisible(false);
-    }
   };
 
   return (
@@ -67,7 +78,6 @@ export default function MobileNav({ setMobileMenuVisible }) {
         <div className="bottom-bar"></div>
       </button>
 
-      {/* Persistent DOM node so CSS slide/fade transitions work smoothly */}
       <div 
         className={`mobile-menu-nav-wrapper ${mobileNavVisible ? "is-open" : ""}`} 
         id="mobileMenuNav"
@@ -80,6 +90,7 @@ export default function MobileNav({ setMobileMenuVisible }) {
           liClass="nav-item" 
           navItems={navItems} 
           onLinkClick={handleLinkClick} 
+          mobileNavVisible={mobileNavVisible}
         />
         <div className="mobile-close-btn">
           <button 

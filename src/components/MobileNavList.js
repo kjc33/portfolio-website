@@ -8,7 +8,7 @@ export default function MobileNavList({
   liClass, 
   navItems, 
   onLinkClick,
-  mobileNavVisible // Passed from MobileNav.js
+  mobileNavVisible 
 }) {
 
   const handleLinkClick = () => {
@@ -24,6 +24,26 @@ export default function MobileNavList({
       aria-label="Mobile Navigation"
       aria-hidden={!mobileNavVisible}
     >
+      <div className="overlay-logo">
+        <div className="logo-inner">
+          <div className="headshot">
+            <figure>
+              <img 
+                src="/images/headshot.webp" 
+                alt="Kyle John Chin" 
+                width="40" 
+                height="40" 
+              />
+            </figure>
+          </div>
+          <div className="site-name">
+            <HashLink smooth to="/#top" className="site-logo" onClick={handleLinkClick}>
+              <p className="pure-black">Kyle John Chin</p>
+            </HashLink>
+          </div>
+        </div>
+      </div>
+
       <ul className={ulClass}>
         {navItems.map((item, index) => (
           <li key={index} className={liClass}>
@@ -31,7 +51,7 @@ export default function MobileNavList({
               smooth 
               to={item.to} 
               onClick={handleLinkClick}
-              tabIndex={mobileNavVisible ? 0 : -1} // Prevents keyboard users from tabbing into hidden links
+              tabIndex={mobileNavVisible ? 0 : -1}
             >
               {item.navLabel}
             </HashLink>
