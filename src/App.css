@@ -315,7 +315,6 @@ body.disable-scroll {
 
 .primary-header .header-cta {
   display: none;
-  margin-left: auto;
 }
 
 .primary-cta-btn {
@@ -1554,6 +1553,7 @@ input[type="file"] {
   }
   .primary-header .header-cta {
     display: block;
+    margin-left: auto;
   }
   .mobile-menu-nav-items {
     padding: 50px 50px;
