@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import MobileNavList from "./MobileNavList";
 
 export default function MobileNav({
@@ -14,12 +14,12 @@ export default function MobileNav({
   ];
 
   // Helper to remove active DOM focus before closing
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     if (document.activeElement instanceof HTMLElement) {
       document.activeElement.blur();
     }
     closeMobileMenu();
-  };
+  }, [closeMobileMenu]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -30,7 +30,7 @@ export default function MobileNav({
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen]);
+  }, [isOpen, handleClose]);
 
   return (
     <div className="mobile-menu-wrapper">
