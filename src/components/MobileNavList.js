@@ -1,5 +1,6 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
+import logoMark from "../images/kc-logo-mark-dark.svg";
 
 export default function MobileNavList({ 
   navClass, 
@@ -10,16 +11,9 @@ export default function MobileNavList({
   onLinkClick,
   mobileNavVisible 
 }) {
-
-  const handleLinkClick = () => {
-    if (onLinkClick && typeof onLinkClick === "function") {
-      onLinkClick();
-    }
-  };
-
   return (
     <nav 
-      className={`${navClass}`} 
+      className={navClass} 
       id={navId}
       aria-label="Mobile Navigation"
       aria-hidden={!mobileNavVisible}
@@ -27,10 +21,16 @@ export default function MobileNavList({
       {/* Mobile Drawer Header / Brand Logo */}
       <div className="overlay-logo">
         <div className="logo-inner">
-          <HashLink smooth to="/#top" className="site-logo" onClick={handleLinkClick}>
+          <HashLink 
+            smooth 
+            to="/#top" 
+            className="site-logo" 
+            onClick={onLinkClick}
+            tabIndex={mobileNavVisible ? 0 : -1}
+          >
             <figure className="logo-mark-wrapper">
               <img 
-                src="/images/kc-logo-mark-dark.svg" 
+                src={logoMark} 
                 alt="Kyle John Chin Logo Mark" 
                 className="brand-logo"
                 width="855"
@@ -42,12 +42,12 @@ export default function MobileNavList({
       </div>
 
       <ul className={ulClass}>
-        {navItems.map((item, index) => (
-          <li key={index} className={liClass}>
+        {navItems.map((item) => (
+          <li key={item.to} className={liClass}>
             <HashLink 
               smooth 
               to={item.to} 
-              onClick={handleLinkClick}
+              onClick={onLinkClick}
               tabIndex={mobileNavVisible ? 0 : -1}
             >
               {item.navLabel}

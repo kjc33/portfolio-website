@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import SiteLogo from "./SiteLogo";
 import PrimaryNav from "./PrimaryNav";
 import MobileNav from "./MobileNav";
@@ -10,8 +10,31 @@ export default function Header() {
   const [scrolledEnough, setScrolledEnough] = useState(false);
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
 
+  // Close handler passed to child nav components
+  const closeMobileMenu = useCallback(() => {
+    setMobileMenuVisible(false);
+  }, []);
+
+  const toggleMobileMenu = useCallback(() => {
+    setMobileMenuVisible((prev) => !prev);
+  }, []);
+
+  // Sync body scroll locking when mobile menu toggles
   useEffect(() => {
-    let lastScrollPosition = window.pageYOffset;
+    if (mobileMenuVisible) {
+      document.body.classList.add("disable-scroll");
+    } else {
+      document.body.classList.remove("disable-scroll");
+    }
+
+    return () => {
+      document.body.classList.remove("disable-scroll");
+    };
+  }, [mobileMenuVisible]);
+
+  // Scroll direction & sticky threshold tracking
+  useEffect(() => {
+    let lastScrollPosition = typeof window !== "undefined" ? window.pageYOffset : 0;
     let ticking = false;
 
     const updateScrollDir = () => {
@@ -42,8 +65,8 @@ export default function Header() {
       }
     };
 
-    // Check on initial mount
-    if (window.pageYOffset > 0) {
+    // Check initial scroll on mount safely
+    if (typeof window !== "undefined" && window.pageYOffset > 0) {
       setScrolledEnough(true);
     }
 
@@ -54,17 +77,40 @@ export default function Header() {
     };
   }, [mobileMenuVisible]);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuVisible((prevVisible) => !prevVisible);
-  };
-
   return (
-    <header className={`primary-header ${scrolledEnough && !mobileMenuVisible ? scrollDirection : ""} ${mobileMenuVisible ? "mobile-nav-active" : ""}`}>
+    <header
+      className={`primary-header ${
+        scrolledEnough && !mobileMenuVisible ? scrollDirection : ""
+      } ${mobileMenuVisible ? "mobile-nav-active" : ""}`}
+    >
       <div className="header-inner">
-        <SiteLogo headshot={headshot} siteName="Kyle Chin" alt="Kyle Chin Headshot" width="80" height="80" />
+        <div className="header-brand">
+          <SiteLogo
+            headshot={headshot}
+            siteName="Kyle Chin"
+            alt="Kyle Chin Headshot"
+            width="80"
+            height="80"
+          />
+        </div>
+
+        {/* Desktop Navigation */}
         <PrimaryNav />
-        <MobileNav setMobileMenuVisible={setMobileMenuVisible} toggleMobileMenu={toggleMobileMenu} />
-        <PrimaryButton url="/#contact" label="Hire Me" />
+
+        {/* Mobile Navigation */}
+        <MobileNav
+          isOpen={mobileMenuVisible}
+          toggleMobileMenu={toggleMobileMenu}
+          closeMobileMenu={closeMobileMenu}
+        />
+
+        <div className="header-actions">
+          <PrimaryButton
+            url="/#contact"
+            label="Hire Me"
+            onClick={closeMobileMenu}
+          />
+        </div>
       </div>
     </header>
   );
