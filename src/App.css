@@ -1358,10 +1358,6 @@ input[type="file"] {
   .mobile-menu-nav-wrapper .mobile-menu-nav-items .mobile-menu-nav-list-items {
     margin-top: 80px;
   }
-  .mobile-menu-nav-wrapper .mobile-close-btn .close-btn svg {
-    height: 24px;
-    width: 24px;
-  }
   .outline-heading-large {
     width: 80%;
   }
@@ -1422,6 +1418,10 @@ input[type="file"] {
 @media screen and (min-width: 500px) {
   .headshot {
     display: block;
+  }
+  .mobile-menu-nav-wrapper .mobile-close-btn .close-btn svg {
+    height: 24px;
+    width: 24px;
   }
   .mobile-menu-nav-items .mobile-menu-nav-list-items .nav-item a {
     font-size: 3.5rem;
